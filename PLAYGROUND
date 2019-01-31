@@ -8,8 +8,12 @@ Estoy probando
 Soy Dani que tal estan
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Muy correcto la verdad
+<<<<<<< HEAD
+=======
 Comprobando que no de errores de merge
+>>>>>>> master
 =======
 <<<<<<< Updated upstream
 Comprobando que no de errores de merge
@@ -27,4 +31,13 @@ Comprobando que no de errores de merge
 >>>>>>> Stashed changes
 >>>>>>> master
 
+<<<<<<< HEAD
 Nuevo cambio
+=======
+Alvaro Lucas
+=======
+Muy correcto la verdad
+
+Soy dani de nuevo, desde una rama
+>>>>>>> ramitaDePrueba
+>>>>>>> master
