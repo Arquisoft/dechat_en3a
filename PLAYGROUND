@@ -7,8 +7,18 @@ Estoy probando
 
 Soy Dani que tal estan
 
+<<<<<<< Updated upstream
 Comprobando que no de errores de merge
 =======
+<<<<<<< HEAD
 >>>>>>> parent of 7f9b1f4... My first commit
 
 Testeando que mege va bien
+=======
+<<<<<<< HEAD
+Muy correcto la verdad
+=======
+Comprobando que no de errores de merge
+>>>>>>> master
+>>>>>>> Stashed changes
+>>>>>>> master
