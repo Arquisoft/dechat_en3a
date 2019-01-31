@@ -3,7 +3,10 @@ This file is just for playing with git...
 The file should be removed once each member of team has more knowledge about git
 
 Estoy probando
+<<<<<<< HEAD
 
 Soy Dani que tal estan
 
 Comprobando que no de errores de merge
+=======
+>>>>>>> parent of 7f9b1f4... My first commit
