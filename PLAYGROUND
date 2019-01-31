@@ -6,4 +6,12 @@ Estoy probando
 
 Soy Dani que tal estan
 
+<<<<<<< Updated upstream
 Comprobando que no de errores de merge
+=======
+<<<<<<< HEAD
+Muy correcto la verdad
+=======
+Comprobando que no de errores de merge
+>>>>>>> master
+>>>>>>> Stashed changes
