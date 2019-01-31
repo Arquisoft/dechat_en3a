@@ -7,6 +7,7 @@ Estoy probando
 Soy Dani que tal estan
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Muy correcto la verdad
 <<<<<<< HEAD
 =======
@@ -25,3 +26,8 @@ Comprobando que no de errores de merge
 >>>>>>> master
 
 Alvaro Lucas
+=======
+Muy correcto la verdad
+
+Soy dani de nuevo, desde una rama
+>>>>>>> ramitaDePrueba
