@@ -35,10 +35,10 @@ Describes the relevant requirements and the driving forces that software archite
 
 *Stakeholders*
 
-  **Jose Emilio Labra Gayo: Have a functional application that satisfy the initial criteria
-  **Work Group: Develop a functional application taht works correctly and improve our knowledge about solid and 
+  ** Jose Emilio Labra Gayo: Have a functional application that satisfy the initial criteria
+  ** Work Group: Develop a functional application taht works correctly and improve our knowledge about solid and 
               software arquitecture.
-  **Client: have a functional application that allows him to keep his personal data.
+  ** Client: have a functional application that allows him to keep his personal data.
 
 ****
 === Requirements Overview
@@ -93,13 +93,13 @@ Explicit overview of stakeholders of the system, i.e. all person, roles or organ
 * need the documentation of the architecture for their work
 * have to come up with decisions about the system or its development
 
-**Jose Emilio Labra Gayo: he should know the arquitecture of the system as well as how to work with it. He also
+* Jose Emilio Labra Gayo: he should know the arquitecture of the system as well as how to work with it. He also
   need the documentation of the project.
   
-**Work Group: The group knows everything about the system: how it works, which is the arquiecture, work with the code of 
+* Work Group: The group knows everything about the system: how it works, which is the arquiecture, work with the code of 
   the application, make the documentation and make the decicions about the project but keeping the initial idea.
  
-**Client: The client just need to know how it works, the objective of the client is to have a good-working application.
+* Client: The client just need to know how it works, the objective of the client is to have a good-working application.
 
 .Motivation
 You should know all parties involved in development of the system or affected by the system.
