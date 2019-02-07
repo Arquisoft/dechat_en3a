@@ -16,4 +16,13 @@ Simple tables of constraints with explanations.
 If needed you can subdivide them into
 technical constraints, organizational and political constraints and
 conventions (e.g. programming or versioning guidelines, documentation or naming conventions)
+
+.Constraints Table
+|===
+|Constraint |Explanation
+
+|The application must be decentralized
+|Our goal is to have a decentralized chat, that consists in having separated personal data from apps
+
+|===
 ****
