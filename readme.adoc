@@ -57,6 +57,11 @@ The https://github.com/Arquisoft/dechat_en3a/tree/master/pom.xml[pom.xml] file
 mvn site
 ----
 
+First meeting day 31-1-2019:
+In today's class we were introduced to the proyect we will need to develop during the course.
+We made some decisions:
+ - We decided to use Javascript as the programming language.
+ - We decided that the documentation will be done by every member of the team. 
 
 
 
