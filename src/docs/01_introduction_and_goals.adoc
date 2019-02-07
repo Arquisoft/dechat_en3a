@@ -21,18 +21,27 @@ Describes the relevant requirements and the driving forces that software archite
 |Cell in column 3, row 2
 |===
 
-.Quality Goals
-|===
-|Goal |Description
+*Quality Goals*
 
-|Cell in column 1, row 1
-|Cell in column 2, row 1
-|Cell in column 3, row 1
+** Runtime quality attributes
 
-|Cell in column 1, row 2
-|Cell in column 2, row 2
-|Cell in column 3, row 2
-|===
+*** Performance:
+*** Security:
+*** Availability:
+*** Usability:
+
+** Non-runtime quality attributes
+
+*** Modifiability:
+*** Portability:
+*** Reusability:
+*** Testability:
+
+** Business quality attributes
+
+*** Cost:
+*** Schedule:
+*** Time-to-market:
 
 .Stakeholders
 |===
