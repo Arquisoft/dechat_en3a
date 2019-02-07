@@ -15,17 +15,20 @@ Describes the relevant requirements and the driving forces that software archite
 
 ** Runtime quality attributes
 
-*** Performance:
-*** Security:
-*** Availability:
-*** Usability:
+*** Performance: Shows the response of the system to performing certain actions for a certain period of time
+*** Security: Is responsible for the ability of the system to reduce the likelihood of malicious or accidental actions as well as the possibility of theft or loss of information.
+*** Availability: Is part of reliability and is expressed as the ratio of the available system time to the total working time
+*** Usability: Is one of the most important attributes, because, unlike in cases with other attributes, users can see directly how well this attribute of the system is worked out. One of the key problems of usability is too much interaction or too many actions necessary to accomplish a task. Incorrect sequences of steps in multistage interfaces are also a problem of usability. Data elements and controls may be designed not according to the accepted patterns of user experience, which also complicates the interaction.
+*** Scalability: is the ability of the system to handle load increases without decreasing performance, or the possibility to rapidly increase the load.
 
 ** Non-runtime quality attributes
 
-*** Modifiability:
-*** Portability:
-*** Reusability:
-*** Testability:
+*** Modifiability: Determines how many common changes need to be made to the system to make changes to each individual item. Ideal is the case where each change affects only one element.
+*** Maintainability: Is the ability of the system to support changes. Changes can be related to new business requirements or correction of old errors and affect system components or separate methods. Also, maintainability affects the time needed to restore the system after a failure. Excessive dependencies between components have a very negative effect on maintainability.
+*** Portability:  In high-level computer programming is the usability of the same software in different environments.
+*** Supportability: Is the ability of the system to provide useful information for identifying and solving problems. 
+*** Reusability: Is a chance of using a component or system in other components/systems with small or no change. Allocation of responsibilities, modularization, decreasing of copy-paste are all about reusability. Copying code, or worse, using different components for the same result in different places, is one of the biggest problems of reusability.
+*** Testability: Shows how well the system allows performing tests, according to predefined criteria. In addition to testing performance, testability makes it possible to effectively divide the system into subsystems.
 
 ** Business quality attributes
 
@@ -35,12 +38,6 @@ Describes the relevant requirements and the driving forces that software archite
 
 *Stakeholders*
 
-  ** Jose Emilio Labra Gayo: Have a functional application that satisfy the initial criteria
-  ** Work Group: Develop a functional application taht works correctly and improve our knowledge about solid and 
-              software arquitecture.
-  ** Client: have a functional application that allows him to keep his personal data.
-
-****
 === Requirements Overview
 
 [role="arc42help"]
@@ -50,13 +47,11 @@ Short description of the functional requirements, driving forces, extract (or ab
 of requirements. Link to (hopefully existing) requirements documents
 (with version number and information where to find it).
 
-A decentralized system which provides the client to dont show his personal data to other users.
-
 .Motivation
 From the point of view of the end users a system is created or modified to
 improve support of a business activity and/or improve the quality.
 
-Allowing the user to have the control of his personal data and just share the data he wants.
+Writing here
 
 .Form
 Short textual description, probably in tabular use-case format.
@@ -92,14 +87,6 @@ Explicit overview of stakeholders of the system, i.e. all person, roles or organ
 * have to work with the architecture or with code
 * need the documentation of the architecture for their work
 * have to come up with decisions about the system or its development
-
-* Jose Emilio Labra Gayo: he should know the arquitecture of the system as well as how to work with it. He also
-  need the documentation of the project.
-  
-* Work Group: The group knows everything about the system: how it works, which is the arquiecture, work with the code of 
-  the application, make the documentation and make the decicions about the project but keeping the initial idea.
- 
-* Client: The client just need to know how it works, the objective of the client is to have a good-working application.
 
 .Motivation
 You should know all parties involved in development of the system or affected by the system.
