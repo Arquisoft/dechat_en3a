@@ -8,6 +8,45 @@ Describes the relevant requirements and the driving forces that software archite
 * underlying business goals, essential features and functional requirements for the system
 * quality goals for the architecture
 * relevant stakeholders and their expectations
+
+.Requirements
+|===
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+.Quality Goals
+|===
+|Goal |Description
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+.Stakeholders
+|===
+|Who? |Expectation?
+
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
 ****
 
 === Requirements Overview
