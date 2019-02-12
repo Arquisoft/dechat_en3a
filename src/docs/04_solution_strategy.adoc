@@ -22,3 +22,25 @@ Motivate what you have decided and why you decided that way,
 based upon your problem statement, the quality goals and key constraints.
 Refer to details in the following sections.
 ****
+[width="80%",cols="3,^2,^2,10",options="header"]
+|=========================================================
+|Decision made |Solution approach  |Reason why |Extrenal references
+
+|*_Working with SOLID_* |As we saw in class we should follow the *SOLID* principles in order to develop the 
+proyect correctly. SOLID is a mnemonic acronym for five design principles: Single responsibility principle, 
+Open/closed principle, Liskov substitution principle... 
+| We need to follow the SOLID specifications in order to make our chat as *decentralized* as 
+possible where data storage is separated from the app, to start working with SOLID we can check the second link. |https://github.com/solid/solid-spec[SOLID specifications]
+https://solid.inrupt.com/docs/app-on-your-lunch-break[SOLID app on lunch break]
+
+|*_Programming language_* |Given the assignment description and its
+requirements, we decided to use *javascript* as the programming 
+language. | We chose javascript because, for us, it makes it easier when dealing 
+with certain things (following SOLID specifications) like callbacks that we may face during the development 
+of the decentralized (one of the *main goals*) chat. 
+| http://aspiringcraftsman.com/2011/12/19/solid-javascript-the-openclosed-principle/[SOLID with Javascript]
+
+|*_Organizational decisions_* |We, as a team, have decided to try to work in an incremental way as a team, trying not to
+leave everything for the last days and with *active comunication*. At first, nobody is going to take care of anything specific, but as the development process advances this may change. 
+| We come from IPS, a subject where we learned how to work in a team efficiently, we are trying to apply the same principles here.
+|https://www.daxx.com/blog/development-team/set-up-development-team-kickstart-your-business[Software development in teams]
