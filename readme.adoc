@@ -72,6 +72,17 @@ We made some decisions:
      * Document_3 -> Not assigned yet.
      * Document_4 -> Daniel Llana and Pablo Martinez.
 
+== Meeting day 13-2-2019
+All the members were present during the meeting.
+In today's reunion we dealed with the first 4 documents of the documentation. 
+
+* *Document 1* was completed by Alvaro Lucas and Vladislav Stelmakh.  
+* *Document 2* was completed by Fernando Ruiz.  
+* *Document 3* will be completed by Fernando Ruiz and Pablo Martinez.
+* In the last reunion we assigned *Document 4* to Daniel Llana and Pablo Martinez, but it will be 
+completed by Daniel Llana.
+
+We also researched information about SOLID and https://www.w3.org/RDF/[RDF]
 
 
 
