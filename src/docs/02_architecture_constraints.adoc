@@ -21,8 +21,14 @@ conventions (e.g. programming or versioning guidelines, documentation or naming 
 |===
 |Constraint |Explanation
 
+|We must follow the five principles of SOLID
+|The five principles are: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation and Dependency Inversion.
+
 |The application must be decentralized
-|Our goal is to have a decentralized chat, that consists in having separated personal data from apps
+|Our goal is to have a decentralized chat, that consists in having separated personal data from apps.
+
+|The application must be object-oriented
+|We have to develop our project with object-oriented programming.
 
 |===
 ****
