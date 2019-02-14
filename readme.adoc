@@ -84,9 +84,12 @@ completed by Daniel Llana.
 
 We also researched information about SOLID and https://www.w3.org/RDF/[RDF]
 
+== Meeting day 14-2-2019
+All the members were present during the meeting.
 
-
-
+* Today we created our SOLID Community accounts in order to manage pots.
+* Also, we planned to adapt our current documentation to the contents seen yesterday in the theory class (quality attributes and design concepts).
+* We considered the tool http://plantuml.com/es/[PlantUML] to create UML graphs/diagrams for the documentation.
 
 
 
