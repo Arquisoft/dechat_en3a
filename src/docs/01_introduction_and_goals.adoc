@@ -9,6 +9,7 @@ Describes the relevant requirements and the driving forces that software archite
 * Quality goals for the architecture
 * Relevant stakeholders and their expectations
 
+'''
 [role="arc42help"]
 ****
 === Requirements Overview
@@ -24,7 +25,7 @@ From the point of view of the end users a system is created or modified to impro
 We develop this system to allow users to keep his personal data save in this computer so the data doesnt need to go to a server.
 
 ****
-
+'''
 [role="arc42help"]
 ****
 === Quality Goals
@@ -118,6 +119,30 @@ A table with quality goals and concrete scenarios, ordered by priorities
 
 *** *Time-to-market:* The development effort will naturally have a budget that must not be exceeded. Different architectures will yield different development costs.
 
+.Quality Attributes
+|===
+| Ref |Quality attribute |Scenario | Priority
+|  1, Performance efficiency | | |
+|  2, Scalability            | | |
+|  3, Interoperability       | | |
+|  4, Managability           | | |
+|  5, Reliability            | | |
+|  6, Security               | | |
+|  7, Availability           | | |
+|  8, Usability              | | |
+|  9, Modifiability          | | |
+| 10, Portability            | | |
+| 11, Reusability            | | |
+| 12, Maintainability        | | |
+| 13, Conceptual integrity   | | |
+| 14, Supportability         | | |
+| 15, Testability            | | |
+| 16, Cost and benefit       | | |
+| 17, Rollout schedule       | | |
+| 18, Time-to-market         | | |
+|===
+
+'''
 [role="arc42help"]
 ****
 === Stakeholders
