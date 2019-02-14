@@ -23,6 +23,10 @@ Various options:
 
 The goal is to create a decentralized chat app based on the solid specifications. The system will be based on a decentralized architecture where data storage is separated from the app. Users can store their chat data in their own pods. The app will allow a user to share pictures, videos or other kinds of files with other friends through the chat. A user can also get notifications when some friend wants to chat with him. Users can have groups of friends with whom they may want to chat and it will be possible to have group chats where all members receive the messages.
 
+<<DeChat application diagram>>
+
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/DeChatSchema.png
+
 
 === Business Context
 
