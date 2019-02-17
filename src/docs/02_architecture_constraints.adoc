@@ -17,7 +17,7 @@ If needed you can subdivide them into
 technical constraints, organizational and political constraints and
 conventions (e.g. programming or versioning guidelines, documentation or naming conventions)
 
-.Constraints Table
+.Technical Contraints 
 |===
 |Constraint |Explanation
 
@@ -29,6 +29,18 @@ conventions (e.g. programming or versioning guidelines, documentation or naming 
 
 |The application must be object-oriented
 |We have to develop our project with object-oriented programming.
+
+|===
+
+.Documentation Constraints
+|===
+|Constraint |Explanation
+
+|The language of the application must be english
+|All the code, comments or documentation must be written in english.
+
+|Documentation
+|The documentation of the project must follow the rules described in asciidoctor.
 
 |===
 ****
