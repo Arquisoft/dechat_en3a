@@ -52,4 +52,16 @@ Potentially more columns in case you need translations.
 |Asciidoctor
 |Is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML5, DocBook 5 or 4.5, EPUB3, PDF and other formats. Asciidoctor is the leading implementation of the AsciiDoc syntax, first introduced and implemented in the Python-based AsciiDoc project.
 
+|Functional requirement
+|They state what the system must do operating within normal parameters, so as to assure the design is adequate to make the desired product and the end product reaches its potential of the design in order to meet user expectations. Functionality does not determine 
+architecture.
+
+|Quality attribute requiremennts
+|Also called non-functional requirements, they annotate or qualify functional requirements.
+They influence the architecture: Availability, modifiability, usability... .
+
+|Quality attribute scenario
+|They Describe a certain event (triggered by a person or a system) of the system and a 
+measurable response to that event. *They must be testeable* and should be prioritized.
+
 |===
