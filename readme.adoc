@@ -56,6 +56,19 @@ The https://github.com/Arquisoft/dechat_en3a/tree/master/pom.xml[pom.xml] file
 ----
 mvn site
 ----
+== Some useful links
+I (Daniel) add here some links I think may be useful for the team during the development process:
+
+* https://github.com/itsee/awesome-solid[Solid resources].
+* https://inrupt.com/solid-app-listing[Solid App Listing].
+* https://inrupt.net/[Prototype implementation of a Solid server(Inrupt)].
+* https://github.com/solid/solid-spec[Solid specifications].
+* https://solid.inrupt.com/docs/app-on-your-lunch-break[Solid app on lunch break].
+* https://pheyvaer.github.io/solid-chess/[Solid chess].
+* https://github.com/solid/query-ldflex[Navigate throught contents of pods].
+* https://github.com/comunica/comunica[SPARQL queries over RDF content].
+* https://github.com/weso/landportal-rdf-generator[RDF generator].
+
 
 == Meeting day 31-1-2019
 In today's class we were introduced to the proyect we will need to develop during the course.
