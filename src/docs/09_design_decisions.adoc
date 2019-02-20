@@ -23,4 +23,20 @@ Various options:
 * List or table, ordered by importance and consequences or:
 * more detailed in form of separate sections per decision
 * ADR (architecture decision record) for every important decision
+
+
+|===
+|Decisions |
+
+|Programming language
+|We are going to use JavaScript.
+
+|Integrated Development Enviroment (IDE)
+|We are going to use WebStorm deigned by JetBrains.
+
+|Implementation
+|We are going to use the design patter Model View Controller (MVC).
+
+|===
+
 ****
