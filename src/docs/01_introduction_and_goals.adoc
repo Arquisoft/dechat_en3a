@@ -15,12 +15,10 @@ Describes the relevant requirements and the driving forces that software archite
 === Requirements Overview
 
 Contents::
-Short description of the functional requirements, driving forces, extract (or abstract) of requirements. Link to (hopefully existing) requirements documents (with version number and information where to find it).
 ::
 We use solid for this application and design a decentralized chat that allows people to communicate people and not share this       personal data.
 
 Motivation::
-From the point of view of the end users a system is created or modified to improve support of a business activity and/or improve the quality.
 ::
 We develop this system to allow users to keep his personal data save in this computer so the data doesnt need to go to a server.
 
@@ -36,8 +34,6 @@ The top three (max five) quality goals for the architecture whose fulfillment is
 Motivation::
 We are looking for high performance a quality application, taking into account the security level due to the goal is to keep the data of client save, an easy to modify application and easy to learn how to use application. Those are some of the principal quality attributes we are looking for.
 
-Form::
-A table with quality goals and concrete scenarios, ordered by priorities
 ****
 
 ** *Runtime Quality Attributes*
@@ -121,25 +117,25 @@ A table with quality goals and concrete scenarios, ordered by priorities
 
 .Quality Attributes
 |===
-| Ref |Quality attribute |Scenario | Priority
-|  1, Performance efficiency | | |
-|  2, Scalability            | | |
-|  3, Interoperability       | | |
-|  4, Managability           | | |
-|  5, Reliability            | | |
-|  6, Security               | | |
-|  7, Availability           | | |
-|  8, Usability              | | |
-|  9, Modifiability          | | |
-| 10, Portability            | | |
-| 11, Reusability            | | |
-| 12, Maintainability        | | |
-| 13, Conceptual integrity   | | |
-| 14, Supportability         | | |
-| 15, Testability            | | |
-| 16, Cost and benefit       | | |
-| 17, Rollout schedule       | | |
-| 18, Time-to-market         | | |
+| Ref |Quality attribute       |Scenario | Priority
+|  1  | Performance efficiency |          |
+|  2  | Scalability            |          |
+|  3  | Interoperability       |          |
+|  4  | Managability           |          |
+|  5  | Reliability            |          |
+|  6  | Security               |          |
+|  7  | Availability           |          |
+|  8  | Usability              |          |
+|  9  | Modifiability          |          |
+| 10  | Portability            |          |
+| 11  | Reusability            |          |
+| 12  | Maintainability        |          |
+| 13  | Conceptual integrity   |          |
+| 14  | Supportability         |          |
+| 15  | Testability            |          |
+| 16  | Cost and benefit       |          |
+| 17  | Rollout schedule       |          |
+| 18  | Time-to-market         |          |
 |===
 
 '''
@@ -148,7 +144,6 @@ A table with quality goals and concrete scenarios, ordered by priorities
 === Stakeholders
 
 Contents::
-Explicit overview of stakeholders of the system, i.e. all person, roles or organizations that
 
 * *Jose Emilio Labra Gayo:* He should know the architecture and be convinced of it, and he also needs to know the doumentation about the project.
 
@@ -156,13 +151,6 @@ Explicit overview of stakeholders of the system, i.e. all person, roles or organ
 
 * *Client:* The client just needs to know how the application works.
 
-Motivation::
-You should know all parties involved in development of the system or affected by the system.
-Otherwise, you may get nasty surprises later in the development process.
-These stakeholders determine the extent and the level of detail of your work and its results.
-
-Form::
-Table with role names, person names, and their expectations with respect to the architecture and its documentation.
 ****
 
 [options="header",cols="1,2,2"]
