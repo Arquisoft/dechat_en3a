@@ -4,46 +4,21 @@
 
 [role="arc42help"]
 ****
-.Contents
-System scope and context - as the name suggests - delimits your system (i.e. your scope) from all its communication partners
-(neighboring systems and users, i.e. the context of your system). It thereby specifies the external interfaces.
-
-If necessary, differentiate the business context (domain specific inputs and outputs) from the technical context (channels, protocols, hardware).
-
-.Motivation
-The domain interfaces and technical interfaces to communication partners are among your system's most critical aspects. Make sure that you completely understand them.
-
-.Form
-Various options:
-
-* Context diagrams
-* Lists of communication partners and their interfaces.
-****
-
-
 The goal is to create a decentralized chat app based on the solid specifications. The system will be based on a decentralized architecture where data storage is separated from the app. Users can store their chat data in their own pods. The app will allow a user to share pictures, videos or other kinds of files with other friends through the chat. A user can also get notifications when some friend wants to chat with him. Users can have groups of friends with whom they may want to chat and it will be possible to have group chats where all members receive the messages.
 
 <<DeChat application diagram>>
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/DeChatSchema.png[diagram]
 
+****
+
+
+
 
 === Business Context
 
 [role="arc42help"]
 ****
-.Contents
-Specification of *all* communication partners (users, IT-systems, ...) with explanations of domain specific inputs and outputs or interfaces.
-Optionally you can add domain specific formats or communication protocols.
-
-.Motivation
-All stakeholders should understand which data are exchanged with the environment of the system.
-
-.Form
-All kinds of diagrams that show the system as a black box and specify the domain interfaces to communication partners.
-
-Alternatively (or additionally) you can use a table.
-The title of the table is the name of your system, the three columns contain the name of the communication partner, the inputs, and the outputs.
 
 <<Business context diagram>>
 
@@ -51,9 +26,6 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Busi
 
 ****
 
-**<Diagram or Table>**
-
-**<optionally: Explanation of external domain interfaces>**
 
 === Technical Context
 
