@@ -4,26 +4,27 @@
 
 [role="arc42help"]
 ****
-.Databases
-  We had some problems at the time of decide which database we use because not all of us has used the 
+
+.*Databases*
+  We had some problems at the time of decide which database we will use because not all of us has used the 
   same kind of databases. 
   We have the idea of using a NoSQL system but we are low experienced with them so we decided to learn 
-  about it because is the best option for a solid system.
+  about it because it is the best option for a solid system.
   
-.Solid
+.*Solid*
   We have some problems using solid due to the fact that is a new technology so there is not such kind of information as 
-  other technologies. By the way we have the solid system so we can ask there some questions but at the time of 
-  programming the final application we have some doubts.
+  other technologies. By the way, we have the solid system so we can ask there some questions but at the time of 
+  programming the final application we are having some doubts.
   
-.Javascript
-  As i said with solid, we have the same problem with javascript. We all know this language but we are not 
+.*Javascript*
+  As we said with solid, we have the same problem with javascript. We all know this language but we are not 
   experts using it so we have some problems at the time of starting the prototype of the application.
   
-.Real time messaging
+.*Real time messaging*
   When two people are online they should be able to establish real time communication, during the development
   process we may have to deal with some problems we have never faced before using javascript.
 
-.Delivering messages in the chat
+.*Delivering messages in the chat*
   We may face some problems with the messaging system of the application, problems like... what
   happens when we send a message to someone who is not online? where do we keep that
   message so it does not get in conflict with the main goal (decentralization) and gets delivered once 
