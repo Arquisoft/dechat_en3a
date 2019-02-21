@@ -10,9 +10,8 @@
 |=========================================================
 |Decision made |Solution approach  |Reason why |Extrenal references
 
-|*_Working with SOLID_* |As we saw in class we should follow the *SOLID* principles in order to develop the 
-proyect correctly. SOLID is a mnemonic acronym for five design principles: Single responsibility principle, 
-Open/closed principle, Liskov substitution principle... 
+|*_Working with SOLID_* |As we saw in class we should follow the *SOLID* specifications in order to develop the 
+proyect correctly.
 | We need to follow the SOLID specifications in order to make our chat as *decentralized* as 
 possible where data storage is separated from the app, to start working with SOLID we can check the second link. |https://github.com/solid/solid-spec[SOLID specifications]
 https://solid.inrupt.com/docs/app-on-your-lunch-break[SOLID app on lunch break]
