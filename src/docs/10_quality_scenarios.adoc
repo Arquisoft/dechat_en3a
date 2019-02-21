@@ -61,3 +61,15 @@ more precisely down to a level of scenarios that can be discussed and evaluated.
 .Form
 Tabular or free form text.
 ****
+
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
+
+Testability / Coverage
+By using JaCoCo during development and the build process ensure a code coverage of at least 95%.
+
+Testability / Independent from external services
+The architecture should be designed in such a way that algorithms depending on external services can be tested without having the external service available. That is: All external dependencies should be mockable.
+
+Example: FetchBikingPicturesJob needs a resource containing a RSS feed. Retrieving the resource and parsing it are at least two different tasks. Fetching the resource through a separate class DailyFratzeProvider makes testing the actual parsing independent from a HTTP connection and thus relatively simple.
+
+
