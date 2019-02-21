@@ -70,13 +70,13 @@ I (Daniel) add here some links I think may be useful for the team during the dev
 * https://github.com/weso/landportal-rdf-generator[RDF generator].
 
 
-== Meeting day 31-1-2019
+== Meeting day 1-31-2019
 In today's class we were introduced to the proyect we will need to develop during the course.
 We made some decisions:
  - We decided to use Javascript as the programming language.
  - We decided that the documentation will be done by every member of the team. 
  
-== Meeting day 7-2-2019
+== Meeting day 2-7-2019
 We made some decisions:
  - We considered the future use of a NoSQL database.
  - We assigned certain part of the documentation to each of the members of the group:
@@ -85,7 +85,7 @@ We made some decisions:
      * Document_3 -> Not assigned yet.
      * Document_4 -> Daniel Llana and Pablo Martinez.
 
-== Meeting day 13-2-2019
+== Meeting day 2-13-2019
 All the members were present during the meeting.
 In today's reunion we dealed with the first 4 documents of the documentation. 
 
@@ -97,14 +97,14 @@ completed by Daniel Llana.
 
 We also researched information about SOLID and https://www.w3.org/RDF/[RDF]
 
-== Meeting day 14-2-2019
+== Meeting day 2-14-2019
 All the members were present during the meeting.
 
 * Today we created our SOLID Community accounts in order to manage pots.
 * Also, we planned to adapt our current documentation to the contents seen yesterday in the theory class (quality attributes and design concepts).
 * We considered the tool http://plantuml.com/es/[PlantUML] to create UML graphs/diagrams for the documentation.
 
-== Meeting day 20-2-2019
+== Meeting day 2-20-2019
 All the members were present during the meeting.
 We made some decisions:
 
