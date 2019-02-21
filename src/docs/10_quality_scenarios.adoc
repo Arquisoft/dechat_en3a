@@ -65,7 +65,7 @@ Tabular or free form text.
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
 
 Testability / Coverage
-By using JaCoCo during development and the build process ensure a code coverage of at least 95%.
+By using JSCoverage and Istanbul during development and the build process ensure a code coverage of at least 95%.
 
 Testability / Independent from external services
 The architecture should be designed in such a way that algorithms depending on external services can be tested without having the external service available. That is: All external dependencies should be mockable.
