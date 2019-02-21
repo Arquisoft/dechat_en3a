@@ -4,8 +4,6 @@
 [role="arc42help"]
 ****
 
-****
-
 |===
 |Term |Definition
 
@@ -40,3 +38,4 @@ They influence the architecture: Availability, modifiability, usability... .
 measurable response to that event. *They must be testeable* and should be prioritized.
 
 |===
+****
