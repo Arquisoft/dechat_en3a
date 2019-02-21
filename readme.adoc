@@ -104,7 +104,13 @@ All the members were present during the meeting.
 * Also, we planned to adapt our current documentation to the contents seen yesterday in the theory class (quality attributes and design concepts).
 * We considered the tool http://plantuml.com/es/[PlantUML] to create UML graphs/diagrams for the documentation.
 
+== Meeting day 20-2-2019
+All the members were present during the meeting.
+We made some decisions:
 
-
-
-
+- We assigned certain part of the documentation to each of the members of the group:
+     * Document_7 -> Vladislav Stelmakh.
+     * Document_9 -> Fernando Ruiz.
+     * Document_10 -> Pablo Martinez.
+     * Document_11 -> Alvaro Lucas y Daniel Llana.
+     * Document_12 -> Fernando Ruiz y Daniel Llana.
