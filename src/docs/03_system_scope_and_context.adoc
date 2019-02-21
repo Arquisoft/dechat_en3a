@@ -8,7 +8,7 @@ The goal is to create a decentralized chat app based on the solid specifications
 
 <<DeChat application diagram>>
 
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/DeChatSchema.png[diagram]
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/SystemDiagram.png[diagram]
 
 ****
 
