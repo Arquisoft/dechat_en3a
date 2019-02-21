@@ -115,7 +115,6 @@ We are looking for high performance a quality application, taking into account t
 
 *** *Time-to-market:* The development effort will naturally have a budget that must not be exceeded. Different architectures will yield different development costs.
 
-.Quality Attributes
 |===
 | Ref |Quality attribute       |Scenario | Priority
 |  1  | Performance efficiency |          |
@@ -142,8 +141,6 @@ We are looking for high performance a quality application, taking into account t
 [role="arc42help"]
 ****
 === Stakeholders
-
-Contents::
 
 * *Jose Emilio Labra Gayo:* He should know the architecture and be convinced of it, and he also needs to know the doumentation about the project.
 
