@@ -1,66 +1,41 @@
 [[section-glossary]]
 == Glossary
 
-
-
 [role="arc42help"]
 ****
-.Contents
-The most important domain and technical terms that your stakeholders use when discussing the system.
-
-You can also see the glossary as source for translations if you work in multi-language teams.
-
-.Motivation
-You should clearly define your terms, so that all stakeholders
-
-* have an identical understanding of these terms
-* do not use synonyms and homonyms
-
-.Form
-A table with columns <Term> and <Definition>.
-
-Potentially more columns in case you need translations.
 
 ****
 
-[options="header"]
-|===
-| Term         | Definition
-| <Term-1>     | <definition-1>
-| <Term-2>     | <definition-2>
-|===
-
-.Glossary
 |===
 |Term |Definition
 
-|SOLID
+|*SOLID*
 |SOlid LInked Data is a proposed set of conventions and tools for building decentralized social applications based on Linked Data principles. Solid is modular and extensible and it relies as much as possible on existing W3C standards and protocols.
 
-|POD
+|*POD*
 |Personal Online Data. Your POD is your personal storage space, PODs are like secure USB sticks for the Web, that you can access from anywhere. When you give others access to parts of your POD, they can react to your photos and share their memories with you. You decide which things apps and people can see.
 
-|User
+|*User*
 |Is an entity that has authority to use an application or uses PODs.
 
-|Stakeholder
+|*Stakeholder*
 |Is a person who affects, is affected or can contribute to the system and its architecture.
 
-|User Profile
+|*User Profile*
 |It have all the information about the user: name, surname, phone number, etc...
 
-|Asciidoctor
+|*Asciidoctor*
 |Is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML5, DocBook 5 or 4.5, EPUB3, PDF and other formats. Asciidoctor is the leading implementation of the AsciiDoc syntax, first introduced and implemented in the Python-based AsciiDoc project.
 
-|Functional requirement
+|*Functional Requirements*
 |They state what the system must do operating within normal parameters, so as to assure the design is adequate to make the desired product and the end product reaches its potential of the design in order to meet user expectations. Functionality does not determine 
 architecture.
 
-|Quality attribute requiremennts
+|*Quality Attribute Requiremennts*
 |Also called non-functional requirements, they annotate or qualify functional requirements.
 They influence the architecture: Availability, modifiability, usability... .
 
-|Quality attribute scenario
+|*Quality Attribute Scenarios*
 |They Describe a certain event (triggered by a person or a system) of the system and a 
 measurable response to that event. *They must be testeable* and should be prioritized.
 
