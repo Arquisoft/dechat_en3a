@@ -14,12 +14,8 @@ Describes the relevant requirements and the driving forces that software archite
 ****
 === Requirements Overview
 
-Contents::
-::
 We use solid for this application and design a decentralized chat that allows people to communicate people and not share this       personal data.
 
-Motivation::
-::
 We develop this system to allow users to keep his personal data save in this computer so the data doesnt need to go to a server.
 
 ****
@@ -27,14 +23,6 @@ We develop this system to allow users to keep his personal data save in this com
 [role="arc42help"]
 ****
 === Quality Goals
-
-Contents::
-The top three (max five) quality goals for the architecture whose fulfillment is of highest importance to the major stakeholders. We really mean quality goals for the architecture. Don't confuse them with project goals. They are not necessarily identical.
-
-Motivation::
-We are looking for high performance a quality application, taking into account the security level due to the goal is to keep the data of client save, an easy to modify application and easy to learn how to use application. Those are some of the principal quality attributes we are looking for.
-
-****
 
 ** *Runtime Quality Attributes*
 
@@ -137,6 +125,7 @@ We are looking for high performance a quality application, taking into account t
 | 18  | Time-to-market         |          |
 |===
 
+****
 '''
 [role="arc42help"]
 ****
