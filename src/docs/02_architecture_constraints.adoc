@@ -1,9 +1,8 @@
 [[section-architecture-constraints]]
 == Architecture Constraints
 
-
-[role="arc42help"]
 ****
+[role="arc42help"]
 
 .*Technical Contraints* 
 |===
