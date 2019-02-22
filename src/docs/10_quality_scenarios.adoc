@@ -3,10 +3,6 @@
 
 
 [role="arc42help"]
-****
-
-
-****
 
 === Quality Tree
 
@@ -29,5 +25,5 @@ Testability / Independent from external services
 The architecture should be designed in such a way that algorithms depending on external services can be tested without having the external service available. That is: All external dependencies should be mockable.
 
 ****
-
+****
 
