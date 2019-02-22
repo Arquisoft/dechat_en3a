@@ -1,7 +1,7 @@
 [[section-quality-scenarios]]
 == Quality Requirements
-
-
+****
+****
 === Quality Tree
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
 ****
@@ -14,6 +14,5 @@ By using JSCoverage and Istanbul during development and the build process ensure
 
 Testability / Independent from external services
 The architecture should be designed in such a way that algorithms depending on external services can be tested without having the external service available. That is: All external dependencies should be mockable.
-
 ****
 ****
