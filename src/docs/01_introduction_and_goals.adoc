@@ -8,7 +8,6 @@ Describes the relevant requirements and the driving forces that software archite
 * Underlying business goals, essential features and functional requirements for the system
 * Quality goals for the architecture
 * Relevant stakeholders and their expectations
-
 '''
 [role="arc42help"]
 ****
@@ -28,46 +27,40 @@ We develop this system to allow users to keep his personal data save in this com
 
 *** *Performance efficiency:* Shows the response of the system to performing certain actions for a certain period of time. This characteristic represents the performance relative to the amount of resources used under stated conditions. There are *two ways how to measure performance*:
 
-**** *Latency:* Time spent on responding to an event
-**** *Channel capacity:* The number of events that occur at a certain point in time.
+* *Latency:* Time spent on responding to an event
+* *Channel capacity:* The number of events that occur at a certain point in time.
 
 *** *Scalability:* is the ability of the system to handle load increases without decreasing performance, or the possibility to rapidly increase the load. There are *two ways to improve scalability*:
 
-**** *Vertical:* To increase, we add more resources, such as memory, disks or processors into one system.
-**** *Horizontal:* We increase the number of computing units and divide the load.
+* *Vertical:* To increase, we add more resources, such as memory, disks or processors into one system.
+* *Horizontal:* We increase the number of computing units and divide the load.
 
 *** *Interoperability:* Is an attribute of the system or part of the system that is responsible for its operation and the transmission of data and its exchange with other external systems. Naturally, there are a lot of *problems for interaction*:
 
-**** Outdated external systems.
-**** Different formats of data in similar external systems.
-**** Different versions of the API in external systems.
-**** Backwards compatibility of the API for integration.
-**** Poor quality and lack of standards of external systems.
-
 *** *Manageability:* Defines how easy it is for system administrators to manage the application.
 
-*** *Reliability:* Ability of a system to remain operational over tim.
+*** *Reliability:* Ability of a system to remain operational over time.
 
 *** *Security:* Is responsible for the ability of the system to reduce the likelihood of malicious or accidental actions as well as the possibility of theft or loss of information. There are a number of measures that are used to protect systems: authentication, encryption, audit, and others. *Examples of this attribute in the work* of the system are:
 
-**** The ability of the system to detect DDoS attacks and respond to them.
-**** Restrictions of user access in accordance with authentication/authorization.
-**** Prevention of SQL injection.
-**** Encryption of passwords and content.
-**** Secure connection.
+* The ability of the system to detect DDoS attacks and respond to them.
+* Restrictions of user access in accordance with authentication/authorization.
+* Prevention of SQL injection.
+* Encryption of passwords and content.
+* Secure connection.
 
 *** *Availability:* Proportion of time that the system is functional and working. Measured as a percentage of the total system downtime over a predefined period. *Important indicators* for this attribute are:
 
-**** Availability.
-**** Planned downtime.
-**** Time needed to update the software, and so on.
+* Availability.
+* Planned downtime.
+* Time needed to update the software, and so on.
 
 *** *Usability:* Is one of the most important attributes, because, unlike in cases with other attributes, users can see directly how well this attribute of the system is worked out. One of the key problems of usability is too much interaction or too many actions necessary to accomplish a task. Incorrect sequences of steps in multistage interfaces are also a problem of usability. Data elements and controls may be designed not according to the accepted patterns of user experience, which also complicates the interaction. Examples of *important indicators* for this attribute are:
 
-**** List of supported devices, OS versions, screen resolutions, and browsers and their versions.
-**** Elements that accelerate user interaction, such as “hot keys”, “lists of suggestions”, and so on.
-**** Average time a user needs to perform individual actions.
-**** Support of accessibility for people with disabilities.
+* List of supported devices, OS versions, screen resolutions, and browsers and their versions.
+* Elements that accelerate user interaction, such as “hot keys”, “lists of suggestions”, and so on.
+* Average time a user needs to perform individual actions.
+* Support of accessibility for people with disabilities.
 
 ** *Non-Runtime Quality Attributes*
 
@@ -86,14 +79,14 @@ We develop this system to allow users to keep his personal data save in this com
 *** *Supportability:* Is the ability of the system to provide useful information for identifying and solving problems. 
 *The main problems* in ensuring supportability can be addressed with the following means:
 
-**** *No diagnosis:* How the activity and performance of the system are controlled. This includes various types of logging.
-**** *No tools for troubleshooting:* This includes backups, various systems for creating snapshots of the system, and tools for auditing the system. When the system fails, it is always more pleasant to wait for an automatic restart than to solve the issue manually.
-**** *No health checking:* This includes a variety of systems for measuring compilation time, deployment time, database size, or mobile application size.
+* *No diagnosis:* How the activity and performance of the system are controlled. This includes various types of logging.
+* *No tools for troubleshooting:* This includes backups, various systems for creating snapshots of the system, and tools for auditing the system. When the system fails, it is always more pleasant to wait for an automatic restart than to solve the issue manually.
+* *No health checking:* This includes a variety of systems for measuring compilation time, deployment time, database size, or mobile application size.
 
 *** *Testability:* Shows how well the system allows performing tests, according to predefined criteria. In addition to testing performance, testability makes it possible to effectively divide the system into subsystems. The *main indicators* for this attribute are:
 
-**** Percentage of coverage with modular, integration, or unit tests.
-**** The final list of required test environments as well as the final list of used approaches to testing (manual/automatic, regression, integration, etc.).
+* Percentage of coverage with modular, integration, or unit tests.
+* The final list of required test environments as well as the final list of used approaches to testing (manual/automatic, regression, integration, etc.).
 
 ** *Business Quality Attributes*
 
@@ -138,7 +131,7 @@ We develop this system to allow users to keep his personal data save in this com
 * *Client:* The client just needs to know how the application works.
 
 ****
-
+****
 [options="header",cols="1,2,2"]
 |===
 |Stakeholder|Description| Expectations
@@ -146,3 +139,4 @@ We develop this system to allow users to keep his personal data save in this com
 | Teamwork | Group developing the application | Develop a functional application that allow us to pass the course
 | Client | People that is going to use the application | Have the possibility to chat with another people keeping his data save
 |===
+****
