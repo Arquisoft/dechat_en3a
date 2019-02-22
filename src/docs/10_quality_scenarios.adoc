@@ -1,22 +1,13 @@
 [[section-quality-scenarios]]
 == Quality Requirements
-****
-****
-[role="arc42help"]
+
 
 === Quality Tree
-
-[role="arc42help"]
-
-
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
-
 ****
 
+****
 === Quality Scenarios
-
-[role="arc42help"]
-****
 
 Testability / Coverage
 By using JSCoverage and Istanbul during development and the build process ensure a code coverage of at least 95%.
@@ -26,4 +17,3 @@ The architecture should be designed in such a way that algorithms depending on e
 
 ****
 ****
-
