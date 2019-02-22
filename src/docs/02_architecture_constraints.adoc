@@ -4,18 +4,17 @@
 ****
 [role="arc42help"]
 
-.*Technical Contraints* 
+*** *Technical Contraints*
+[options="header"]
 |===
 |Constraint |Explanation
-
 |The application must be decentralized
 |Our goal is to have a decentralized chat, that consists in having separated personal data from apps.
 |===
 
-.*Documentation Constraints*
+*** *Documentation Constraints*
 |===
 |Constraint |Explanation
-
 |The language of the application must be english
 |All the code, comments or documentation must be written in english.
 
