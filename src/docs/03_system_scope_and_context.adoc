@@ -1,5 +1,5 @@
 [[section-system-scope-and-context]]
-= System Scope and Context
+== System Scope and Context
 
 
 [role="arc42help"]
@@ -12,10 +12,7 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Syst
 
 ****
 
-
-
-
-== Business Context
+=== Business Context
 
 [role="arc42help"]
 ****
@@ -27,7 +24,7 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Busi
 ****
 
 
-== Technical Context
+=== Technical Context
 
 [role="arc42help"]
 ****
@@ -48,3 +45,4 @@ together with a mapping table showing the relationships between channels and inp
 **<optionally: Explanation of technical interfaces>**
 
 **<Mapping Input/Output to Channels>**
+****
