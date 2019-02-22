@@ -1,18 +1,18 @@
 [[section-architecture-constraints]]
 == Architecture Constraints
+****
 
 ****
-[role="arc42help"]
-
-*** *Technical Contraints*
+=== Technical Contraints
 [options="header"]
 |===
 |Constraint |Explanation
 |The application must be decentralized
 |Our goal is to have a decentralized chat, that consists in having separated personal data from apps.
 |===
-
-*** *Documentation Constraints*
+****
+****
+=== Documentation Constraints
 |===
 |Constraint |Explanation
 |The language of the application must be english
@@ -22,4 +22,5 @@
 |The documentation of the project must follow the rules described in asciidoctor.
 
 |===
+****
 ****
