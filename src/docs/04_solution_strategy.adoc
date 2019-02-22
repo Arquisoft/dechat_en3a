@@ -7,7 +7,7 @@
 
 ****
 [width="80%",cols="3,^2,^2,10",options="header"]
-|=========================================================
+|===
 |Decision made |Solution approach  |Reason why |Extrenal references
 
 |*_Working with SOLID_* |As we saw in class we should follow the *SOLID* specifications in order to develop the 
@@ -27,4 +27,6 @@ of the decentralized (one of the *main goals*) chat.
 leave everything for the last days and with *active comunication*. At first, nobody is going to take care of anything specific, but as the development process advances this may change. 
 | We come from IPS, a subject where we learned how to work in a team efficiently, we are trying to apply the same principles here.
 |https://www.daxx.com/blog/development-team/set-up-development-team-kickstart-your-business[Software development in teams]
+|===
+****
 ****
