@@ -73,8 +73,9 @@ I (Daniel) add here some links I think may be useful for the team during the dev
 == Meeting day 1-31-2019
 In today's class we were introduced to the proyect we will need to develop during the course.
 We made some decisions:
- - We decided to use Javascript as the programming language.
- - We decided that the documentation will be done by every member of the team. 
+
+ * We decided to use Javascript as the programming language.
+ * We decided that the documentation will be done by every member of the team. 
  
 == Meeting day 2-7-2019
 We made some decisions:
