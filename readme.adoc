@@ -114,3 +114,15 @@ We made some decisions:
      * Document_10 -> Pablo Martinez.
      * Document_11 -> Alvaro Lucas y Daniel Llana.
      * Document_12 -> Fernando Ruiz y Daniel Llana.
+  
+== Meeting day 2-21-2019
+All the members were present during the meeting.
+
+In today's class we evaluated the documentation that is being developed.
+We realized that we had made some mistakes in the documentation so we need to fix them.
+Conclusions:
+     
+ * Fix the broken documentation.
+ * Start developing some code.
+  
+We have some usefull links at the beginig of this document that may be really helpful in the developing process.
