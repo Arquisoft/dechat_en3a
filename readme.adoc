@@ -111,11 +111,12 @@ All the members were present during the meeting.
 We made some decisions:
 
 - We assigned certain part of the documentation to each of the members of the group:
-     * Document_7 -> Vladislav Stelmakh.
+     * Document_6 -> Vladislav Stelmakh.
+     * Document_7 -> Pablo Martinez.
      * Document_9 -> Fernando Ruiz.
-     * Document_10 -> Pablo Martinez.
-     * Document_11 -> Alvaro Lucas y Daniel Llana.
-     * Document_12 -> Fernando Ruiz y Daniel Llana.
+     * Document_10 -> Pablo Martínez and Vladislav Stelmakh.
+     * Document_11 -> Alvaro Lucas and Daniel Llana.
+     * Document_12 -> Fernando Ruiz and Daniel Llana.
   
 == Meeting day 2-21-2019
 All the members were present during the meeting.
