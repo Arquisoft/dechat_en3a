@@ -2,23 +2,23 @@
 == Risks and Technical Debts
 [role="arc42help"]
 ****
-.Database
+.*Database*
 We had some problems at the time of decide which database we will use because not all of us has used the 
   same kind of databases
 
-.Solid
+.*Solid*
 As we said with solid, we have the same problem with javascript. We all know this language but we are not 
 experts using it so we have some problems at the time of starting the prototype of the application
 
-.Javascript
+.*Javascript*
 As we said with solid, we have the same problem with javascript. We all know this language but we are not 
 experts using it so we have some problems at the time of starting the prototype of the application
 
-.Real time messaging
+.*Real time messaging*
 When two people are online they should be able to establish real time communication, during the development
 process we may have to deal with some problems we have never faced before using javascript
 
-.Delivering messages in the chat
+.*Delivering messages in the chat*
 We may face some problems with the messaging system of the application, problems like... what
 happens when we send a message to someone who is not online? where do we keep that
 message so it does not get in conflict with the main goal (decentralization) and gets delivered once 
