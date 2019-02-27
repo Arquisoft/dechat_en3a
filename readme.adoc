@@ -81,6 +81,7 @@ We made some decisions:
 We made some decisions:
  - We considered the future use of a NoSQL database.
  - We assigned certain part of the documentation to each of the members of the group:
+ 
      * Document_1 -> Vladislav Stelmakh and Alvaro Lucas.
      * Document_2 -> Fernando Ruiz.
      * Document_3 -> Not assigned yet.
