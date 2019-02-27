@@ -1,18 +1,30 @@
 [[section-quality-scenarios]]
 == Quality Requirements
 ****
+
+[role="arc42help"]
 ****
 === Quality Tree
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
 ****
 
+[role="arc42help"]
 ****
 === Quality Scenarios
 
-Testability / Coverage
-By using JSCoverage and Istanbul during development and the build process ensure a code coverage of at least 95%.
-
-Testability / Independent from external services
-The architecture should be designed in such a way that algorithms depending on external services can be tested without having the external service available. That is: All external dependencies should be mockable.
 ****
+|===
+| Reference |Quality attribute |Scenario  | Priority
+|  1  | Performance efficiency | The user will send and receive messages as fast as possible | High, high
+|  2  | Scalability            | If the number of users increased, the system must be available and the perfomance mustn't be affected| High, low
+|  3  | Interoperability       | The system must exchange, without any lost data, all the messages between the users | Medium, low
+|  4  | Managability           | The administrators of the application will manage the application as easy as possible | Medium, low
+|  5  | Security               | If a user is not included in a specific chat, the system won't allow him to know anything about the messages of that chat | High, medium
+|  6  | Availability           | The system must be available/accessible at 90% | High, medium
+|  7  | Usability              | The system must be intuitive and easy to use for the user | High, medium
+|  8  | Modifiability          | The system must work 3 hours after changing/modifying any funcionality of the system | High, high
+| 9   | Maintainability        | The system will support changes, without affecting the usability of the system | Medium ,lo
+| 10  | Testabiliy             | The system will give to the developers their own "special" accounts and POD's where they can test any system functionality | Medium, low
+|===
+
 ****
