@@ -69,6 +69,10 @@ I (Daniel) add here some links I think may be useful for the team during the dev
 * https://github.com/comunica/comunica[SPARQL queries over RDF content].
 * https://github.com/weso/landportal-rdf-generator[RDF generator].
 * https://github.com/pheyvaer/solid-chess[Solid chess github].
+* https://angular.io/guide/quickstart[Getting started with Angular].
+* https://github.com/solid/solid-tutorial-angular[SOLID Angular tutorial (example Apps)].
+* https://solid.inrupt.com/docs/writing-solid-apps-with-angular[SOLID Apps with Angular].
+
 
 
 == Meeting day 1-31-2019
@@ -130,3 +134,15 @@ Conclusions:
  * Start developing some code.
   
 We have some usefull links at the beginig of this document that may be really helpful in the developing process.
+
+== Meeting day 2-28-2019
+All the members were present during the meeting. 
+
+Today we started the 'coding' phase, we researched information in order to start coding. 
+
+Initially, we got https://angular.io/guide/quickstart[started with angular] and tested some aplications with angular just to get in touch with it.
+
+We have some SOLID aplications using Angular in the useful links section of this document.
+
+
+
