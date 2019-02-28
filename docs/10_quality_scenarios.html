@@ -561,17 +561,84 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="sect2">
 <h3 id="quality-scenarios"><a class="anchor" href="#quality-scenarios"></a>Quality Scenarios</h3>
-<div class="paragraph">
-<p>Testability / Coverage
-By using JSCoverage and Istanbul during development and the build process ensure a code coverage of at least 95%.</p>
-</div>
-<div class="paragraph">
-<p>Testability / Independent from external services
-The architecture should be designed in such a way that algorithms depending on external services can be tested without having the external service available. That is: All external dependencies should be mockable.</p>
-</div>
 <div class="sidebarblock">
 <div class="content">
-
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reference</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quality attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scenario</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Priority</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performance efficiency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The user will send and receive messages as fast as possible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High, high</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scalability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the number of users increased, the system must be available and the perfomance mustn&#8217;t be affected</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High, low</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Interoperability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The system must exchange, without any lost data, all the messages between the users</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium, low</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Managability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The administrators of the application will manage the application as easy as possible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium, low</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If a user is not included in a specific chat, the system won&#8217;t allow him to know anything about the messages of that chat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High, medium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Availability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The system must be available/accessible at 90%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High, medium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The system must be intuitive and easy to use for the user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High, medium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modifiability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The system must work 3 hours after changing/modifying any funcionality of the system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">High, high</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maintainability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The system will support changes, without affecting the usability of the system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium ,lo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Testabiliy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The system will give to the developers their own "special" accounts and POD&#8217;s where they can test any system functionality</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium, low</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -580,7 +647,7 @@ The architecture should be designed in such a way that algorithms depending on e
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-22 16:44:29 CET
+Last updated 2019-02-28 12:05:11 CET
 </div>
 </div>
 </body>

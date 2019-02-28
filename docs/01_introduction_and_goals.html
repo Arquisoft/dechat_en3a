@@ -542,24 +542,9 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect1">
 <h2 id="section-introduction-and-goals"><a class="anchor" href="#section-introduction-and-goals"></a>Introduction and Goals</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Describes the relevant requirements and the driving forces that software architects and development team must consider. These include</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Underlying business goals, essential features and functional requirements for the system</p>
-</li>
-<li>
-<p>Quality goals for the architecture</p>
-</li>
-<li>
-<p>Relevant stakeholders and their expectations</p>
-</li>
-</ul>
-</div>
+
 </div>
 </div>
 <div class="sect2">
@@ -578,305 +563,29 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div class="sect2">
 <h3 id="quality-goals"><a class="anchor" href="#quality-goals"></a>Quality Goals</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Runtime Quality Attributes</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Performance efficiency:</strong> Shows the response of the system to performing certain actions for a certain period of time. This characteristic represents the performance relative to the amount of resources used under stated conditions. There are <strong>two ways how to measure performance</strong>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Latency:</strong> Time spent on responding to an event</p>
-</li>
-<li>
-<p><strong>Channel capacity:</strong> The number of events that occur at a certain point in time.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Scalability:</strong> is the ability of the system to handle load increases without decreasing performance, or the possibility to rapidly increase the load. There are <strong>two ways to improve scalability</strong>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Vertical:</strong> To increase, we add more resources, such as memory, disks or processors into one system.</p>
-</li>
-<li>
-<p><strong>Horizontal:</strong> We increase the number of computing units and divide the load.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Interoperability:</strong> Is an attribute of the system or part of the system that is responsible for its operation and the transmission of data and its exchange with other external systems. Naturally, there are a lot of <strong>problems for interaction</strong>:</p>
-</li>
-<li>
-<p><strong>Manageability:</strong> Defines how easy it is for system administrators to manage the application.</p>
-</li>
-<li>
-<p><strong>Reliability:</strong> Ability of a system to remain operational over time.</p>
-</li>
-<li>
-<p><strong>Security:</strong> Is responsible for the ability of the system to reduce the likelihood of malicious or accidental actions as well as the possibility of theft or loss of information. There are a number of measures that are used to protect systems: authentication, encryption, audit, and others. <strong>Examples of this attribute in the work</strong> of the system are:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The ability of the system to detect DDoS attacks and respond to them.</p>
-</li>
-<li>
-<p>Restrictions of user access in accordance with authentication/authorization.</p>
-</li>
-<li>
-<p>Prevention of SQL injection.</p>
-</li>
-<li>
-<p>Encryption of passwords and content.</p>
-</li>
-<li>
-<p>Secure connection.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Availability:</strong> Proportion of time that the system is functional and working. Measured as a percentage of the total system downtime over a predefined period. <strong>Important indicators</strong> for this attribute are:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Availability.</p>
-</li>
-<li>
-<p>Planned downtime.</p>
-</li>
-<li>
-<p>Time needed to update the software, and so on.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Usability:</strong> Is one of the most important attributes, because, unlike in cases with other attributes, users can see directly how well this attribute of the system is worked out. One of the key problems of usability is too much interaction or too many actions necessary to accomplish a task. Incorrect sequences of steps in multistage interfaces are also a problem of usability. Data elements and controls may be designed not according to the accepted patterns of user experience, which also complicates the interaction. Examples of <strong>important indicators</strong> for this attribute are:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>List of supported devices, OS versions, screen resolutions, and browsers and their versions.</p>
-</li>
-<li>
-<p>Elements that accelerate user interaction, such as “hot keys”, “lists of suggestions”, and so on.</p>
-</li>
-<li>
-<p>Average time a user needs to perform individual actions.</p>
-</li>
-<li>
-<p>Support of accessibility for people with disabilities.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Non-Runtime Quality Attributes</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Modifiability:</strong> Determines how many common changes need to be made to the system to make changes to each individual item. Ideal is the case where each change affects only one element.</p>
-</li>
-<li>
-<p><strong>Portability:</strong>  In high-level computer programming is the usability of the same software in different environments.</p>
-</li>
-<li>
-<p><strong>Reusability:</strong> Is a chance of using a component or system in other components/systems with small or no change. Allocation of responsibilities, modularization, decreasing of copy-paste are all about reusability. Copying code, or worse, using different components for the same result in different places, is one of the biggest problems of reusability.</p>
-</li>
-<li>
-<p><strong>Maintainability:</strong> Is the ability of the system to support changes. Changes can be related to new business requirements or correction of old errors and affect system components or separate methods. Also, maintainability affects the time needed to restore the system after a failure. Excessive dependencies between components have a very negative effect on maintainability.</p>
-</li>
-<li>
-<p><strong>Conceptual integrity:</strong> Defines the consistency and coherence of the overall design. Includes the way that components or modules are designed.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>System Quality Attributes</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Supportability:</strong> Is the ability of the system to provide useful information for identifying and solving problems.
-<strong>The main problems</strong> in ensuring supportability can be addressed with the following means:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>No diagnosis:</strong> How the activity and performance of the system are controlled. This includes various types of logging.</p>
-</li>
-<li>
-<p><strong>No tools for troubleshooting:</strong> This includes backups, various systems for creating snapshots of the system, and tools for auditing the system. When the system fails, it is always more pleasant to wait for an automatic restart than to solve the issue manually.</p>
-</li>
-<li>
-<p><strong>No health checking:</strong> This includes a variety of systems for measuring compilation time, deployment time, database size, or mobile application size.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Testability:</strong> Shows how well the system allows performing tests, according to predefined criteria. In addition to testing performance, testability makes it possible to effectively divide the system into subsystems. The <strong>main indicators</strong> for this attribute are:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Percentage of coverage with modular, integration, or unit tests.</p>
-</li>
-<li>
-<p>The final list of required test environments as well as the final list of used approaches to testing (manual/automatic, regression, integration, etc.).</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Business Quality Attributes</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Cost and benefit:</strong> The development effort will naturally have a budget that must not be exceeded. Different architectures will yield different development costs.</p>
-</li>
-<li>
-<p><strong>Rollout schedule:</strong> If a product is to be introduced as base functionality with many features released later, the flexibility and customizability of the architecture are important.</p>
-</li>
-<li>
-<p><strong>Time-to-market:</strong> The development effort will naturally have a budget that must not be exceeded. Different architectures will yield different development costs.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Goal</th>
+<th class="tableblock halign-left valign-top">Scenarios</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ref</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quality attribute</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Scenario</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Priority</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Privacy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The app should give to the user the capability that the user controls all its information</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Performance efficiency</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Scalability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Interoperability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Managability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reliability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Security</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Availability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The app should always be available, should always work, and should not depend if there is internet conection or not</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Usability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modifiability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Portability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reusability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maintainability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Conceptual integrity</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Supportability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Testability</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cost and benefit</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rollout schedule</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Time-to-market</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The app should be easy to use for the user, easy to interact with, and intuitive, so the users doesn&#8217;t need to think so much about what to do and how to do that</p></td>
 </tr>
 </tbody>
 </table>
@@ -943,7 +652,7 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-22 16:04:39 CET
+Last updated 2019-02-28 12:05:11 CET
 </div>
 </div>
 </body>

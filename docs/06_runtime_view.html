@@ -530,10 +530,9 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel1">
 <li><a href="#section-runtime-view">Runtime View</a>
 <ul class="sectlevel2">
-<li><a href="#runtime-scenario-1">&lt;Runtime Scenario 1&gt;</a></li>
-<li><a href="#runtime-scenario-2">&lt;Runtime Scenario 2&gt;</a></li>
-<li><a href="#">&#8230;&#8203;</a></li>
-<li><a href="#runtime-scenario-n">&lt;Runtime Scenario n&gt;</a></li>
+<li><a href="#log-in">Log in</a></li>
+<li><a href="#add-friends">Add friends</a></li>
+<li><a href="#chat-with-friends">Chat with friends</a></li>
 </ul>
 </li>
 </ul>
@@ -602,37 +601,81 @@ You will mainly capture scenarios in your documentation to communicate your arch
 </div>
 </div>
 <div class="sect2">
-<h3 id="runtime-scenario-1"><a class="anchor" href="#runtime-scenario-1"></a>&lt;Runtime Scenario 1&gt;</h3>
-<div class="ulist">
-<ul>
+<h3 id="log-in"><a class="anchor" href="#log-in"></a>Log in</h3>
+<div class="paragraph">
+<p>Users will do the login process by logging in with theis personal data to get access to the chat</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><em>&lt;insert runtime diagram or textual description of the scenario&gt;</em></p>
+<p>First, the user must enter it&#8217;s personal ID and password</p>
 </li>
 <li>
-<p><em>&lt;insert description of the notable aspects of the interactions between the
-building block instances depicted in this diagram.&gt;</em></p>
+<p>Atter that, the application will ask the server to approve the login request made by the user</p>
 </li>
-</ul>
+<li>
+<p>Finally, if the server approves the login the user will access to the chat, but if the server denies the login the user won&#8217;t access to it</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>ADD IMAGE</strong></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="runtime-scenario-2"><a class="anchor" href="#runtime-scenario-2"></a>&lt;Runtime Scenario 2&gt;</h3>
-
+<h3 id="add-friends"><a class="anchor" href="#add-friends"></a>Add friends</h3>
+<div class="paragraph">
+<p>Every user must have any friend added in the chat so they can chat one to each other.
+When the user signs up for the first time, it won&#8217;t have any friend</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>One of the users must enter the url of the pod of the other user, the one who asks for adding the first user as a friend</p>
+</li>
+<li>
+<p>After that, the first user friend&#8217;s url is stored on its pod so they can chat one to each other</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>ADD IMAGE</strong></p>
+</div>
 </div>
 <div class="sect2">
-<h3 id=""><a class="anchor" href="#"></a>&#8230;&#8203;</h3>
-
+<h3 id="chat-with-friends"><a class="anchor" href="#chat-with-friends"></a>Chat with friends</h3>
+<div class="paragraph">
+<p>The chat is used for chatting between users, better said, between friends.</p>
 </div>
-<div class="sect2">
-<h3 id="runtime-scenario-n"><a class="anchor" href="#runtime-scenario-n"></a>&lt;Runtime Scenario n&gt;</h3>
-
+<div class="paragraph">
+<p><strong>Sequence of a chat</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First User_1 sends a message to User_2</p>
+</li>
+<li>
+<p>The application of the User_1 posts its message on the pod of the User_2</p>
+</li>
+<li>
+<p>The application of the User_2 requests the received messages that contains its pod, so the pod makes the messages available for the application</p>
+</li>
+<li>
+<p>Finally User_2 reads the received messages from the application</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>ADD IMAGE</strong></p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-22 15:08:51 CET
+Last updated 2019-02-28 12:05:11 CET
 </div>
 </div>
 </body>
