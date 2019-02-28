@@ -68,6 +68,7 @@ I (Daniel) add here some links I think may be useful for the team during the dev
 * https://github.com/solid/query-ldflex[Navigate throught contents of pods].
 * https://github.com/comunica/comunica[SPARQL queries over RDF content].
 * https://github.com/weso/landportal-rdf-generator[RDF generator].
+* https://github.com/pheyvaer/solid-chess[Solid chess github].
 
 
 == Meeting day 1-31-2019
