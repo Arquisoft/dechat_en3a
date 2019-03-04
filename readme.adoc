@@ -144,5 +144,14 @@ Initially, we got https://angular.io/guide/quickstart[started with angular] and 
 
 We have some SOLID aplications using Angular in the useful links section of this document.
 
+== 03-04-2019
+ 
+I added a basic login Angular-SOLID based application. 
+See the following link for https://github.com/Inrupt-inc/generator-solid-angular[detailed explanation].
+ 
+* First, we install the SOLID generator, we run npm install -g @inrupt/generator-solid-angular.
+* Then we can create the application using the following command: yo @inrupt/solid-angular (install yeoman if needed).
+* To run the application: ng serve (in localhost port 4200) or ng serve --open (automatically opens the broswer with the app running).
+
 
 
