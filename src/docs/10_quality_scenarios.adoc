@@ -2,13 +2,13 @@
 == Quality Requirements
 ****
 
-[role="arc42help"]
+
 ****
 === Quality Tree
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
 ****
 
-[role="arc42help"]
+
 ****
 === Quality Scenarios
 
