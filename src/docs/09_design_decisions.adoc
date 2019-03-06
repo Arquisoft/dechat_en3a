@@ -2,7 +2,6 @@
 == Design Decisions
 
 
-[role="arc42help"]
 ****
 
 |===
