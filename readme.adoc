@@ -13,24 +13,15 @@ using the https://arc42.org/[arc42] templates.
 The source documents are located at
  https://github.com/Arquisoft/dechat_en3a/tree/master/src/docs[src/docs].
 
-Using https://maven.apache.org/[Maven] and the
-https://asciidoctor.org/[AsciiDoctor plugin] it is possible to generate
-the documentation running:
-
-----
-mvn generate-resources
-----
-
 == Compile and run
 
-The skeleton project is a simple
- https://spring.io/projects/spring-boot[Spring-boot] application which can be run as:
-
+* First, clone or download the project
+* Then download the needed modules by running the following command:
 ----
- mvn spring-boot:run
+npm run installPackages
 ----
+* Finally, to run the application: ng serve (in localhost port 4200) or ng serve --open (automatically opens the broswer with the app running).
 
-Once executed, the application should be available at: http://localhost:8080
 
 == Testing
 
@@ -42,20 +33,9 @@ There are also some
  with a simple user story defined at:
  https://github.com/Arquisoft/dechat_en3a/tree/master/src/test/resources/features[src/test/resources/features].
 
-To run tests execute:
-
-----
-mvn test
-----
-
 == Site documentation
+https://arquisoft.github.io/dechat_en3a/
 
-The https://github.com/Arquisoft/dechat_en3a/tree/master/pom.xml[pom.xml] file
- has also been configured to generate site project documentation running:
-
-----
-mvn site
-----
 == Some useful links
 I (Daniel) add here some links I think may be useful for the team during the development process:
 
