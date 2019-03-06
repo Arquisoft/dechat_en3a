@@ -30,6 +30,7 @@ There are many notations for describing scenarios, e.g.
 
 ****
 
+
 === Log in
 Users will do the login process by logging in with theis personal data to get access to the chat
 
@@ -59,3 +60,5 @@ The chat is used for chatting between users, better said, between friends.
 4. Finally User_2 reads the received messages from the application
 
 *ADD IMAGE*
+
+****
