@@ -3,7 +3,6 @@
 
 == Deployment View
 
-[role="arc42help"]
 ****
 .Content
 The deployment view describes:
@@ -36,7 +35,6 @@ when your infrastructure is more complex.
 
 === Infrastructure Level 1
 
-[role="arc42help"]
 ****
 Describe (usually in a combination of diagrams, tables, and text):
 
