@@ -72,3 +72,12 @@
   font-size: 12px;
   line-height: 16px;
 }
+
+.registration .inrupt {
+  display: inline-block;
+  margin: 50px;
+}
+.registration .solid {
+  display: inline-block;
+  margin: 50px;
+}
