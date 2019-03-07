@@ -6,7 +6,7 @@
 [role="arc42help"]
 ****
 
-image:05_building_blocks-EN.png["Hierarchy of building blocks"]
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/BuildingBlock%20(1).jpg[diagram]
 
 ****
 === Whitebox Overall System
@@ -14,7 +14,7 @@ image:05_building_blocks-EN.png["Hierarchy of building blocks"]
 [role="arc42help"]
 ****
 
-image::./images/BuilingBlock(1).jpg["System diagram"]
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/05_building_blocks-EN.png[diagram]
 
 
 Here you describe the decomposition of the overall system using the following white box template. It contains
