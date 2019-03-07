@@ -97,7 +97,6 @@ We made some decisions:
 
 - We assigned certain part of the documentation to each of the members of the group:
      * Document_6 -> Vladislav Stelmakh.
-     * Document_7 -> Pablo Martinez.
      * Document_9 -> Fernando Ruiz.
      * Document_10 -> Pablo Martínez and Vladislav Stelmakh.
      * Document_11 -> Alvaro Lucas and Daniel Llana.
@@ -124,7 +123,7 @@ Initially, we got https://angular.io/guide/quickstart[started with angular] and 
 
 We have some SOLID aplications using Angular in the useful links section of this document.
 
-== 03-04-2019
+== Meeting day 03-04-2019
  
 I added a basic login Angular-SOLID based application. 
 See the following link for https://github.com/Inrupt-inc/generator-solid-angular[detailed explanation].
@@ -133,5 +132,10 @@ See the following link for https://github.com/Inrupt-inc/generator-solid-angular
 * Then we can create the application using the following command: yo @inrupt/solid-angular (install yeoman if needed).
 * To run the application: ng serve (in localhost port 4200) or ng serve --open (automatically opens the broswer with the app running).
 
+== Meeting day 03-07-2019
 
+We have decided to implement the funcionality that allows a user sending messages to other users for the next week.
+We have improved the login window.
+
+All the members of the group were present in the meeting.
 
