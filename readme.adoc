@@ -135,8 +135,11 @@ See the following link for https://github.com/Inrupt-inc/generator-solid-angular
 == Meeting day 03-07-2019
 
 We have decided to implement the funcionality that allows a user sending messages to other users for the next week.
+
 We have improved the login window.
+
 We have decided to use "Codecov" to manage the coverage of the tested code.
+
 We must take a look about the structure in Angular.
 
 All the members of the group were present in the meeting.
