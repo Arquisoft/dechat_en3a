@@ -11,8 +11,10 @@
 |Our goal is to have a decentralized chat, that consists in having separated personal data from apps.
 |===
 ****
+
 ****
 === Documentation Constraints
+[options="header"]
 |===
 |Constraint |Explanation
 |The language of the application must be english

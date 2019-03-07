@@ -13,6 +13,7 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Qual
 === Quality Scenarios
 
 ****
+[options="header"]
 |===
 | Reference |Quality attribute |Scenario  | Priority
 |  1  | Performance efficiency | The user will send and receive messages as fast as possible | High, high
