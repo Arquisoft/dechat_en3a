@@ -7,6 +7,7 @@ import {LoginPopupComponent} from './login-popup/login-popup.component';
 import {LoginComponent} from './login/login.component';
 import { CardComponent } from './card/card.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChatComponent } from './chat/chat.component';
 
 // Services
 import { AuthService } from './services/solid.auth.service';
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -44,7 +46,13 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
+  },
+  {
+    path : 'chat',
+    component: ChatComponent,
+    canActivate: [AuthGuard]
+
   }
 ];
 
@@ -55,6 +63,7 @@ const routes: Routes = [
     LoginPopupComponent,
     DashboardComponent,
     CardComponent,
+    ChatComponent,
     RegisterComponent
   ],
   imports: [

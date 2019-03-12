@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { SolidProfile } from '../models/solid-profile.model';
 import { RdfService } from '../services/rdf.service';
 import { AuthService } from '../services/solid.auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class CardComponent implements OnInit  {
   @ViewChild('f') cardForm: NgForm;
 
   constructor(private rdf: RdfService,
-    private route: ActivatedRoute, private auth: AuthService) {}
+    private route: ActivatedRoute, private auth: AuthService, private r: Router) {}
 
   ngOnInit() {
     this.loadingProfile = true;
@@ -74,5 +75,9 @@ export class CardComponent implements OnInit  {
   // Example of logout functionality. Normally wouldn't be triggered by clicking the profile picture.
   logout() {
     this.auth.solidSignOut();
+  }
+
+  goToChat(){
+    this.r.navigateByUrl('chat');
   }
 }
