@@ -8,17 +8,17 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.css'],
 })
-export class CardComponent implements OnInit  {
+export class SettingsComponent implements OnInit  {
 
   profile: SolidProfile;
   profileImage: string;
   loadingProfile: Boolean;
 
-  @ViewChild('f') cardForm: NgForm;
+  
 
   constructor(private rdf: RdfService,
     private route: ActivatedRoute, private auth: AuthService, private r: Router) {}
@@ -50,17 +50,6 @@ export class CardComponent implements OnInit  {
 
   }
 
-  // Submits the form, and saves the profile data using the auth/rdf service
-  async onSubmit () {
-    if (!this.cardForm.invalid) {
-      try {
-        await this.rdf.updateProfile(this.cardForm);
-        localStorage.setItem('oldProfileData', JSON.stringify(this.profile));
-      } catch (err) {
-        console.log(`Error: ${err}`);
-      }
-    }
-  }
 
   // Format data coming back from server. Intended purpose is to replace profile image with default if it's missing
   // and potentially format the address if we need to reformat it for this UI
@@ -77,11 +66,8 @@ export class CardComponent implements OnInit  {
     this.auth.solidSignOut();
   }
 
-  goToChat(){
-    this.r.navigateByUrl('chat');
-  }
 
-  goToSettings() {
-    this.r.navigateByUrl('settings')
+  goBack(){
+    this.r.navigateByUrl('card');
   }
 }
