@@ -50,3 +50,8 @@
   position: absolute;
   bottom:-8px; left:-9px;
 }
+
+.login-page .github {
+  height: 2px;
+  width: 10px;
+}
