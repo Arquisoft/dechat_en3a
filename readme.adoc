@@ -144,5 +144,15 @@ We must take a look about the structure in Angular.
 
 All the members of the group were present in the meeting.
 
+== Meeting day 03-12-2019
+* All the members of the group but Vladi were present in the meeting.
+
+* Today we decided to take some measures in order to improve the interface design of the application.
+
+* Also, we kept researching information on how to be able to send a message follownig the SOLID specifications.
+
+* In order to do that we researched the useful links at the beginig of the document.
+
+* An approach to the messaging system is being developed.
 
 
