@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css'],
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.css'],
 })
-export class ChatComponent implements OnInit  {
+export class SettingsComponent implements OnInit  {
 
   profile: SolidProfile;
   profileImage: string;
@@ -70,10 +70,4 @@ export class ChatComponent implements OnInit  {
   goBack(){
     this.r.navigateByUrl('card');
   }
-  
-  sendMessage(){
-    ;
-  }
-  
-  
 }

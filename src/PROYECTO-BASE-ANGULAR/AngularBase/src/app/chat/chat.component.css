@@ -149,8 +149,9 @@ body {
   padding:35px; }
 
 form, p, span {
-  margin:0;
-  padding:0; }
+  margin-left:30px;
+  padding:0; 
+}
 
 input { font:12px arial; }
 
@@ -197,3 +198,4 @@ a {
 .logout { float:right; }
 
 .msgln { margin:0 0 2px 0; }
+

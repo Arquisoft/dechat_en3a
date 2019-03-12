@@ -80,4 +80,8 @@ export class CardComponent implements OnInit  {
   goToChat(){
     this.r.navigateByUrl('chat');
   }
+
+  goToSettings() {
+    this.r.navigateByUrl('settings')
+  }
 }

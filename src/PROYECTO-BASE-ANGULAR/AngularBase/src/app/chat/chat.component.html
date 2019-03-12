@@ -1,34 +1,35 @@
 <div class="profile-container">
-  
-  <!-- EXAMPLE TOP NAV -->
-  <LINK REL=StyleSheet HREF="chat.component.css" TYPE="text/css"/>
-  <div class="topnav">
-    <div class="logo">
-      Solid</div>
 
-    <div class="profile-menu" (click)="goBack()">
-      <img src="assets/images/volver-menu.jpg" />
+    <!-- EXAMPLE TOP NAV -->
+    <LINK REL=StyleSheet HREF="chat.component.css" TYPE="text/css" />
+    <div class="topnav">
+        <div class="logo">
+            <p>Solid</p>
+        </div>
+        <div class="profile-menu" (click)="goBack()">
+            <img src="assets/images/volver-menu.jpg" />
+        </div>
     </div>
-  </div>
-  <h1>Decetralized Chat</h1>
+    <h1>Decetralized Chat</h1>
 
-  <div id="wrapper">
-      <div id="menu">
+    <div id="wrapper">
+        <div id="menu">
             <div style="clear:both"></div>
         </div>
-         
+
         <div id="chatbox"></div>
-         
+
         <form name="message" action="">
             <input name="usermsg" type="text" id="usermsg" size="63" />
-            <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+            <input name="submitmsg" type="submit" id="submitmsg" value="Send" (click)="sendMessage()" />
         </form>
     </div>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
     <script type="text/javascript">
-    // jQuery Document
-    $(document).ready(function(){
-     
-    });
+        // jQuery Document
+        $(document).ready(function() {
+
+        });
+
     </script>
 </div>

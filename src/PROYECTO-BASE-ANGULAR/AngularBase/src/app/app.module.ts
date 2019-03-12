@@ -8,6 +8,7 @@ import {LoginComponent} from './login/login.component';
 import { CardComponent } from './card/card.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChatComponent } from './chat/chat.component';
+import { SettingsComponent } from './settings/settings.component';
 
 // Services
 import { AuthService } from './services/solid.auth.service';
@@ -53,7 +54,13 @@ const routes: Routes = [
     component: ChatComponent,
     canActivate: [AuthGuard]
 
+  },
+  {
+    path : 'settings',
+    component: SettingsComponent,
+    canActivate: [AuthGuard]
   }
+
 ];
 
 @NgModule({
@@ -64,6 +71,7 @@ const routes: Routes = [
     DashboardComponent,
     CardComponent,
     ChatComponent,
+    SettingsComponent,
     RegisterComponent
   ],
   imports: [
