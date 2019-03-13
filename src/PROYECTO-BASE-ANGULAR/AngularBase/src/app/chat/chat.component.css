@@ -102,6 +102,7 @@
   position: relative;
   top: -8px;
   left: 28px;
+  cursor: pointer;
 }
 
 .topnav .menu-item {
@@ -125,6 +126,7 @@
   width: 50px;
   height: 50px;
   background-color: rgba(0,0,0,0.25);
+  cursor: pointer;
 }
 
 .topnav .profile-menu img {
