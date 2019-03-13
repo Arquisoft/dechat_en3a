@@ -16,9 +16,7 @@ export class ChatComponent implements OnInit  {
 
   profile: SolidProfile;
   profileImage: string;
-  loadingProfile: Boolean;
-
-  
+  loadingProfile: Boolean;  
 
   constructor(private rdf: RdfService,
     private route: ActivatedRoute, private auth: AuthService, private r: Router) {}
@@ -72,8 +70,9 @@ export class ChatComponent implements OnInit  {
   }
   
   sendMessage(){
-    ;
-  }
-  
+    let message = document.getElementById("usermsg").value;
+    this.message_list = message;    
+    document.getElementById("usermsg").value = '';
+  }  
   
 }

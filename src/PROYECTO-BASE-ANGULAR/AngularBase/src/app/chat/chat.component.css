@@ -199,3 +199,7 @@ a {
 
 .msgln { margin:0 0 2px 0; }
 
+.time-right {
+  float: right;
+  color: #aaa;
+}
