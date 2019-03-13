@@ -52,6 +52,7 @@ I (Daniel) add here some links I think may be useful for the team during the dev
 * https://angular.io/guide/quickstart[Getting started with Angular].
 * https://github.com/solid/solid-tutorial-angular[SOLID Angular tutorial (example Apps)].
 * https://solid.inrupt.com/docs/writing-solid-apps-with-angular[SOLID Apps with Angular].
+* https://github.com/TechnionYP5777/SmartCity-Market/wiki/Integrating-Codecov-with-a-GitHub-project-(Coverage-tool)[Integrating Codecov in Github project].
 
 
 
@@ -154,5 +155,15 @@ All the members of the group were present in the meeting.
 * In order to do that we researched the useful links at the beginig of the document.
 
 * An approach to the messaging system is being developed.
+
+== Meeting day 03-13-2019
+* All the members of the group where present in the meeting
+* Today we decided to make some improvements in the application, basically in the interface design.
+* We added some additional options such as settings and personalized some incons.
+* Also, a messaging box was created but still cannot communicate with the user's POD.
+
+
+
+
 
 
