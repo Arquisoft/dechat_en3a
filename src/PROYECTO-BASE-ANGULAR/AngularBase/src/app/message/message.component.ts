@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import { ChatMessage } from '../../models/dechat/chat-message.model';
+//import { ChatMessage } from '../../models/dechat/chat-message.model';
 
 @Component({
     selector: 'app-message',
@@ -9,7 +9,7 @@ import { ChatMessage } from '../../models/dechat/chat-message.model';
 })
 export class MessageComponent implements OnInit {
 
-    @Input() chatMessage: ChatMessage;
+    //@Input() chatMessage: ChatMessage;
     author: string;
     message: string;
     time: string;
@@ -41,4 +41,4 @@ export class MessageComponent implements OnInit {
         return day + ' ' + time;
     }
   
-}
+}*/

@@ -69,10 +69,10 @@ export class ChatComponent implements OnInit  {
     this.r.navigateByUrl('card');
   }
   
-  sendMessage(){
-    let message = document.getElementById("usermsg").value;
+ sendMessage(){
+    /*let message = document.getElementById("usermsg").value;
     this.message_list = message;    
-    document.getElementById("usermsg").value = '';
+    document.getElementById("usermsg").value = '';*/;
   }  
   
 }
