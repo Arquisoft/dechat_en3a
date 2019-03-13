@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <div class="profile-container">
 
     <!-- EXAMPLE TOP NAV -->
@@ -17,10 +18,10 @@
             <div style="clear:both"></div>
         </div>
         
-        <div id="chatbox">{{message_list}}</div>
+        <div id="chatbox"></div>
 
         <form name="message" action="">
-            <input name="usermsg" type="text" id="usermsg" size="63"/>
+            <input name="usermsg" type="text" id="usermsg" size="63" />
             <input name="submitmsg" type="submit" id="submitmsg" value="Send" (click)="sendMessage()"/>
         </form>
     </div>

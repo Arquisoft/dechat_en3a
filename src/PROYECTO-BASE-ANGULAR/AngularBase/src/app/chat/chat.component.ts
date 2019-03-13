@@ -5,6 +5,8 @@ import { SolidProfile } from '../models/solid-profile.model';
 import { RdfService } from '../services/rdf.service';
 import { AuthService } from '../services/solid.auth.service';
 import { Router } from '@angular/router';
+import { ChatMessage } from '../models/chat-message.model';
+import { print } from 'util';
 
 
 @Component({
@@ -16,10 +18,12 @@ export class ChatComponent implements OnInit  {
 
   profile: SolidProfile;
   profileImage: string;
-  loadingProfile: Boolean;  
+  loadingProfile: Boolean; 
+  message: string; 
+  chatMessages: string[] = new Array<string>();
 
   constructor(private rdf: RdfService,
-    private route: ActivatedRoute, private auth: AuthService, private r: Router) {}
+    private route: ActivatedRoute, private auth: AuthService, private r: Router, ) {}
 
   ngOnInit() {
     this.loadingProfile = true;
@@ -70,9 +74,15 @@ export class ChatComponent implements OnInit  {
   }
   
  sendMessage(){
-    /*let message = document.getElementById("usermsg").value;
-    this.message_list = message;    
-    document.getElementById("usermsg").value = '';*/;
+    let m = "";
+    <HTMLInputElement> document.getElementById("usermsg");
+    let message = (<HTMLInputElement> document.getElementById("usermsg")).value
+    this.chatMessages.push(message);
+    for(let i=0; i < this.chatMessages.length; i++){
+      m = m + this.chatMessages[i] + "<br>";
+    }
+    (<HTMLInputElement> document.getElementById("chatbox")).innerHTML = m;  
+    (<HTMLInputElement> document.getElementById("usermsg")).value = "";
   }  
   
 }

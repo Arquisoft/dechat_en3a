@@ -1,6 +1,6 @@
-/*import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Router} from "@angular/router";
-//import { ChatMessage } from '../../models/dechat/chat-message.model';
+import { ChatMessage } from '../../app/models/chat-message.model';
 
 @Component({
     selector: 'app-message',
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class MessageComponent implements OnInit {
 
-    //@Input() chatMessage: ChatMessage;
+    @Input() chatMessage: ChatMessage;
     author: string;
     message: string;
     time: string;
@@ -19,10 +19,10 @@ export class MessageComponent implements OnInit {
     constructor() { }
  
     ngOnInit(chatMessage = this.chatMessage) {
-        this.messageContent = chatMessage.message;
+        this.message = chatMessage.message;
         this.author = chatMessage.userName;
-        this.time = this.getTimeStamp(chatMessage.date);
-        if(author){
+        this.time = this.getTimeStamp(chatMessage.timeSent);
+        if(this.author){
             this.isOwn = true;
         } else {
             this.isOwn = false;
@@ -41,4 +41,4 @@ export class MessageComponent implements OnInit {
         return day + ' ' + time;
     }
   
-}*/
+}
