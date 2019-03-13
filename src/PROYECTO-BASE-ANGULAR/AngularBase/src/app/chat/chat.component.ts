@@ -18,8 +18,8 @@ export class ChatComponent implements OnInit  {
 
   profile: SolidProfile;
   profileImage: string;
-  loadingProfile: Boolean; 
-  message: string; 
+  loadingProfile: Boolean;
+  message: string;
   chatMessages: string[] = new Array<string>();
 
   constructor(private rdf: RdfService,
@@ -68,7 +68,7 @@ export class ChatComponent implements OnInit  {
     this.auth.solidSignOut();
   }
 
-  goToChat(){
+  goToChat() {
     this.r.navigateByUrl('chat');
   }
 
@@ -76,20 +76,25 @@ export class ChatComponent implements OnInit  {
     this.r.navigateByUrl('settings');
   }
 
-  goBack(){
+  goToInfo() {
+    this.r.navigateByUrl('information');
+  }
+
+  goBack() {
     this.r.navigateByUrl('card');
   }
-  
- sendMessage(){
-    let m = "";
-    <HTMLInputElement> document.getElementById("usermsg");
-    let message = (<HTMLInputElement> document.getElementById("usermsg")).value
+
+ sendMessage() {
+    let m = '';
+    // not used?
+    <HTMLInputElement> document.getElementById('usermsg');
+    let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.chatMessages.push(message);
-    for(let i=0; i < this.chatMessages.length; i++){
-      m = m + this.chatMessages[i] + "<br>";
+    for(let i = 0; i < this.chatMessages.length; i++) {
+      m = m + this.chatMessages[i] + '<br>';
     }
-    (<HTMLInputElement> document.getElementById("chatbox")).innerHTML = m;  
-    (<HTMLInputElement> document.getElementById("usermsg")).value = "";
-  }  
-  
+    (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
+    (<HTMLInputElement> document.getElementById('usermsg')).value = '';
+  }
 }
+

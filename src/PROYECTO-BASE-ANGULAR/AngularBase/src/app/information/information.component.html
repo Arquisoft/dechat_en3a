@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<div class="profile-container">
+
+    <!-- EXAMPLE TOP NAV -->
+    <LINK REL=StyleSheet HREF="chat.component.css" TYPE="text/css" />
+    <div class="topnav">
+        <div class="logo" (click)= "goBack()">
+            <p>Solid</p>
+        </div>
+        <div class="menu-item">
+            <div class = "chat" (click)="goToChat()">
+                <img src="assets/images/chat.jpg">
+                <p>Decentralized Chat</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class = "settings" (click)="goToSettings()">
+                <i class="fas fa-sliders-h"></i>
+            </div>
+            Settings
+        </div>
+        <div class="profile-menu" (click)="goBack()">
+            <img src="assets/images/volver-menu.jpg" />
+        </div>
+    </div>
+    <h2>Information</h2>
+    <h3>Developers:</h3>
+    <ul>
+        <li>Pablo Martinez Arango</li>
+        <li>Daniel Llana Garcia</li>
+        <li>Alvaro Lucas Jimenez</li>
+        <li>Vladislav Stelmakh</li>
+    </ul>
+    <h3>Description:</h3>
+    <p>
+        We are a team of five students of the university 
+        of Oviedo, developing a decentralized char application
+        following the SOLID specifications.
+
+        This project is being developed for the ASW course of the 
+        University of Oviedo.
+
+        See the documentetion in the following link.
+    </p>
+
+    <h3>Documentation:</h3>
+    <a href="https://arquisoft.github.io/dechat_en3a/">Project documentation</a>
+</div>

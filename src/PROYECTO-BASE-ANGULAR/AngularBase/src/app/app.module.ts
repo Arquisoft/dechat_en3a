@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChatComponent } from './chat/chat.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileComponent } from './profile/profile.component';
+import { InfoComponent } from './information/information.component';
 
 // Services
 import { AuthService } from './services/solid.auth.service';
@@ -57,6 +58,12 @@ const routes: Routes = [
 
   },
   {
+    path : 'information',
+    component: InfoComponent,
+    canActivate: [AuthGuard]
+
+  },
+  {
     path : 'settings',
     component: SettingsComponent,
     canActivate: [AuthGuard]
@@ -77,6 +84,7 @@ const routes: Routes = [
     DashboardComponent,
     CardComponent,
     ChatComponent,
+    InfoComponent,
     SettingsComponent,
     RegisterComponent,
     ProfileComponent
@@ -87,7 +95,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     NgSelectModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule //required for toastr
+    BrowserAnimationsModule // required for toastr
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

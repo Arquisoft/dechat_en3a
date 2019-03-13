@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 import { ChatMessage } from '../../app/models/chat-message.model';
 
 @Component({
@@ -14,15 +14,14 @@ export class MessageComponent implements OnInit {
     message: string;
     time: string;
     isOwn: boolean;
- 
- 
+
     constructor() { }
- 
+
     ngOnInit(chatMessage = this.chatMessage) {
         this.message = chatMessage.message;
         this.author = chatMessage.userName;
         this.time = this.getTimeStamp(chatMessage.timeSent);
-        if(this.author){
+        if (this.author) {
             this.isOwn = true;
         } else {
             this.isOwn = false;
@@ -40,5 +39,4 @@ export class MessageComponent implements OnInit {
 
         return day + ' ' + time;
     }
-  
 }

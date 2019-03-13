@@ -2,17 +2,26 @@
   <!-- EXAMPLE TOP NAV -->
   <div class="topnav">
     <div class="logo">Solid</div>
+    
     <div class="menu-item">
       <div class = "chat" (click)="goToChat()">
         <img src="assets/images/chat.jpg"> 
         <p>Decentralized Chat</p>
       </div> 
     </div>
+    
     <div class="menu-item">
       <div class = "settings" (click)="goToSettings()">
         <i class="fas fa-sliders-h"></i>
       </div>
       Settings
+    </div>
+   
+    <div class="menu-item">
+      <div class = "information" (click)="goToInfo()">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      Information
     </div>
 
     <div class="profile-menu" (click)="logout()">
