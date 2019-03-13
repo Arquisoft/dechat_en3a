@@ -9,6 +9,7 @@ import { CardComponent } from './card/card.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChatComponent } from './chat/chat.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ProfileComponent } from './profile/profile.component';
 
 // Services
 import { AuthService } from './services/solid.auth.service';
@@ -59,6 +60,11 @@ const routes: Routes = [
     path : 'settings',
     component: SettingsComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path : 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   }
 
 ];
@@ -72,7 +78,8 @@ const routes: Routes = [
     CardComponent,
     ChatComponent,
     SettingsComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

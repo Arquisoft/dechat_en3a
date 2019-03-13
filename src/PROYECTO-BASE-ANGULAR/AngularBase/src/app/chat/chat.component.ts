@@ -68,6 +68,13 @@ export class ChatComponent implements OnInit  {
     this.auth.solidSignOut();
   }
 
+  goToChat(){
+    this.r.navigateByUrl('chat');
+  }
+
+  goToSettings() {
+    this.r.navigateByUrl('settings');
+  }
 
   goBack(){
     this.r.navigateByUrl('card');
