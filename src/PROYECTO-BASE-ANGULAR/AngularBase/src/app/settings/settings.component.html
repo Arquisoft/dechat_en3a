@@ -16,6 +16,12 @@
             </div>
             Settings
         </div>
+        <div class="menu-item">
+            <div class = "information" (click)="goToInfo()">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            Information
+        </div>
   
       <div class="profile-menu" (click)="goBack()">
         <img src="assets/images/volver-menu.jpg" />
@@ -26,7 +32,7 @@
       <a href="#">Personalization</a>
       <a href="#">Administrator</a>
       <a href="#">Comments</a>
-      <a href="#">Profile</a>
+      <a class="profile" (click)="goToProfile()">Profile</a>
       <a href="#">Help</a>
     </nav>
     <a><img src="assets/images/settings-image.png"></a>

@@ -84,4 +84,9 @@ this.r.navigateByUrl('chat');
 goToSettings() {
 this.r.navigateByUrl('settings')
 }
+
+    goToInfo() {
+        this.r.navigateByUrl('information');
+    }
+
 }

@@ -77,4 +77,12 @@ export class SettingsComponent implements OnInit  {
   goBack(){
     this.r.navigateByUrl('card');
   }
+
+  goToInfo() {
+    this.r.navigateByUrl('information');
+  }
+
+  goToProfile(){
+    this.r.navigateByUrl('profile');
+  }
 }

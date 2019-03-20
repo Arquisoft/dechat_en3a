@@ -100,25 +100,27 @@
   line-height: 32px;
   padding-right: 80px;
   position: relative;
-  top: -15px;
-  left: 20px;
+  top: -13px;
+  left: 28px;
   cursor: pointer;
 }
 
 .topnav .menu-item {
   display: inline-block;
   font-size: 10px;
-  line-height: 13px;
+  line-height: 8px;
   width: 100px;
   height: 100%;
   text-align: center;
   cursor: pointer;
+  margin-top: -6px;
 }
 
 .topnav .menu-item i {
   font-size: 24px;
-  margin-top:0px;
-  margin-bottom: 12px;
+  line-height: 4px;
+  margin-top: -4px;
+  margin-bottom: 24px;
 }
 
 .topnav .profile-menu {
@@ -146,7 +148,7 @@
 }
 
 img {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 body {

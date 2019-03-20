@@ -76,6 +76,10 @@ export class InfoComponent implements OnInit  {
     this.r.navigateByUrl('settings');
   }
 
+  goToInfo() {
+    this.r.navigateByUrl('information');
+  }
+
   goBack() {
     this.r.navigateByUrl('card');
   }
