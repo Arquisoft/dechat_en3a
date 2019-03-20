@@ -100,8 +100,8 @@
   line-height: 32px;
   padding-right: 80px;
   position: relative;
-  top: -13px;
-  left: 28px;
+  top: -11px;
+  left: 3px;
   cursor: pointer;
 }
 
@@ -114,6 +114,7 @@
   text-align: center;
   cursor: pointer;
   margin-top: -6px;
+  margin-left: -20px;
 }
 
 .topnav .menu-item i {

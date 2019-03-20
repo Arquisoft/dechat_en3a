@@ -73,20 +73,24 @@ this.profileImage = '/assets/images/profile.png';
 }
 
 // Example of logout functionality. Normally wouldn't be triggered by clicking the profile picture.
-logout() {
-this.auth.solidSignOut();
-}
+    logout() {
+        this.auth.solidSignOut();
+    }
 
-goToChat(){
-this.r.navigateByUrl('chat');
-}
+    goToChat(){
+        this.r.navigateByUrl('chat');
+    }
 
-goToSettings() {
-this.r.navigateByUrl('settings')
-}
+    goToSettings() {
+        this.r.navigateByUrl('settings');
+    }
 
     goToInfo() {
         this.r.navigateByUrl('information');
+    }
+
+    goBack() {
+        this.r.navigateByUrl('card')
     }
 
 }

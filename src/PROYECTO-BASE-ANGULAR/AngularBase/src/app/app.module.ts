@@ -11,6 +11,7 @@ import { ChatComponent } from './chat/chat.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { InfoComponent } from './information/information.component';
+import { CommentsComponent } from './comments/comments.component';
 
 // Services
 import { AuthService } from './services/solid.auth.service';
@@ -72,6 +73,11 @@ const routes: Routes = [
     path : 'profile',
     component: ProfileComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path : 'comments',
+    component: CommentsComponent,
+    canActivate: [AuthGuard]
   }
 
 ];
@@ -87,7 +93,8 @@ const routes: Routes = [
     InfoComponent,
     SettingsComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

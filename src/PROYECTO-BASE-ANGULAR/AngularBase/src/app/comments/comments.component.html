@@ -1,0 +1,77 @@
+<div class="profile-container">
+    <!-- EXAMPLE TOP NAV -->
+    <div class="topnav">
+        <div class="logo" (click)= "goBack()">
+            <p>Solid</p>
+        </div>
+        <div class="menu-item">
+            <div class = "chat" (click)="goToChat()">
+                <img src="assets/images/chat.jpg">
+                <p>Decentralized Chat</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class = "settings" (click)="goToSettings()">
+                <i class="fas fa-sliders-h"></i>
+            </div>
+            Settings
+        </div>
+        <div class="menu-item">
+            <div class = "information" (click)="goToInfo()">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            Information
+        </div>
+        <div class="profile-menu" (click)="goBack()">
+            <img src="assets/images/volver-menu.jpg" />
+        </div>
+    </div>
+    <h1>How the application works?</h1>
+
+    <div>
+        <h2>Log in</h2>
+        <p> Users will do the login process by logging in with theis personal data to get access to the chat</p>
+        <ol>
+            <li>
+                First, the user must enter it’s personal ID and password
+            </li>
+            <li>
+                Atter that, the application will ask the server to approve the login request made by the user
+            </li>
+            <li>
+                Finally, if the server approves the login the user will access to the chat, but if the server denies the login the user won’t access to it
+            </li>
+        </ol>
+
+        <h2>Add friends</h2>
+        <p>Every user must have any friend added in the chat so they can chat one to each other. When the user signs up for the first time, it won’t have any friend</p>
+        <ol>
+            <li>
+                One of the users must enter the url of the pod of the other user, the one who asks for adding the first user as a friend
+            </li>
+            <li>
+                After that, the first user friend’s url is stored on its pod so they can chat one to each other
+            </li>
+        </ol>
+
+        <h2>Chat with friends</h2>
+        <p>The chat is used for chatting between users, better said, between friends.</p>
+        <p><b>Sequence of a chat</b></p>
+        <ol>
+            <li>
+                First User_1 sends a message to User_2
+            </li>
+            <li>
+                The application of the User_1 posts its message on the pod of the User_2
+            </li>
+            <li>
+                The application of the User_2 requests the received messages that contains its pod, so the pod makes the messages available for the application
+            </li>
+            <li>
+                Finally User_2 reads the received messages from the application
+            </li>
+        </ol>
+
+    </div>
+
+</div>
