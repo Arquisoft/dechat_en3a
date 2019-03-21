@@ -7,6 +7,7 @@ declare let $rdf: any;
 // TODO: Remove any UI interaction from this service
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { NamedNode } from 'rdflib';
 
 const VCARD = $rdf.Namespace('http://www.w3.org/2006/vcard/ns#');
 const FOAF = $rdf.Namespace('http://xmlns.com/foaf/0.1/');
@@ -326,5 +327,32 @@ export class RdfService {
       return store.value;
     }
     return '';
+  }
+
+  async getfriendsList(): Promise<Array<NamedNode>> {
+    const webId = this.session.webId;
+    return this.getDataAsArray(webId, 'knows', FOAF);
+  }
+
+  private async getDataAsArray(webId: string | String, field: string, namespace: any): Promise<Array<NamedNode>> {
+    try {
+        await this.fetcher.load(this.store.sym(webId).doc());
+        return this.store.each(this.store.sym(webId), namespace(field)); 
+    } catch (error) {
+      console.log(`Error fetching data: ${error}`);
+    }
+  }
+
+  async getStringProfile(field: string): Promise<string> {
+    return this.getFieldAsString(this.session.webId, field, VCARD);
+}
+
+  private async getFieldAsString(webId: string, field: string, namespace: any): Promise<string> {
+    try {
+      await this.fetcher.load(this.store.sym(webId).doc());
+      return this.store.any(this.store.sym(webId), namespace(field));
+    } catch (error) {
+      console.log(`Error fetching data: ${error}`);
+    }
   }
 }
