@@ -24,9 +24,9 @@ export class CharService{
 
     constructor (private rdf : RdfService, private toastr: ToastrService){
         this.rdf.getSession();
-        //this.loadUserData().then(response => {
-          //  this.loadFriends();
-          //});
+        this.loadUserData().then(response => {
+            this.loadFriends();
+          });
           this.thisUser = new BehaviorSubject<User>(null);
     }
 
@@ -64,5 +64,13 @@ export class CharService{
         this.thisUser.next(user);
       }
 
+      public async sendMessage(){
+        await this.rdf.getSession();
+        if(!this.rdf.session){
+          return ;
+        }
+        const webId = this.rdf.session.webId;
+        this.thisUser
+      }
      
 }
