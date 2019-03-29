@@ -6,8 +6,11 @@ export class User {
         this.profilePicture = profilePicture;
     }
 
+
+    
     webId?: string;
     username?: string;
     status?: string = "online";
     profilePicture?: string = "../assets/images/profile.png";
+    isCurrent?: boolean;
 }

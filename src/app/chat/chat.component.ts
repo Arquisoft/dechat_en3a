@@ -7,6 +7,7 @@ import { AuthService } from '../services/solid.auth.service';
 import { Router } from '@angular/router';
 import { ChatMessage } from '../models/chat-message.model';
 import { print } from 'util';
+import { ChatService } from '../services/chat.service';
 
 
 @Component({

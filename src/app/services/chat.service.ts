@@ -11,16 +11,20 @@ import * as fileClient from 'solid-file-client';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Injectable()
-export class CharService{
+export class ChatService{
 
     chatMessages: ChatMessage[] = new Array<ChatMessage>();
 
     thisUser: BehaviorSubject<User>;
     currentUserWebId: string;
 
-    parnerUser: User;
+    currentChannel: String;
+    
+    ownUser: User;
+    partnerUser: User;
 
     friendsList: Array<User> = new Array<User>();
+
 
     constructor (private rdf : RdfService, private toastr: ToastrService){
         this.rdf.getSession();
@@ -28,7 +32,38 @@ export class CharService{
             this.loadFriends();
           });
           this.thisUser = new BehaviorSubject<User>(null);
+          this.loadPartner('Ruizber');
+          
     }
+
+    loadOwnUser() {
+      this.rdf.getSession();
+      const photo: string = '../assets/images/profile.png';
+      this.ownUser = new User(this.rdf.session.webId, this.getUsername(this.rdf.session.webId), photo)
+    }
+
+
+    getUsername(webId: String) {
+      let username = '';
+      username = webId.replace('https://', '');
+      return username.split('.')[0];        
+    }
+
+
+    loadPartner(username: String) {
+      const photo: string = '../assets/images/profile.png';
+      this.partnerUser = (new User('https://'+ username +'.inrupt.net/profile/card#me', username, photo));
+      /*this.loadPartnerMessages(this.partnerUser);*/
+    }
+
+    createChannel(ownUser: User) {
+      this.currentChannel = this.ownUser.webId.replace('#me', '#' + this.partnerUser.username);
+    }
+
+
+    /*loadPartnerMessages(partnerUser: User) {
+  
+    }*/
 
     private async loadFriends() {
         await this.rdf.getSession();
