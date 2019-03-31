@@ -45,7 +45,11 @@ measurable response to that event. *They must be testeable* and should be priori
 
 
 |*Cucumber*
-|It is a tool that supports Behavior Driven Development. Cucumber give us the opportunity to write tests that anybody can understand.
+|It is a tool that supports Behavior Driven Development. Cucumber give us the opportunity to write tests that anybody can understand. It is based on user stories.
+
+|*User stories*
+|User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. They typically follow a simple template:
+As a < type of user >, I want < some goal > so that < some reason >.
 
 |===
 ****
