@@ -53,6 +53,9 @@ I (Daniel) add here some links I think may be useful for the team during the dev
 * https://github.com/solid/solid-tutorial-angular[SOLID Angular tutorial (example Apps)].
 * https://solid.inrupt.com/docs/writing-solid-apps-with-angular[SOLID Apps with Angular].
 * https://github.com/TechnionYP5777/SmartCity-Market/wiki/Integrating-Codecov-with-a-GitHub-project-(Coverage-tool)[Integrating Codecov in Github project].
+* https://cucumber.io/[Cucumber, for testing].
+* https://www.amadousall.com/angular-e2e-with-cucumber/[How to setup cucumber in angular project (from scratch)].
+* https://github.com/bchinmz/protractor-cucumber[Integrating cucumber in angular project (our case)].
 
 
 
