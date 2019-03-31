@@ -11,6 +11,7 @@ import { NamedNode } from 'rdflib';
 
 const VCARD = $rdf.Namespace('http://www.w3.org/2006/vcard/ns#');
 const FOAF = $rdf.Namespace('http://xmlns.com/foaf/0.1/');
+const MEE = $rdf.Namespace('http://www.w3.org/ns/pim/meeting#');
 
 /**
  * A service layer for RDF data manipulation using rdflib.js
@@ -345,7 +346,7 @@ export class RdfService {
 
   async getStringProfile(field: string): Promise<string> {
     return this.getFieldAsString(this.session.webId, field, VCARD);
-}
+  }
 
   private async getFieldAsString(webId: string, field: string, namespace: any): Promise<string> {
     try {
@@ -355,4 +356,18 @@ export class RdfService {
       console.log(`Error fetching data: ${error}`);
     }
   }
+
+  async getChannel(userWebId: string, partnerWebId: string): Promise<string>{
+    const me = this.store.sym(userWebId.replace('#me', ''));
+    const document = me.doc();
+    await this.fetcher.load(document);
+    const partner = this.store.sym(partnerWebId);
+    const match = await this.store.match(null, MEE('Chat'), partner, document);
+    return match[0].subject.value;
+  }
+
+  async createNewChat(ownWebId: string, partnerWebId: string, chatFolder: string){
+    // To do.
+  }
+
 }
