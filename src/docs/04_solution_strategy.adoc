@@ -35,6 +35,11 @@ to follow the SOLID specifications.
 |https://github.com/Inrupt-inc/generator-solid-angular[SOLID Generator]
 https://solid.inrupt.com/docs/writing-solid-apps-with-angular[SOLID applications with ANGULAR]
 
+|*_Testing with cucumber_* | TDD and acceptance tests will be implemented using cucumber | As we saw in class, this testing tool is based on user stories, something we already where familiar with and can make things easier 
+|https://cucumber.io/[Cucumber, for testing].
+https://www.amadousall.com/angular-e2e-with-cucumber/[How to setup cucumber in angular project (from scratch)].
+https://github.com/bchinmz/protractor-cucumber[Integrating cucumber in angular project (our case)].
+
 |===
 ****
 ****
