@@ -22,4 +22,7 @@ We may face some problems with the messaging system of the application, problems
 happens when we send a message to someone who is not online? where do we keep that
 message so it does not get in conflict with the main goal (decentralization) and gets delivered once 
 the other client connects?
+
+.*Cucumber*
+We never did any acceptance test so we have to get used to work with Cucumber.
 ****
