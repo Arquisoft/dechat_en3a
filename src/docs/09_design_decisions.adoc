@@ -13,6 +13,9 @@
 |Implementation
 |We are going to use the design patter Model View Controller (MVC).
 
+|Cucumber
+|We decided to use Cucumber to develop the acceptance tests.
+
 |===
 
 ****
