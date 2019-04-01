@@ -87,8 +87,11 @@ export class ChatComponent implements OnInit  {
     <HTMLInputElement> document.getElementById('usermsg');
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.chat.sendMessage(message);
+    let now = new Date();
+    let date2 = new Date().getHours();
+    let date3 = new Date().getMinutes();
     let user = this.chat.ownUser.username;
-    this.chatMessages.push(user + ' -> ' + message);
+    this.chatMessages.push(user + ' [ ' + now.getUTCFullYear() + '/' + (now.getUTCMonth()+1) +'/'+ now.getUTCDate()+ ' ' +  date2 + ':' + date3 + ' ] ' + ' -> ' + message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
     }
