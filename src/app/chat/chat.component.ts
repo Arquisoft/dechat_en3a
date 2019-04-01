@@ -14,6 +14,7 @@ import { ChatService } from '../services/chat.service';
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css'],
+  providers: [ ChatService ]
 })
 export class ChatComponent implements OnInit  {
 
@@ -21,10 +22,9 @@ export class ChatComponent implements OnInit  {
   profileImage: string;
   loadingProfile: Boolean;
   message: string;
-  chatService: ChatService;
   chatMessages: string[] = new Array<string>();
 
-  constructor(private rdf: RdfService, private auth: AuthService, private r: Router) {
+  constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
   }
 
   ngOnInit() {
@@ -84,11 +84,11 @@ export class ChatComponent implements OnInit  {
 
  sendMessage() {
     let m = '';
-    // not used?
     <HTMLInputElement> document.getElementById('usermsg');
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
-    //this.chatService.sendMessage(message);
-    this.chatMessages.push(message);
+    this.chat.sendMessage(message);
+    let user = this.chat.ownUser.username;
+    this.chatMessages.push(user + ' -> ' + message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
     }

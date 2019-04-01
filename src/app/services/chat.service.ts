@@ -13,6 +13,7 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 @Injectable()
 export class ChatService{
 
+  providers: [ RdfService ];
   chatMessages: ChatMessage[] = new Array<ChatMessage>();
 
   thisUser: BehaviorSubject<User>;
@@ -39,7 +40,7 @@ export class ChatService{
  * 
  */
   private async loadOwnUser() {
-    this.rdf.getSession();
+    await this.rdf.getSession();
     const photo: string = '../assets/images/profile.png';
     this.ownUser = new User(this.rdf.session.webId, this.getUsername(this.rdf.session.webId), photo);
   }
@@ -125,8 +126,8 @@ export class ChatService{
    * @param ownUser 
    */
   private setChannel(ownUser: User) {
-    this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '<->' + this.partnerUser.username
-    + this.partnerUser.username + '/index.ttl#this');
+    this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '<->' 
+    + this.partnerUser.username + '/index.ttl');
   }    
 
   /**
@@ -138,7 +139,6 @@ export class ChatService{
     if(!this.rdf.session){
       return ;
     }
-    //const webId = this.rdf.session.webId;
     const msg = new ChatMessage(this.ownUser, message);
     this.addMessage(msg);
   }

@@ -14,6 +14,8 @@ import { NamedNode } from 'rdflib';
 const VCARD = $rdf.Namespace('http://www.w3.org/2006/vcard/ns#');
 const FOAF = $rdf.Namespace('http://xmlns.com/foaf/0.1/');
 const MEE = $rdf.Namespace('http://www.w3.org/ns/pim/meeting#');
+const RDFSYN = $rdf.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#');
+const DCEL = $rdf.Namespace('http://purl.org/dc/elements/1.1/');
 
 /**
  * A service layer for RDF data manipulation using rdflib.js
@@ -369,7 +371,26 @@ export class RdfService {
   }
 
   async createNewChat(ownWebId: string, partnerWebId: string, chatFolder: string){
-    const currDate = new Date();
+    const currentDate = new Date();
+    const thisUriSym = this.store.sym(chatFolder + '#this');
+    const ownUriSym = this.store.sym(ownWebId);
+    const partnerUiSym = this.store.sym(partnerWebId);
+
+    const ins = [];
+
+    const indexFile = this.store.sym(chatFolder);
+    const myCardFile = this.store.sym(ownWebId.replace('#me', ''));
+    const chatFolderFile = this.store.sym(chatFolder.replace('/index.ttl', ''));
+    this.fetcher.load(myCardFile.doc());
+
+    ins.push($rdf.st(thisUriSym, RDFSYN('type'), MEE('Chat'), indexFile.doc()));
+    ins.push($rdf.st(thisUriSym, DCEL('author'), ownUriSym, indexFile.doc()));
+    ins.push($rdf.st(thisUriSym, DCEL('created'), currentDate, indexFile.doc()));
+    ins.push($rdf.st(thisUriSym, DCEL('title'), 'Chat Channel', indexFile.doc()));
+   
+    const cardNote = $rdf.st(chatFolderFile, MEE('Chat'), partnerUiSym, myCardFile.doc());
+
+    //this.setPermissions(chatFolder, partnerWebId, ownWebId);
   }
 
 }
