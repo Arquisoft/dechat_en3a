@@ -96,7 +96,8 @@ export class ChatService{
   }
 
   private setChannel(ownUser: User) {
-    this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '<->' + this.partnerUser.username);
+    this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '<->' + this.partnerUser.username
+    + this.partnerUser.username + '/index.ttl#this');
   }    
 
   async sendMessage(message: string){

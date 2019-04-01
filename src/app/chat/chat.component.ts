@@ -21,10 +21,11 @@ export class ChatComponent implements OnInit  {
   profileImage: string;
   loadingProfile: Boolean;
   message: string;
+  chatService: ChatService;
   chatMessages: string[] = new Array<string>();
 
-  constructor(private rdf: RdfService,
-    private route: ActivatedRoute, private auth: AuthService, private r: Router, ) {}
+  constructor(private rdf: RdfService, private auth: AuthService, private r: Router) {
+  }
 
   ngOnInit() {
     this.loadingProfile = true;
@@ -69,10 +70,6 @@ export class ChatComponent implements OnInit  {
     this.auth.solidSignOut();
   }
 
-  goToChat() {
-    this.r.navigateByUrl('chat');
-  }
-
   goToSettings() {
     this.r.navigateByUrl('settings');
   }
@@ -90,6 +87,7 @@ export class ChatComponent implements OnInit  {
     // not used?
     <HTMLInputElement> document.getElementById('usermsg');
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
+    //this.chatService.sendMessage(message);
     this.chatMessages.push(message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
