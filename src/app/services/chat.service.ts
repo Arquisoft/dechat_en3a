@@ -34,19 +34,29 @@ export class ChatService{
       this.loadPartner('Ruizber'); 
       this.loadChat(); 
   }
-
+/**
+ * Loads the user that logs in the application with the webId
+ * 
+ */
   private async loadOwnUser() {
     this.rdf.getSession();
     const photo: string = '../assets/images/profile.png';
     this.ownUser = new User(this.rdf.session.webId, this.getUsername(this.rdf.session.webId), photo);
   }
 
+  /**
+   * This method gets the username of the logged user.
+   * @param webId 
+   */
   private getUsername(webId: String) {
     let username = '';
     username = webId.replace('https://', '');
     return username.split('.')[0];        
   }
 
+/**
+ * This method loads the information of the logged user.
+ */
   private async loadUserData() {
     await this.rdf.getSession();
     if (!this.rdf.session) {
@@ -64,6 +74,9 @@ export class ChatService{
     this.thisUser.next(user);
   }
 
+  /**
+   * This method loads the friends of the logged user.
+   */
   private async loadFriends() {
     await this.rdf.getSession();
     if (!this.rdf.session) {
@@ -77,15 +90,27 @@ export class ChatService{
     });
   }
 
+  /**
+   * 
+   * @param u1 This method sorts user by their names.
+   * @param u2 
+   */
   private sortUserByName(u1: User, u2: User) {
     return u1.username.localeCompare(u2.username);
   }
 
+  /**
+   * This method load the partner with its webId.
+   * @param username T
+   */
   loadPartner(username: String) {
     const photo: string = '../assets/images/profile.png';
     this.partnerUser = new User('https://'+ username +'.inrupt.net/profile/card#me', username, photo);
   }
   
+  /**
+   * This method loads the chat.
+   */
   private async loadChat(){
     await this.rdf.getSession();
     try {
@@ -95,11 +120,19 @@ export class ChatService{
     await this.rdf.createNewChat(this.ownUser.webId, this.partnerUser.webId, this.currentChannel);
   }
 
+  /**
+   * This method set the communication channel between the own user and the partner.
+   * @param ownUser 
+   */
   private setChannel(ownUser: User) {
     this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '<->' + this.partnerUser.username
     + this.partnerUser.username + '/index.ttl#this');
   }    
 
+  /**
+   * This is the method to send messages.
+   * @param message 
+   */
   async sendMessage(message: string){
     await this.rdf.getSession();
     if(!this.rdf.session){
@@ -113,5 +146,8 @@ export class ChatService{
   private addMessage(message: ChatMessage){
     this.chatMessages.push(message);
   }
-     
+  
+  private getFriends(): Observable<User[]> {
+    return of(this.friendsList);
+  }
 }

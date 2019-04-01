@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SolidSession } from '../models/solid-session.model';
+import { ChatService } from '../services/chat.service';
+import { ChatMessage } from '../models/chat-message.model';
 declare let solid: any;
 declare let $rdf: any;
 //import * as $rdf from 'rdflib'
@@ -367,7 +369,7 @@ export class RdfService {
   }
 
   async createNewChat(ownWebId: string, partnerWebId: string, chatFolder: string){
-    // To do.
+    const currDate = new Date();
   }
 
 }
