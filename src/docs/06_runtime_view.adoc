@@ -56,8 +56,7 @@ When the user signs up for the first time, it won't have any friend
 2. After that, the first user friend's url is stored on its pod so they can chat one to each other
 
 *ADD IMAGE*
-****
-****
+
 === Chat with friends
 The chat is used for chatting between users, better said, between friends.
 
@@ -68,7 +67,7 @@ The chat is used for chatting between users, better said, between friends.
 3. The application of the User_2 requests the received messages that contains its pod, so the pod makes the messages available for the application
 4. Finally User_2 reads the received messages from the application
 
-*ADD IMAGE*
-****
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/chat.png[diagram]
+
 ****
 
