@@ -117,17 +117,29 @@ export class ChatComponent implements OnInit  {
     this.chat.sendMessage(message);
     let now = new Date();
     let nowYear = now.getUTCFullYear();
-    let nowMonth = new Date().getUTCMonth();
-    if(nowMonth < 10) {
-        nowMonth = Number('0' + (now.getUTCMonth()+1));
+    let nowMonth = new Date().getUTCMonth()+1;
+    let minutes = now.getUTCMinutes();
+    let hours = now.getHours();
+    let day = now.getUTCDate();
+    let zeroM = '0';
+    let zeroH = '0';
+    let zeroMo = '0';
+    let zeroD = '0';
+    if(minutes > 10){
+      zeroM = ''
     }
-    else {
-      nowMonth = (now.getUTCMonth()+1);
+    if(hours > 10) {
+      zeroH = '';
     }
-    
+    if(nowMonth > 10) {
+      zeroMo = '';
+    }
+    if(day > 10) {
+      zeroD = '';
+    }
     let user = this.chat.ownUser.username;
-    this.chatMessages.push('[' + nowYear + '/' + nowMonth +'/'+ now.getUTCDate()+ ' - ' 
-    +  now.getHours() + ':' + now.getUTCMinutes() + '] ' + user + ': ' + message);
+    this.chatMessages.push('[' + nowYear + '/' +zeroMo + nowMonth +'/'+ zeroD + day+ ' - ' 
+    + zeroH + hours + ':' + zeroM + minutes + '] ' + user + ': ' + message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
     }
