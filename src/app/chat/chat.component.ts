@@ -26,6 +26,7 @@ export class ChatComponent implements OnInit  {
   loadingProfile: Boolean;
   message: string;
   chatMessages: string[] = new Array<string>();
+  partnerChatMessages: string[] = new Array<string>();
 
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
   }
@@ -142,6 +143,46 @@ export class ChatComponent implements OnInit  {
     + zeroH + hours + ':' + zeroM + minutes + '] ' + user + ': ' + message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
+    }
+    (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
+    (<HTMLInputElement> document.getElementById('usermsg')).value = '';
+  }
+
+  loadPartnerMessages() {
+    let m = '';
+    let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
+    this.chat.sendMessage(message);
+    let now = new Date();
+    let nowYear = now.getUTCFullYear();
+    let nowMonth = new Date().getUTCMonth()+1;
+    let minutes = now.getUTCMinutes();
+    let hours = now.getHours();
+    let day = now.getUTCDate();
+    let zeroM = '0';
+    let zeroH = '0';
+    let zeroMo = '0';
+    let zeroD = '0';
+    if(minutes > 10){
+      zeroM = ''
+    }
+    if(hours > 10) {
+      zeroH = '';
+    }
+    if(nowMonth > 10) {
+      zeroMo = '';
+    }
+    if(day > 10) {
+      zeroD = '';
+    }
+    this.partnerChatMessages.push('[' + nowYear + '/' +zeroMo + nowMonth +'/'+ zeroD + day+ ' - ' 
+    + zeroH + hours + ':' + zeroM + minutes + '] ' + this.chat.partnerUser.username + ': ' + message);
+    for(let i = 0; i < this.partnerChatMessages.length; i++){
+      if(this.chat.ownUser.username == this.chat.partnerChatMessages[i].userName){
+        return;
+      }
+      else {
+        m = m + this.partnerChatMessages[i] + '<br>';
+      }
     }
     (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
     (<HTMLInputElement> document.getElementById('usermsg')).value = '';

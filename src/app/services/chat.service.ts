@@ -15,6 +15,7 @@ export class ChatService{
 
   providers: [ RdfService ];
   chatMessages: ChatMessage[] = new Array<ChatMessage>();
+  partnerChatMessages: ChatMessage[] = new Array<ChatMessage>();
 
   thisUser: BehaviorSubject<User>;
   ownUser: User;
@@ -145,14 +146,23 @@ export class ChatService{
   }
 
   /**
-   * This methos add a message to the array of messages called chatMessages.
+   * This method add a message to the array of messages called chatMessages.
    * @param message 
    */
   private addMessage(message: ChatMessage){
     this.chatMessages.push(message);
   }
+
   
   private getFriends(): Observable<User[]> {
     return of(this.friendsList);
+  }
+
+
+  /**
+   * To add the messages for the partner
+   */
+  private addPartnerMessages(message: ChatMessage) {
+    this.partnerChatMessages.push(message);
   }
 }
