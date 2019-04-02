@@ -29,16 +29,21 @@ There are many notations for describing scenarios, e.g.
 * ...
 
 ****
+== Log in / Register
+Users will do the login process by logging in with their personal data to get access to the chat, or if they don't have an account, they will must get register
+
 === Log in
-Users will do the login process by logging in with theis personal data to get access to the chat
 
 1. First, the user must enter it's personal ID and password
-2. Atter that, the application will ask the server to approve the login request made by the user
+2. After that, the application will ask the server to approve the login request made by the user
 3. Finally, if the server approves the login the user will access to the chat, but if the server denies the login the user won't access to it
-****
-*ADD IMAGE*
-****
-=== Add friends
+
+=== Register
+1. First, the user must choose between getting registered via Inrupt or Solid Community
+2. After that, they will fulfill the registration form with their personal data
+3. Finally, they can login in with their account
+
+== Add friends
 Every user must have any friend added in the chat so they can chat one to each other.
 When the user signs up for the first time, it won't have any friend
 
