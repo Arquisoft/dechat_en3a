@@ -2,10 +2,10 @@ module.exports.config = {
   framework: 'custom',
   frameworkPath: 'node_modules/protractor-cucumber-framework',
   cucumberOpts: {
-      require: ['src/steps/*.steps.js'],
+      require: ['e2e/src/steps/*.steps.js'],
       strict: true
   },
-  specs: ['src/features/*.feature'],
+  specs: ['e2e/src/features/*.feature'],
   capabilities: {
       browserName: 'chrome',
   }
