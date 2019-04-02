@@ -24,14 +24,22 @@ npm run installPackages
 
 
 == Testing
+The testing of the project is done via 
+ https://cucumber.io/[Cucumber], based on user stories, such as those defined in the 
+ https://github.com/Arquisoft/dechat_en3a/tree/master/e2e/src/features[features folder].
+ To run the tests, if it has not been done before, you should download the needed dependencies executing the following command
+----
+npm run installTestDeps
+----
 
-There are some simple Unit tests at:
- https://github.com/Arquisoft/dechat_en3a/tree/master/src/test[src/test].
+Finally, run the tests execute the following commands:
+----
+npm run pretest
+----
 
-There are also some
- https://cucumber.io/[Cucumber based tests]
- with a simple user story defined at:
- https://github.com/Arquisoft/dechat_en3a/tree/master/src/test/resources/features[src/test/resources/features].
+----
+npm run test2
+----
 
 == Site documentation
 https://arquisoft.github.io/dechat_en3a/
