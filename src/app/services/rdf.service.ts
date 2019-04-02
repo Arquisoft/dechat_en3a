@@ -391,29 +391,23 @@ export class RdfService {
     ins.push($rdf.st(thisUriSym, DCEL('title'), 'Chat Channel', indexFile.doc()));
    
     const cardNote = $rdf.st(chatFolderFile, MEE('Chat'), partnerUiSym, myCardFile.doc());
-
-    //this.setPermissions(chatFolder, partnerWebId, ownWebId);
   }
 
   async createStructure(uri: string) {
     const splitted = uri.split('/');
-    for (let i = 4; i > 0; i--) {
+    for (let i = 3; i > 0; i--) {
       const newUri = splitted.slice(0, splitted.length - i).join('/');
       await fileClient.createFolder(newUri);
     }
     await this.createChatFile(uri);
   }
-
+  
   async createChatFile(uri: string) {
     const chatFile = this.store.sym(uri);
     const chatFold = uri.replace('/index.ttl', '');
     const chatFolder = this.store.sym(chatFold);
     await this.fetcher.load(chatFolder.doc());
     const matches = await this.store.match(chatFolder, LDP('contains'), null, chatFolder.doc());
-
-    if (matches.length === 0) {
-      await this.updateManager.put(chatFile.doc(), '', 'text/turtle', function (o, s, c) { });
-    }
   }
-
+  
 }
