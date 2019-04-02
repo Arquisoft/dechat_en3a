@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+/**
+ * Imports of the diferents components of the application
+ */
 import { AppComponent } from './app.component';
 import {LoginPopupComponent} from './login-popup/login-popup.component';
 import {LoginComponent} from './login/login.component';
@@ -13,7 +16,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { InfoComponent } from './information/information.component';
 import { CommentsComponent } from './comments/comments.component';
 
-// Services
+/**
+ * Imports the services
+ */
 import { AuthService } from './services/solid.auth.service';
 import { AuthGuard } from './services/auth.guard.service';
 import { NgSelectModule } from '@ng-select/ng-select';
@@ -24,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
-
+/**
+ * Differents routes of the differents components.
+ */
 const routes: Routes = [
   {
     path: '',
@@ -82,6 +89,9 @@ const routes: Routes = [
 
 ];
 
+/**
+ * Declarations of the different components in the application.
+ */
 @NgModule({
   declarations: [
     AppComponent,

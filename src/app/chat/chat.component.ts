@@ -7,6 +7,9 @@ import { AuthService } from '../services/solid.auth.service';
 import { Router } from '@angular/router';
 import { ChatMessage } from '../models/chat-message.model';
 import { print } from 'util';
+/**
+ * We need the chat service to do the operations with the messages.
+ */
 import { ChatService } from '../services/chat.service';
 
 
@@ -105,6 +108,7 @@ export class ChatComponent implements OnInit  {
 
   /**
    * This mtehod is use to send messages in the chat application.
+   * In this method also when you send a message apperas the date when the message was sent and the author of the message in this case with the username of solid.
    */
  sendMessage() {
     let m = '';
@@ -112,14 +116,25 @@ export class ChatComponent implements OnInit  {
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.chat.sendMessage(message);
     let now = new Date();
+    let nowYear = now.getUTCFullYear();
+    let nowMonth = new Date().getUTCMonth();
+    if(nowMonth < 10) {
+        nowMonth = Number('0' + (now.getUTCMonth()+1));
+    }
+    else {
+      nowMonth = (now.getUTCMonth()+1);
+    }
+    
     let user = this.chat.ownUser.username;
-    this.chatMessages.push('[' + now.getUTCFullYear() + '/' + (now.getUTCMonth()+1) +'/'+ now.getUTCDate()+ ' - ' 
-    +  now.getUTCHours() + ':' + now.getUTCMinutes() + '] ' + user + ': ' + message);
+    this.chatMessages.push('[' + nowYear + '/' + nowMonth +'/'+ now.getUTCDate()+ ' - ' 
+    +  now.getHours() + ':' + now.getUTCMinutes() + '] ' + user + ': ' + message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
     }
     (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
     (<HTMLInputElement> document.getElementById('usermsg')).value = '';
   }
+
+
 }
 

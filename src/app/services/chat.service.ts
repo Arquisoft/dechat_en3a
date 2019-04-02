@@ -92,8 +92,8 @@ export class ChatService{
   }
 
   /**
-   * 
-   * @param u1 This method sorts user by their names.
+   * This method sorts user by their names.
+   * @param u1 
    * @param u2 
    */
   private sortUserByName(u1: User, u2: User) {
@@ -111,6 +111,7 @@ export class ChatService{
   
   /**
    * This method loads the chat.
+   * If the channel exists it uses it else it creates a new channel between the own user and the partner user.
    */
   async loadChat(){
     await this.rdf.getSession();
@@ -131,7 +132,7 @@ export class ChatService{
   }    
 
   /**
-   * This is the method to send messages.
+   * This is the method to send messages between the own user and the partner user.
    * @param message 
    */
   async sendMessage(message: string){
@@ -143,6 +144,10 @@ export class ChatService{
     this.addMessage(msg);
   }
 
+  /**
+   * This methos add a message to the array of messages called chatMessages.
+   * @param message 
+   */
   private addMessage(message: ChatMessage){
     this.chatMessages.push(message);
   }

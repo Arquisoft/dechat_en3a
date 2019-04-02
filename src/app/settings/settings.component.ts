@@ -66,10 +66,16 @@ export class SettingsComponent implements OnInit  {
     this.auth.solidSignOut();
   }
 
+  /**
+   * Method created to go to the chat component in the application
+   */
   goToChat(){
     this.r.navigateByUrl('chat');
   }
 
+  /**
+   * Method created to go to the settings component when you click in the settings button.
+   */
   goToSettings() {
     this.r.navigateByUrl('settings');
   }
@@ -78,10 +84,16 @@ export class SettingsComponent implements OnInit  {
     this.r.navigateByUrl('card');
   }
 
+  /**
+   * Method created to go to the information about the application.
+   */
   goToInfo() {
     this.r.navigateByUrl('information');
   }
 
+  /**
+   * Method created to go to the profile component.
+   */
   goToProfile(){
     this.r.navigateByUrl('profile');
   }
