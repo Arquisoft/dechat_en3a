@@ -39,7 +39,7 @@ export class ChatService{
  * Loads the user that logs in the application with the webId
  * 
  */
-  private async loadOwnUser() {
+  async loadOwnUser() {
     await this.rdf.getSession();
     const photo: string = '../assets/images/profile.png';
     this.ownUser = new User(this.rdf.session.webId, this.getUsername(this.rdf.session.webId), photo);
@@ -58,7 +58,7 @@ export class ChatService{
 /**
  * This method loads the information of the logged user.
  */
-  private async loadUserData() {
+  async loadUserData() {
     await this.rdf.getSession();
     if (!this.rdf.session) {
       return;
@@ -78,7 +78,7 @@ export class ChatService{
   /**
    * This method loads the friends of the logged user.
    */
-  private async loadFriends() {
+  async loadFriends() {
     await this.rdf.getSession();
     if (!this.rdf.session) {
       return;
@@ -112,7 +112,7 @@ export class ChatService{
   /**
    * This method loads the chat.
    */
-  private async loadChat(){
+  async loadChat(){
     await this.rdf.getSession();
     try {
       this.currentChannel = await this.rdf.getChannel(this.ownUser.webId, this.partnerUser.webId);

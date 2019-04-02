@@ -50,14 +50,20 @@ export class ChatComponent implements OnInit  {
       if (profile) {
         this.profile = profile;
         this.auth.saveOldUserData(profile);
+        this.loadData();
       }
-
       this.loadingProfile = false;
       this.setupProfileData();
     } catch (error) {
       console.log(`Error: ${error}`);
     }
 
+  }
+
+  private loadData(){
+    this.chat.loadPartner('Ruizber');
+    console.log(this.chat.partnerUser.username);
+    this.chat.loadChat();
   }
 
   /**
@@ -106,10 +112,9 @@ export class ChatComponent implements OnInit  {
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.chat.sendMessage(message);
     let now = new Date();
-    let date2 = new Date().getHours();
-    let date3 = new Date().getMinutes();
     let user = this.chat.ownUser.username;
-    this.chatMessages.push(user + ' [ ' + now.getUTCFullYear() + '/' + (now.getUTCMonth()+1) +'/'+ now.getUTCDate()+ ' ' +  date2 + ':' + date3 + ' ] ' + ' -> ' + message);
+    this.chatMessages.push('[' + now.getUTCFullYear() + '/' + (now.getUTCMonth()+1) +'/'+ now.getUTCDate()+ ' - ' 
+    +  now.getUTCHours() + ':' + now.getUTCMinutes() + '] ' + user + ': ' + message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
     }
