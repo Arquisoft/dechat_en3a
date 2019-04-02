@@ -27,6 +27,10 @@ export class ChatComponent implements OnInit  {
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
   }
 
+/**
+ * Executes this method when the component is used.
+ * 
+ */
   ngOnInit() {
     this.loadingProfile = true;
     this.loadProfile();
@@ -36,7 +40,9 @@ export class ChatComponent implements OnInit  {
     localStorage.removeItem('oldProfileData');
   }
 
-  // Loads the profile from the rdf service and handles the response
+  /**
+   * Loads the profile from the rdf service and handles the response
+   */
   async loadProfile() {
     try {
       this.loadingProfile = true;
@@ -54,9 +60,10 @@ export class ChatComponent implements OnInit  {
 
   }
 
-
-  // Format data coming back from server. Intended purpose is to replace profile image with default if it's missing
-  // and potentially format the address if we need to reformat it for this UI
+  /**
+   * Format data coming back from server. Intended purpose is to replace profile image with default if it's missing
+   * and potentially format the address if we need to reformat it for this UI
+   */
   private setupProfileData() {
     if (this.profile) {
       this.profileImage = this.profile.image ? this.profile.image : '/assets/images/profile.png';
@@ -65,15 +72,23 @@ export class ChatComponent implements OnInit  {
     }
   }
 
-  // Example of logout functionality. Normally wouldn't be triggered by clicking the profile picture.
+  /**
+   * Example of logout functionality. Normally wouldn't be triggered by clicking the profile picture.
+   */ 
   logout() {
     this.auth.solidSignOut();
   }
 
+  /**
+   * Method that goes to the settings component.
+   */
   goToSettings() {
     this.r.navigateByUrl('settings');
   }
 
+  /**
+   * This method goes to the information component.
+   */
   goToInfo() {
     this.r.navigateByUrl('information');
   }
@@ -82,6 +97,9 @@ export class ChatComponent implements OnInit  {
     this.r.navigateByUrl('card');
   }
 
+  /**
+   * This mtehod is use to send messages in the chat application.
+   */
  sendMessage() {
     let m = '';
     <HTMLInputElement> document.getElementById('usermsg');
