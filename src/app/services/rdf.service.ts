@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { SolidSession } from '../models/solid-session.model';
 import { ChatService } from '../services/chat.service';
 import { ChatMessage } from '../models/chat-message.model';
+import * as fileClient from 'solid-file-client';
 declare let solid: any;
 declare let $rdf: any;
 //import * as $rdf from 'rdflib'
@@ -16,6 +17,7 @@ const FOAF = $rdf.Namespace('http://xmlns.com/foaf/0.1/');
 const MEE = $rdf.Namespace('http://www.w3.org/ns/pim/meeting#');
 const RDFSYN = $rdf.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#');
 const DCEL = $rdf.Namespace('http://purl.org/dc/elements/1.1/');
+const LDP = $rdf.Namespace('http://www.w3.org/ns/ldp#');
 
 /**
  * A service layer for RDF data manipulation using rdflib.js
@@ -391,6 +393,27 @@ export class RdfService {
     const cardNote = $rdf.st(chatFolderFile, MEE('Chat'), partnerUiSym, myCardFile.doc());
 
     //this.setPermissions(chatFolder, partnerWebId, ownWebId);
+  }
+
+  async createStructure(uri: string) {
+    const splitted = uri.split('/');
+    for (let i = 4; i > 0; i--) {
+      const newUri = splitted.slice(0, splitted.length - i).join('/');
+      await fileClient.createFolder(newUri);
+    }
+    await this.createChatFile(uri);
+  }
+
+  async createChatFile(uri: string) {
+    const chatFile = this.store.sym(uri);
+    const chatFold = uri.replace('/index.ttl', '');
+    const chatFolder = this.store.sym(chatFold);
+    await this.fetcher.load(chatFolder.doc());
+    const matches = await this.store.match(chatFolder, LDP('contains'), null, chatFolder.doc());
+
+    if (matches.length === 0) {
+      await this.updateManager.put(chatFile.doc(), '', 'text/turtle', function (o, s, c) { });
+    }
   }
 
 }

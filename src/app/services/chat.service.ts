@@ -118,16 +118,19 @@ export class ChatService{
     await this.rdf.getSession();
     try {
       this.currentChannel = await this.rdf.getChannel(this.ownUser.webId, this.partnerUser.webId);
-    } catch (error){}
-    this.setChannel(this.ownUser);
-    await this.rdf.createNewChat(this.ownUser.webId, this.partnerUser.webId, this.currentChannel);
+      await this.rdf.createStructure(this.currentChannel);
+    } catch (error){
+      this.createChannel(this.ownUser);
+      await this.rdf.createStructure(this.currentChannel);
+      await this.rdf.createNewChat(this.ownUser.webId, this.partnerUser.webId, this.currentChannel);
+    }
   }
 
   /**
    * This method set the communication channel between the own user and the partner.
    * @param ownUser 
    */
-  private setChannel(ownUser: User) {
+  private createChannel(ownUser: User) {
     this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '<->' 
     + this.partnerUser.username + '/index.ttl');
   }    

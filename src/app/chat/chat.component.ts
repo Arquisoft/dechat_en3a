@@ -117,30 +117,10 @@ export class ChatComponent implements OnInit  {
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.chat.sendMessage(message);
     let now = new Date();
-    let nowYear = now.getUTCFullYear();
-    let nowMonth = new Date().getUTCMonth()+1;
-    let minutes = now.getUTCMinutes();
-    let hours = now.getHours();
-    let day = now.getUTCDate();
-    let zeroM = '0';
-    let zeroH = '0';
-    let zeroMo = '0';
-    let zeroD = '0';
-    if(minutes > 10){
-      zeroM = ''
-    }
-    if(hours > 10) {
-      zeroH = '';
-    }
-    if(nowMonth > 10) {
-      zeroMo = '';
-    }
-    if(day > 10) {
-      zeroD = '';
-    }
     let user = this.chat.ownUser.username;
-    this.chatMessages.push('[' + nowYear + '/' +zeroMo + nowMonth +'/'+ zeroD + day+ ' - ' 
-    + zeroH + hours + ':' + zeroM + minutes + '] ' + user + ': ' + message);
+    this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
+    + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
+    + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
     for(let i = 0; i < this.chatMessages.length; i++) {
       m = m + this.chatMessages[i] + '<br>';
     }
@@ -153,29 +133,10 @@ export class ChatComponent implements OnInit  {
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.chat.sendMessage(message);
     let now = new Date();
-    let nowYear = now.getUTCFullYear();
-    let nowMonth = new Date().getUTCMonth()+1;
-    let minutes = now.getUTCMinutes();
-    let hours = now.getHours();
-    let day = now.getUTCDate();
-    let zeroM = '0';
-    let zeroH = '0';
-    let zeroMo = '0';
-    let zeroD = '0';
-    if(minutes > 10){
-      zeroM = ''
-    }
-    if(hours > 10) {
-      zeroH = '';
-    }
-    if(nowMonth > 10) {
-      zeroMo = '';
-    }
-    if(day > 10) {
-      zeroD = '';
-    }
-    this.partnerChatMessages.push('[' + nowYear + '/' +zeroMo + nowMonth +'/'+ zeroD + day+ ' - ' 
-    + zeroH + hours + ':' + zeroM + minutes + '] ' + this.chat.partnerUser.username + ': ' + message);
+    let user = this.chat.ownUser.username;
+    this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
+    + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
+    + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
     for(let i = 0; i < this.partnerChatMessages.length; i++){
       if(this.chat.ownUser.username == this.chat.partnerChatMessages[i].userName){
         return;
