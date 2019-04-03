@@ -34,6 +34,6 @@ export class AppPage {
     }
 
     navigateToLogin() {
-        return ;
+        return browser.get('/card');
     }
 }
