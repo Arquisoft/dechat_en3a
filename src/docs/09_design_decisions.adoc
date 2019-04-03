@@ -8,7 +8,7 @@
 |Sections |Decisions
 
 |Programming language
-|We are going to use JavaScript.
+|We are going to use TypeScript, html and css to develop our app.
 
 |Implementation
 |We are going to use the design patter Model View Controller (MVC).
@@ -16,6 +16,8 @@
 |Cucumber
 |We decided to use Cucumber to develop the acceptance tests.
 
+|Platform
+|We are going to develop the app using angular
 |===
 
 ****
