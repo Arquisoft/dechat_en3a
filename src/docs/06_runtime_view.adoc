@@ -29,10 +29,7 @@ There are many notations for describing scenarios, e.g.
 * ...
 
 ****
-== Log in / Register
-Users will do the login process by logging in with their personal data to get access to the chat, or if they don't have an account, they will must get register
-
-=== Log in
+==== Log in
 
 1. First, the user must enter it's personal ID and password
 2. After that, the application will ask the server to approve the login request made by the user
@@ -40,7 +37,7 @@ Users will do the login process by logging in with their personal data to get ac
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/log in.png[diagram]
 
-=== Register
+==== Register
 1. First, the user must choose between getting registered via Inrupt or Solid Community
 2. After that, they will fulfill the registration form with their personal data
 3. Finally, they can login in with their account
@@ -48,7 +45,7 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/lo
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register.png[diagram]
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register2.png[diagram]
 
-== Add friends
+=== Add friends
 Every user must have any friend added in the chat so they can chat one to each other.
 When the user signs up for the first time, it won't have any friend
 
@@ -69,5 +66,6 @@ The chat is used for chatting between users, better said, between friends.
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/chat.png[diagram]
 
+****
 ****
 
