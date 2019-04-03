@@ -13,4 +13,19 @@ export class AppPage {
     getButtonText() {
         return element(by.css('button')).getText();
     }
+      navigateToCard(){
+        return browser.get('/card');
+    }
+
+    clickRegisterButton(){
+        return element(by.id('register')).click();
+    }
+
+    clickSolidRegistration(){
+        return  element(by.id('solidregister')).click();
+    }
+
+    clickLoginButton(){
+        return  element(by.id('login')).click();
+    }
 }
