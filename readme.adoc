@@ -32,7 +32,9 @@ The testing of the project is done via
 npm run installTestDeps
 ----
 
-Finally, to run the tests execute the following commands:
+Then, open a console and launch the application.
+
+Finally, to run the tests open another console and execute the following commands:
 ----
 npm run pretest
 ----
