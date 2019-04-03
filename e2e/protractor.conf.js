@@ -1,6 +1,6 @@
 module.exports.config = {
   framework: 'custom',
-  frameworkPath: 'node_modules/protractor-cucumber-framework',
+  frameworkPath: require.resolve('protractor-cucumber-framework'),
   cucumberOpts: {
       require: ['src/steps/*.steps.js'],
       strict: true

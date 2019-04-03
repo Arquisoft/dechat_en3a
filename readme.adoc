@@ -32,7 +32,7 @@ The testing of the project is done via
 npm run installTestDeps
 ----
 
-Finally, run the tests execute the following commands:
+Finally, to run the tests execute the following commands:
 ----
 npm run pretest
 ----

@@ -29,17 +29,4 @@ defineSupportCode( function({When, Then}) {
   nav.waitSeconds(1.5);
   return expect(article.getText()).to.eventually.eql(title);
  });
-
- When('I click the Resources button', function() {
-  nav.waitSeconds(1.5);
-  var resourcesButton = nav.findByCss('[title="Resources"]');
-  return resourcesButton.click();
- });
-
- Then('I should see a {string} article', function(title) {
-  nav.waitSeconds(1.5);
-  var article = nav.findById('what-is-angular');
-  nav.waitSeconds(1.5);
-  return expect(article.getText()).to.eventually.eql(title);
- });
 });
