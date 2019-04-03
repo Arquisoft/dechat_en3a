@@ -557,25 +557,19 @@ table.CodeRay td.code>pre{padding:0}
 </ul>
 </li>
 <li><a href="#section-runtime-view">6. Runtime View</a>
-<ul class="sectlevel2">
+<ul class="sectlevel3">
 <li><a href="#log-in">6.1. Log in</a></li>
-<li><a href="#add-friends">6.2. Add friends</a></li>
-<li><a href="#chat-with-friends">6.3. Chat with friends</a></li>
+<li><a href="#register">6.2. Register</a></li>
+<li><a href="#add-friends">6.3. Add friends</a></li>
+<li><a href="#chat-with-friends">6.4. Chat with friends</a></li>
 </ul>
 </li>
 <li><a href="#section-deployment-view">7. Deployment View</a>
 <ul class="sectlevel2">
 <li><a href="#infrastructure-level-1">7.1. Infrastructure Level 1</a></li>
-<li><a href="#infrastructure-level-2">7.2. Infrastructure Level 2</a></li>
 </ul>
 </li>
-<li><a href="#section-concepts">8. Cross-cutting Concepts</a>
-<ul class="sectlevel2">
-<li><a href="#concept-1">8.1. <em>&lt;Concept 1&gt;</em></a></li>
-<li><a href="#concept-2">8.2. <em>&lt;Concept 2&gt;</em></a></li>
-<li><a href="#concept-n">8.3. <em>&lt;Concept n&gt;</em></a></li>
-</ul>
-</li>
+<li><a href="#section-concepts">8. Cross-cutting Concepts</a></li>
 <li><a href="#section-design-decisions">9. Design Decisions</a></li>
 <li><a href="#section-quality-scenarios">10. Quality Requirements</a>
 <ul class="sectlevel2">
@@ -776,11 +770,13 @@ For documentation of your own system you use better the <em>plain</em> version.<
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Constraint</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Explanation</p></td>
+<th class="tableblock halign-left valign-top">Constraint</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The language of the application must be english</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All the code, comments or documentation must be written in english.</p></td>
@@ -916,6 +912,23 @@ leave everything for the last days and with <strong>active comunication</strong>
 <td class="tableblock halign-center valign-top"><p class="tableblock">We come from IPS, a subject where we learned how to work in a team efficiently, we are trying to apply the same principles here.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.daxx.com/blog/development-team/set-up-development-team-kickstart-your-business">Software development in teams</a></p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>ANGULAR+SOLID</em></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">We decided to use ANGULAR and a SOLID generator to initially develop the application.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">We researched some information and realized that ANGULAR makes it easy to build applications with the web, specially with the given
+constraints. Also, another main reason why we chose ANGULAR is the SOLID generator (see links at the right), that makes it easier
+to follow the SOLID specifications.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/Inrupt-inc/generator-solid-angular">SOLID Generator</a>
+<a href="https://solid.inrupt.com/docs/writing-solid-apps-with-angular">SOLID applications with ANGULAR</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>Testing with cucumber</em></strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">TDD and acceptance tests will be implemented using cucumber</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">As we saw in class, this testing tool is based on user stories, something we already where familiar with and can make things easier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cucumber.io/">Cucumber, for testing</a>.
+<a href="https://www.amadousall.com/angular-e2e-with-cucumber/">How to setup cucumber in angular project (from scratch)</a>.
+<a href="https://github.com/bchinmz/protractor-cucumber">Integrating cucumber in angular project (our case)</a>.</p></td>
+</tr>
 </tbody>
 </table>
 <div class="sidebarblock">
@@ -931,8 +944,10 @@ leave everything for the last days and with <strong>active comunication</strong>
 <div class="sectionbody">
 <div class="sidebarblock arc42help">
 <div class="content">
-<div class="paragraph">
-<p><span class="image"><img src="./images/05_building_blocks-EN.png" alt="Hierarchy of building blocks"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/BuildingBlock%20(1).jpg" alt="diagram">
+</div>
 </div>
 </div>
 </div>
@@ -942,7 +957,7 @@ leave everything for the last days and with <strong>active comunication</strong>
 <div class="content">
 <div class="imageblock">
 <div class="content">
-<img src="./images/images/BuilingBlock(1).jpg" alt="System diagram">
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/05_building_blocks-EN.png" alt="diagram">
 </div>
 </div>
 <div class="paragraph">
@@ -1257,34 +1272,55 @@ You will mainly capture scenarios in your documentation to communicate your arch
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="log-in"><a class="anchor" href="#log-in"></a>6.1. Log in</h3>
-<div class="paragraph">
-<p>Users will do the login process by logging in with theis personal data to get access to the chat</p>
-</div>
+<div class="sect3">
+<h4 id="log-in"><a class="anchor" href="#log-in"></a>6.1. Log in</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>First, the user must enter it&#8217;s personal ID and password</p>
 </li>
 <li>
-<p>Atter that, the application will ask the server to approve the login request made by the user</p>
+<p>After that, the application will ask the server to approve the login request made by the user</p>
 </li>
 <li>
 <p>Finally, if the server approves the login the user will access to the chat, but if the server denies the login the user won&#8217;t access to it</p>
 </li>
 </ol>
 </div>
-<div class="sidebarblock">
+<div class="imageblock">
 <div class="content">
-<div class="paragraph">
-<p><strong>ADD IMAGE</strong></p>
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/log%20in.png" alt="diagram">
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="register"><a class="anchor" href="#register"></a>6.2. Register</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, the user must choose between getting registered via Inrupt or Solid Community</p>
+</li>
+<li>
+<p>After that, they will fulfill the registration form with their personal data</p>
+</li>
+<li>
+<p>Finally, they can login in with their account</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register.png" alt="diagram">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register2.png" alt="diagram">
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-friends"><a class="anchor" href="#add-friends"></a>6.2. Add friends</h3>
+<h3 id="add-friends"><a class="anchor" href="#add-friends"></a>6.3. Add friends</h3>
 <div class="paragraph">
 <p>Every user must have any friend added in the chat so they can chat one to each other.
 When the user signs up for the first time, it won&#8217;t have any friend</p>
@@ -1302,14 +1338,9 @@ When the user signs up for the first time, it won&#8217;t have any friend</p>
 <div class="paragraph">
 <p><strong>ADD IMAGE</strong></p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-
-</div>
-</div>
 </div>
 <div class="sect2">
-<h3 id="chat-with-friends"><a class="anchor" href="#chat-with-friends"></a>6.3. Chat with friends</h3>
+<h3 id="chat-with-friends"><a class="anchor" href="#chat-with-friends"></a>6.4. Chat with friends</h3>
 <div class="paragraph">
 <p>The chat is used for chatting between users, better said, between friends.</p>
 </div>
@@ -1332,8 +1363,10 @@ When the user signs up for the first time, it won&#8217;t have any friend</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><strong>ADD IMAGE</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/chat.png" alt="diagram">
+</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1350,50 +1383,8 @@ When the user signs up for the first time, it won&#8217;t have any friend</p>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<div class="title">Content</div>
-<p>The deployment view describes:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>the technical infrastructure used to execute your system, with infrastructure elements like geographical locations, environments, computers, processors, channels and net topologies as well as other infrastructure elements and</p>
-</li>
-<li>
-<p>the mapping of (software) building blocks to that infrastructure elements.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Often systems are executed in different environments, e.g. development environment, test environment, production environment. In such cases you should document all relevant environments.</p>
-</div>
-<div class="paragraph">
-<p>Especially document the deployment view when your software is executed as distributed system with more then one computer, processor, server or container or when you design and construct your own hardware processors and chips.</p>
-</div>
-<div class="paragraph">
-<p>From a software perspective it is sufficient to capture those elements of the infrastructure that are needed to show the deployment of your building blocks. Hardware architects can go beyond that and describe the infrastructure to any level of detail they need to capture.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Software does not run without hardware.
-This underlying infrastructure can and will influence your system and/or some
-cross-cutting concepts. Therefore, you need to know the infrastructure.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Maybe the highest level deployment diagram is already contained in section 3.2. as
-technical context with your own infrastructure as ONE black box. In this section you will
-zoom into this black box using additional deployment diagrams:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>UML offers deployment diagrams to express that view. Use it, probably with nested diagrams,
-when your infrastructure is more complex.</p>
-</li>
-<li>
-<p>When your (hardware) stakeholders prefer other kinds of diagrams rather than the deployment diagram, let them use any kind that is able to show nodes and channels of the infrastructure.</p>
-</li>
-</ul>
+<p>The deployment view is very easy to describe in a decentralized chat because we are just focusing in the interaction between the users
+and SOLID providers</p>
 </div>
 </div>
 </div>
@@ -1401,84 +1392,18 @@ when your infrastructure is more complex.</p>
 <h3 id="infrastructure-level-1"><a class="anchor" href="#infrastructure-level-1"></a>7.1. Infrastructure Level 1</h3>
 <div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p>Describe (usually in a combination of diagrams, tables, and text):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the distribution of your system to multiple locations, environments, computers, processors, .. as well as the physical connections between them</p>
-</li>
-<li>
-<p>important justification or motivation for this deployment structure</p>
-</li>
-<li>
-<p>Quality and/or performance features of the infrastructure</p>
-</li>
-<li>
-<p>the mapping of software artifacts to elements of the infrastructure</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For multiple environments or alternative deployments please copy that section of arc42 for all relevant environments.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><em><strong>&lt;Overview Diagram&gt;</strong></em></p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Motivation</dt>
-<dd>
-<p><em>&lt;explanation in text form&gt;</em></p>
-</dd>
-<dt class="hdlist1">Quality and/or Performance Features</dt>
-<dd>
-<p><em>&lt;explanation in text form&gt;</em></p>
-</dd>
-<dt class="hdlist1">Mapping of Building Blocks to Infrastructure</dt>
-<dd>
-<p><em>&lt;description of the mapping&gt;</em></p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect2">
-<h3 id="infrastructure-level-2"><a class="anchor" href="#infrastructure-level-2"></a>7.2. Infrastructure Level 2</h3>
-<div class="sidebarblock arc42help">
+<div class="imageblock">
 <div class="content">
-<div class="paragraph">
-<p>Here you can include the internal structure of (some) infrastructure elements from level 1.</p>
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Untitled%20Diagram.png" alt="diagram">
 </div>
-<div class="paragraph">
-<p>Please copy the structure from level 1 for each selected element.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="infrastructure-element-1"><a class="anchor" href="#infrastructure-element-1"></a>7.2.1. <em>&lt;Infrastructure Element 1&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;diagram + explanation&gt;</em></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="infrastructure-element-2"><a class="anchor" href="#infrastructure-element-2"></a>7.2.2. <em>&lt;Infrastructure Element 2&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;diagram + explanation&gt;</em></p>
 </div>
 <div class="paragraph">
-<p>&#8230;&#8203;</p>
+<p>In our decentralized system the users send message through the chat application to the the SOLID provider that is the one that has the
+POD where the messages are going to be store. It&#8217;s a simple diagram</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="infrastructure-element-n"><a class="anchor" href="#infrastructure-element-n"></a>7.2.3. <em>&lt;Infrastructure Element n&gt;</em></h4>
-<div class="paragraph">
-<p><em>&lt;diagram + explanation&gt;</em></p>
 </div>
 <div style="page-break-after: always;"></div>
-</div>
 </div>
 </div>
 </div>
@@ -1576,33 +1501,14 @@ cohesive specification of such concepts.</p>
 <p>Note: it might be difficult to assign individual concepts to one specific topic
 on this list.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/08-Crosscutting-Concepts-Structure-EN.png" alt="Possible topics for crosscutting concepts"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/08-Crosscutting-Concepts-Structure-EN.png" alt="Possible topics for crosscutting concepts">
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="concept-1"><a class="anchor" href="#concept-1"></a>8.1. <em>&lt;Concept 1&gt;</em></h3>
-<div class="paragraph">
-<p><em>&lt;explanation&gt;</em></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="concept-2"><a class="anchor" href="#concept-2"></a>8.2. <em>&lt;Concept 2&gt;</em></h3>
-<div class="paragraph">
-<p><em>&lt;explanation&gt;</em></p>
-</div>
-<div class="paragraph">
-<p>&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="concept-n"><a class="anchor" href="#concept-n"></a>8.3. <em>&lt;Concept n&gt;</em></h3>
-<div class="paragraph">
-<p><em>&lt;explanation&gt;</em></p>
 </div>
 <div style="page-break-after: always;"></div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -1624,11 +1530,19 @@ on this list.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Programming language</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">We are going to use JavaScript.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">We are going to use TypeScript, html and css to develop our app.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Implementation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">We are going to use the design patter Model View Controller (MVC).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cucumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">We decided to use Cucumber to develop the acceptance tests.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Platform</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">We are going to develop the app using angular</p></td>
 </tr>
 </tbody>
 </table>
@@ -1669,13 +1583,15 @@ on this list.</p>
 <col style="width: 25%;">
 <col style="width: 25%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reference</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quality attribute</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Scenario</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Priority</p></td>
+<th class="tableblock halign-left valign-top">Reference</th>
+<th class="tableblock halign-left valign-top">Quality attribute</th>
+<th class="tableblock halign-left valign-top">Scenario</th>
+<th class="tableblock halign-left valign-top">Priority</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Performance efficiency</p></td>
@@ -1756,13 +1672,13 @@ on this list.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Solid</strong></div>
-<p>As we said with solid, we have the same problem with javascript. We all know this language but we are not
-experts using it so we have some problems at the time of starting the prototype of the application</p>
+<p>This is something completely new for all of us, so we may need to spend quite some time
+in order to start managing everything correctly.</p>
 </div>
 <div class="paragraph">
-<div class="title"><strong>Javascript</strong></div>
-<p>As we said with solid, we have the same problem with javascript. We all know this language but we are not
-experts using it so we have some problems at the time of starting the prototype of the application</p>
+<div class="title"><strong>Angular</strong></div>
+<p>We are not experts on angular since we are not used to use typescript in this kind or level , and apply this
+language to the SOLID requirments its gonna be difficult.</p>
 </div>
 <div class="paragraph">
 <div class="title"><strong>Real time messaging</strong></div>
@@ -1775,6 +1691,10 @@ process we may have to deal with some problems we have never faced before using 
 happens when we send a message to someone who is not online? where do we keep that
 message so it does not get in conflict with the main goal (decentralization) and gets delivered once
 the other client connects?</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>Cucumber</strong></div>
+<p>We never did any acceptance test so we have to get used to work with Cucumber.</p>
 </div>
 </div>
 </div>
@@ -1837,6 +1757,27 @@ They influence the architecture: Availability, modifiability, usability&#8230;&#
 <td class="tableblock halign-left valign-top"><p class="tableblock">They Describe a certain event (triggered by a person or a system) of the system and a
 measurable response to that event. <strong>They must be testeable</strong> and should be prioritized.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Angular</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges. Angular empowers developers to build applications that live on the web, mobile, or the desktop.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Test coverage</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is a measure used to describe the degree to which the source code of a program is executed when a particular test suite runs. A program with high test coverage, measured as a percentage, has had more of its source code executed during testing, which suggests it has a lower chance of containing undetected software bugs compared to a program with low test coverage.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cucumber</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is a tool that supports Behavior Driven Development. Cucumber give us the opportunity to write tests that anybody can understand. It is based on user stories.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>User stories</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. They typically follow a simple template:
+As a &lt; type of user &gt;, I want &lt; some goal &gt; so that &lt; some reason &gt;.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Travis</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is a distributed continuous integration service used to test software projects hosted at GitHub.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1866,7 +1807,7 @@ Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-22 15:08:51 CET
+Last updated 2019-04-02 15:18:26 CEST
 </div>
 </div>
 </body>
