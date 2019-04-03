@@ -9,9 +9,9 @@ We had some problems at the time of decide which database we will use because no
 This is something completely new for all of us, so we may need to spend quite some time 
 in order to start managing everything correctly.
 
-.*Javascript*
-As we said with solid, we have the same problem with javascript. We all know this language but we are not 
-experts using it so we have some problems at the time of starting the prototype of the application
+.*Angular*
+We are not experts on angular since we are not used to use typescript in this kind or level , and apply this
+language to the SOLID requirments its gonna be difficult.
 
 .*Real time messaging*
 When two people are online they should be able to establish real time communication, during the development
