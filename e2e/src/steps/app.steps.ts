@@ -1,4 +1,3 @@
-    
 import { Before, Given, Then, When } from 'cucumber';
 import { expect } from 'chai';
 

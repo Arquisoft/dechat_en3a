@@ -13,19 +13,27 @@ export class AppPage {
     getButtonText() {
         return element(by.css('button')).getText();
     }
-      navigateToCard(){
+      navigateToCard() {
         return browser.get('/card');
     }
 
-    clickRegisterButton(){
+    clickRegisterButton() {
         return element(by.id('register')).click();
     }
 
-    clickSolidRegistration(){
+    clickSolidRegistration() {
         return  element(by.id('solidregister')).click();
     }
 
-    clickLoginButton(){
+    clickLoginButton() {
         return  element(by.id('login')).click();
+    }
+
+    getParagraphText() {
+        return element(by.css('h1')).getText();
+    }
+
+    navigateToLogin() {
+        return ;
     }
 }
