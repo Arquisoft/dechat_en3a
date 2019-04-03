@@ -12,6 +12,8 @@ import { print } from 'util';
  */
 import { ChatService } from '../services/chat.service';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+import { p } from '@angular/core/src/render3';
+import { User } from '../models/user.model';
 
 
 @Component({
@@ -27,8 +29,11 @@ export class ChatComponent implements OnInit  {
   loadingProfile: Boolean;
   message: string;
   chatMessages: string[] = new Array<string>();
+  public partnerUsername: string; 
+
 
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
+    this.partnerUsername = this.chat.partnerUser.username;
   }
 
 /**
@@ -115,6 +120,7 @@ export class ChatComponent implements OnInit  {
     let m = '';
     <HTMLInputElement> document.getElementById('usermsg');
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
+    this.checkNotEmpty(message);
     if(message != ''){
       let now = new Date();
       let user = this.chat.ownUser.username;
@@ -130,5 +136,17 @@ export class ChatComponent implements OnInit  {
       (<HTMLInputElement> document.getElementById('usermsg')).value = '';
     }
   }
+
+  /**
+   * With this method checks if you write an empty message and shows an alert in that case.
+   * @param message 
+   */
+  checkNotEmpty(message: string) {
+    if(message.length == 0) {
+        alert("You cannot send an empty message");
+    }
+  }
+
+
 }
 
