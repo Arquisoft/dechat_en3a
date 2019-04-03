@@ -15,7 +15,7 @@ export class ChatService{
 
   providers: [ RdfService ];
   chatMessages: ChatMessage[] = new Array<ChatMessage>();
-  partnerChatMessages: ChatMessage[] = new Array<ChatMessage>();
+
 
   thisUser: BehaviorSubject<User>;
   ownUser: User;
@@ -161,11 +161,4 @@ export class ChatService{
     return of(this.friendsList);
   }
 
-
-  /**
-   * To add the messages for the partner
-   */
-  private addPartnerMessages(message: ChatMessage) {
-    this.partnerChatMessages.push(message);
-  }
 }

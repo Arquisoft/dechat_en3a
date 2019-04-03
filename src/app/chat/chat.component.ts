@@ -27,7 +27,6 @@ export class ChatComponent implements OnInit  {
   loadingProfile: Boolean;
   message: string;
   chatMessages: string[] = new Array<string>();
-  partnerChatMessages: string[] = new Array<string>();
 
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
   }
@@ -131,28 +130,5 @@ export class ChatComponent implements OnInit  {
       (<HTMLInputElement> document.getElementById('usermsg')).value = '';
     }
   }
-
-  loadPartnerMessages() {
-    let m = '';
-    let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
-    //this.chat.sendMessage(message);
-    let now = new Date();
-    let user = this.chat.ownUser.username;
-    this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
-    + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
-    + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
-    for(let i = 0; i < this.partnerChatMessages.length; i++){
-      if(this.chat.ownUser.username == this.chat.partnerChatMessages[i].userName){
-        return;
-      }
-      else {
-        m = m + this.partnerChatMessages[i] + '<br>';
-      }
-    }
-    (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
-    (<HTMLInputElement> document.getElementById('usermsg')).value = '';
-  }
-
-
 }
 
