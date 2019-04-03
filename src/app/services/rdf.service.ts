@@ -18,6 +18,9 @@ const MEE = $rdf.Namespace('http://www.w3.org/ns/pim/meeting#');
 const RDFSYN = $rdf.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#');
 const DCEL = $rdf.Namespace('http://purl.org/dc/elements/1.1/');
 const LDP = $rdf.Namespace('http://www.w3.org/ns/ldp#');
+const TERMS = $rdf.Namespace('http://purl.org/dc/terms/');
+const SIOC = $rdf.Namespace('http://rdfs.org/sioc/ns#');
+const FLOW = $rdf.Namespace('http://www.w3.org/2005/01/wf/flow#');
 
 /**
  * A service layer for RDF data manipulation using rdflib.js
@@ -373,16 +376,17 @@ export class RdfService {
   }
 
   async createNewChat(ownWebId: string, partnerWebId: string, chatFolder: string){
+    const indexFileUri = chatFolder.replace('/chat.ttl','/index.ttl');
     const currentDate = new Date();
-    const thisUriSym = this.store.sym(chatFolder + '#this');
+    const thisUriSym = this.store.sym(indexFileUri + '#this');
     const ownUriSym = this.store.sym(ownWebId);
     const partnerUiSym = this.store.sym(partnerWebId);
 
     const ins = [];
 
-    const indexFile = this.store.sym(chatFolder);
+    const indexFile = this.store.sym(indexFileUri);
     const myCardFile = this.store.sym(ownWebId.replace('#me', ''));
-    const chatFolderFile = this.store.sym(chatFolder.replace('/index.ttl', ''));
+    const chatFolderFile = this.store.sym(chatFolder.replace('/chat.ttl', ''));
     this.fetcher.load(myCardFile.doc());
 
     ins.push($rdf.st(thisUriSym, RDFSYN('type'), MEE('Chat'), indexFile.doc()));
@@ -392,7 +396,7 @@ export class RdfService {
    
     const cardNote = $rdf.st(chatFolderFile, MEE('Chat'), partnerUiSym, myCardFile.doc());
   }
-
+  
   async createStructure(uri: string) {
     const splitted = uri.split('/');
     for (let i = 3; i > 0; i--) {
@@ -404,10 +408,34 @@ export class RdfService {
   
   async createChatFile(uri: string) {
     const chatFile = this.store.sym(uri);
-    const chatFold = uri.replace('/index.ttl', '');
-    const chatFolder = this.store.sym(chatFold);
+    const folder = uri.replace('/chat.ttl', '');
+    const chatFolder = this.store.sym(folder);
     await this.fetcher.load(chatFolder.doc());
     const matches = await this.store.match(chatFolder, LDP('contains'), null, chatFolder.doc());
-  }
   
+    if (matches.length === 0) {
+      await this.updateManager.put(chatFile.doc(), '', 'text/turtle', function (o, s, c) { });
+    }
+  }
+
+  async addMessage(chatFileUri: string, message: ChatMessage, ownUri: string) {
+    let time = message.timeSent.getUTCFullYear() + ('0' + (message.timeSent.getUTCMonth() + 1)).slice(-2) 
+    + ('0' + message.timeSent.getUTCDate()).slice(-2) + ('0' + message.timeSent.getHours()).slice(-2) 
+    + ('0' + message.timeSent.getMinutes()).slice(-2)
+    const msgUri = chatFileUri + '#Msg' + time;
+    const indexUri = chatFileUri.split('/').slice(0, 5).join('/') + '#this';
+    const msgUriSym = this.store.sym(msgUri);
+    const indexUriSym = this.store.sym(indexUri);
+    
+    const ins = [];
+
+    const cFile = this.store.sym(chatFileUri);
+    this.fetcher.load(cFile.doc());
+    ins.push($rdf.st(msgUriSym, TERMS('created'), message.timeSent, cFile.doc()));
+    ins.push($rdf.st(msgUriSym, SIOC('content'), message.message, cFile.doc()));
+    ins.push($rdf.st(msgUriSym, FOAF('maker'), this.store.sym(ownUri), cFile.doc()));
+
+    ins.push($rdf.st(indexUriSym, FLOW('message'), msgUriSym, cFile.doc()));
+  }
+
 }

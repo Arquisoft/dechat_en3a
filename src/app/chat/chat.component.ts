@@ -11,6 +11,7 @@ import { print } from 'util';
  * We need the chat service to do the operations with the messages.
  */
 import { ChatService } from '../services/chat.service';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
 
 @Component({
@@ -115,23 +116,26 @@ export class ChatComponent implements OnInit  {
     let m = '';
     <HTMLInputElement> document.getElementById('usermsg');
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
-    this.chat.sendMessage(message);
-    let now = new Date();
-    let user = this.chat.ownUser.username;
-    this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
-    + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
-    + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
-    for(let i = 0; i < this.chatMessages.length; i++) {
-      m = m + this.chatMessages[i] + '<br>';
+    if(message != ''){
+      let now = new Date();
+      let user = this.chat.ownUser.username;
+      let msg = new ChatMessage(user, message, now);
+      this.chat.sendMessage(msg);
+      this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
+      + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
+      + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
+      for(let i = 0; i < this.chatMessages.length; i++) {
+        m = m + this.chatMessages[i] + '<br>';
+      }
+      (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
+      (<HTMLInputElement> document.getElementById('usermsg')).value = '';
     }
-    (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
-    (<HTMLInputElement> document.getElementById('usermsg')).value = '';
   }
 
   loadPartnerMessages() {
     let m = '';
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
-    this.chat.sendMessage(message);
+    //this.chat.sendMessage(message);
     let now = new Date();
     let user = this.chat.ownUser.username;
     this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
