@@ -132,7 +132,7 @@ export class ChatService{
    */
   private getChannel(ownUser: User) {
     this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '-' 
-    + this.partnerUser.username + '/chat.ttl');
+    + this.partnerUser.username.toLocaleLowerCase() + '/chat.ttl');
   }    
 
   /**
