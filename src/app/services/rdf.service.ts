@@ -422,19 +422,15 @@ export class RdfService {
 
   }
 
-  async addMessage(chatFileUri: string, message: ChatMessage, ownUri: string) {
+  async addMessage(chatFileUri: string, message: ChatMessage, ownUri: string, partnerFile: string) {
     let time = message.timeSent.getUTCFullYear() + ('0' + (message.timeSent.getUTCMonth() + 1)).slice(-2) 
     + ('0' + message.timeSent.getUTCDate()).slice(-2) + ('0' + message.timeSent.getHours()).slice(-2) 
     + ('0' + message.timeSent.getMinutes()).slice(-2)
     const msgUri = chatFileUri + '#Msg' + time;
-    console.log(msgUri);
     const indexUri = chatFileUri.split('/').slice(0, 6).join('/') + '#this';
-    console.log(indexUri);
     const msgUriSym = this.store.sym(msgUri);
-    console.log(msgUriSym);
     const indexUriSym = this.store.sym(indexUri);
-    console.log(indexUriSym);
-
+    
     const ins = [];
 
     const cFile = this.store.sym(chatFileUri);
@@ -444,8 +440,26 @@ export class RdfService {
     ins.push($rdf.st(msgUriSym, FOAF('maker'), this.store.sym(ownUri), cFile.doc()));
 
     ins.push($rdf.st(indexUriSym, FLOW('message'), msgUriSym, cFile.doc()));
-  
+
     this.updateManager.update([], ins, (uri, ok, msg, response) => {});
+
+    //Send to the partner
+    const msgPartnerUri = partnerFile + '#Msg' + time;
+    const indexParnerUri = partnerFile.split('/').slice(0, 6).join('/') + '#this';
+    const msgPartnerUriSym = this.store.sym(msgPartnerUri);
+    const indexPartnerUriSym = this.store.sym(indexParnerUri);
+
+    const ins2 = [];
+
+    const pFile = this.store.sym(partnerFile);
+    this.fetcher.load(pFile.doc());
+    ins2.push($rdf.st(msgPartnerUriSym, TERMS('created'), message.timeSent, pFile.doc()));
+    ins2.push($rdf.st(msgPartnerUriSym, SIOC('content'), message.message, pFile.doc()));
+    ins2.push($rdf.st(msgPartnerUriSym, FOAF('maker'), this.store.sym(ownUri), pFile.doc()));
+
+    ins2.push($rdf.st(indexPartnerUriSym, FLOW('message'), msgPartnerUriSym, pFile.doc()));
+  
+    this.updateManager.update([], ins2, (uri, ok, msg, response) => {});
   
   }
 

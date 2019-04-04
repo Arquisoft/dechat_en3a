@@ -144,7 +144,9 @@ export class ChatService{
     if(!this.rdf.session){
       return ;
     }
-    await this.rdf.addMessage(await this.currentChannel, msg, this.ownUser.webId);
+    const partnerFolder = this.partnerUser.webId.replace('profile/card#me', 'public/' + this.partnerUser.username.toLocaleLowerCase() + '-' 
+    + this.ownUser.username + '/chat.ttl');
+    await this.rdf.addMessage(await this.currentChannel, msg, this.ownUser.webId, partnerFolder);
     this.addMessage(msg);
   }
 
