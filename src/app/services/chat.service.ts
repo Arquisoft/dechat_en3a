@@ -131,7 +131,7 @@ export class ChatService{
    * @param ownUser 
    */
   private getChannel(ownUser: User) {
-    this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '<->' 
+    this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '-' 
     + this.partnerUser.username + '/chat.ttl');
   }    
 

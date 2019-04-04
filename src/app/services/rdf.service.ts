@@ -376,15 +376,14 @@ export class RdfService {
   }
 
   async createNewChat(ownWebId: string, partnerWebId: string, chatFolder: string){
-    const indexFileUri = chatFolder.replace('/chat.ttl','/index.ttl');
     const currentDate = new Date();
-    const thisUriSym = this.store.sym(indexFileUri + '#this');
+    const thisUriSym = this.store.sym(chatFolder + '#this');
     const ownUriSym = this.store.sym(ownWebId);
     const partnerUiSym = this.store.sym(partnerWebId);
 
     const ins = [];
 
-    const indexFile = this.store.sym(indexFileUri);
+    const indexFile = this.store.sym(chatFolder);
     const myCardFile = this.store.sym(ownWebId.replace('#me', ''));
     const chatFolderFile = this.store.sym(chatFolder.replace('/chat.ttl', ''));
     this.fetcher.load(myCardFile.doc());
@@ -392,15 +391,19 @@ export class RdfService {
     ins.push($rdf.st(thisUriSym, RDFSYN('type'), MEE('Chat'), indexFile.doc()));
     ins.push($rdf.st(thisUriSym, DCEL('author'), ownUriSym, indexFile.doc()));
     ins.push($rdf.st(thisUriSym, DCEL('created'), currentDate, indexFile.doc()));
-    ins.push($rdf.st(thisUriSym, DCEL('title'), 'Chat Channel', indexFile.doc()));
+    ins.push($rdf.st(thisUriSym, DCEL('title'), 'Chat', indexFile.doc()));
    
+    await this.updateManager.put(indexFile.doc(), ins, 'text/turtle', (uri, ok, message, response) => {});
+
     const cardNote = $rdf.st(chatFolderFile, MEE('Chat'), partnerUiSym, myCardFile.doc());
   }
   
   async createStructure(uri: string) {
     const splitted = uri.split('/');
+    console.log(splitted);
     for (let i = 3; i > 0; i--) {
       const newUri = splitted.slice(0, splitted.length - i).join('/');
+      console.log(newUri);
       await fileClient.createFolder(newUri);
     }
     await this.createChatFile(uri);
@@ -412,10 +415,11 @@ export class RdfService {
     const chatFolder = this.store.sym(folder);
     await this.fetcher.load(chatFolder.doc());
     const matches = await this.store.match(chatFolder, LDP('contains'), null, chatFolder.doc());
-  
+
     if (matches.length === 0) {
       await this.updateManager.put(chatFile.doc(), '', 'text/turtle', function (o, s, c) { });
     }
+
   }
 
   async addMessage(chatFileUri: string, message: ChatMessage, ownUri: string) {
@@ -423,10 +427,14 @@ export class RdfService {
     + ('0' + message.timeSent.getUTCDate()).slice(-2) + ('0' + message.timeSent.getHours()).slice(-2) 
     + ('0' + message.timeSent.getMinutes()).slice(-2)
     const msgUri = chatFileUri + '#Msg' + time;
-    const indexUri = chatFileUri.split('/').slice(0, 5).join('/') + '#this';
+    console.log(msgUri);
+    const indexUri = chatFileUri.split('/').slice(0, 6).join('/') + '#this';
+    console.log(indexUri);
     const msgUriSym = this.store.sym(msgUri);
+    console.log(msgUriSym);
     const indexUriSym = this.store.sym(indexUri);
-    
+    console.log(indexUriSym);
+
     const ins = [];
 
     const cFile = this.store.sym(chatFileUri);
@@ -436,6 +444,9 @@ export class RdfService {
     ins.push($rdf.st(msgUriSym, FOAF('maker'), this.store.sym(ownUri), cFile.doc()));
 
     ins.push($rdf.st(indexUriSym, FLOW('message'), msgUriSym, cFile.doc()));
+  
+    this.updateManager.update([], ins, (uri, ok, msg, response) => {});
+  
   }
 
 }
