@@ -107,7 +107,7 @@ export class ChatService{
    */
   loadPartner(username: String) {
     const photo: string = '../assets/images/profile.png';
-    this.partnerUser = new User('https://'+ username +'.inrupt.net/profile/card#me', username, photo);
+    this.partnerUser = new User('https://'+ username.toLocaleLowerCase() +'.inrupt.net/profile/card#me', username.toLocaleLowerCase(), photo);
   }
   
   /**
