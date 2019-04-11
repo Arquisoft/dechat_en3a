@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 
 @Component({
-    selector: 'app-card',
+    selector: 'app-comments',
     templateUrl: './comments.component.html',
     styleUrls: ['./comments.component.css'],
 })
@@ -77,7 +77,7 @@ export class CommentsComponent implements OnInit  {
         this.auth.solidSignOut();
     }
 
-    goToChat(){
+    goToChat() {
         this.r.navigateByUrl('chat');
     }
 
@@ -90,7 +90,7 @@ export class CommentsComponent implements OnInit  {
     }
 
     goBack() {
-        this.r.navigateByUrl('card')
+        this.r.navigateByUrl('card');
     }
 
 }

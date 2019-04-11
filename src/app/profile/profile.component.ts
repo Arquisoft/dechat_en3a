@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 
 @Component({
-selector: 'app-card',
+selector: 'app-profile',
 templateUrl: './profile.component.html',
 styleUrls: ['./profile.component.css'],
 })
@@ -77,7 +77,7 @@ this.profileImage = '/assets/images/profile.png';
         this.auth.solidSignOut();
     }
 
-    goToChat(){
+    goToChat() {
         this.r.navigateByUrl('chat');
     }
 
@@ -90,7 +90,7 @@ this.profileImage = '/assets/images/profile.png';
     }
 
     goBack() {
-        this.r.navigateByUrl('card')
+        this.r.navigateByUrl('card');
     }
 
 }

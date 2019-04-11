@@ -33,7 +33,7 @@ export class ChatService{
       this.thisUser = new BehaviorSubject<User>(null);
       this.loadOwnUser();
       this.loadUserData().then(response => { this.loadFriends(); });
-      this.loadPartner('Ruizber'); 
+      this.loadPartner('pablomrtnez'); 
       this.loadChat(); 
   }
 /**

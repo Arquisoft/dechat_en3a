@@ -29,7 +29,7 @@ export class ChatComponent implements OnInit  {
   loadingProfile: Boolean;
   message: string;
   chatMessages: string[] = new Array<string>();
-  public partnerUsername: string; 
+  public partnerUsername: string;
 
 
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
@@ -38,7 +38,7 @@ export class ChatComponent implements OnInit  {
 
 /**
  * Executes this method when the component is used.
- * 
+ *
  */
   ngOnInit() {
     this.loadingProfile = true;
@@ -69,8 +69,8 @@ export class ChatComponent implements OnInit  {
 
   }
 
-  private loadData(){
-    this.chat.loadPartner('Ruizber');
+  private loadData() {
+    this.chat.loadPartner('pablomrtnez');
     console.log(this.chat.partnerUser.username);
     this.chat.loadChat();
   }
@@ -89,7 +89,7 @@ export class ChatComponent implements OnInit  {
 
   /**
    * Example of logout functionality. Normally wouldn't be triggered by clicking the profile picture.
-   */ 
+   */
   logout() {
     this.auth.solidSignOut();
   }
@@ -114,14 +114,16 @@ export class ChatComponent implements OnInit  {
 
   /**
    * This mtehod is use to send messages in the chat application.
-   * In this method also when you send a message apperas the date when the message was sent and the author of the message in this case with the username of solid.
+   * In this method also when you send a message
+   * apperas the date when the message was sent and
+   * the author of the message in this case with the username of solid.
    */
  sendMessage() {
     let m = '';
     <HTMLInputElement> document.getElementById('usermsg');
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.checkNotEmpty(message);
-    if(message != ''){
+    if(message != '') {
       let now = new Date();
       let user = this.chat.ownUser.username;
       let msg = new ChatMessage(user, message, now);
@@ -129,7 +131,7 @@ export class ChatComponent implements OnInit  {
       this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
       + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
       + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
-      for(let i = 0; i < this.chatMessages.length; i++) {
+      for (let i = 0; i < this.chatMessages.length; i++) {
         m = m + this.chatMessages[i] + '<br>';
       }
       (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
@@ -139,11 +141,11 @@ export class ChatComponent implements OnInit  {
 
   /**
    * With this method checks if you write an empty message and shows an alert in that case.
-   * @param message 
+   * @param message
    */
   checkNotEmpty(message: string) {
-    if(message.length == 0) {
-        alert("You cannot send an empty message");
+    if (message.length === 0) {
+        alert('You cannot send an empty message');
     }
   }
 
