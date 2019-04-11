@@ -77,6 +77,14 @@ export class ChatService{
   }
 
   /**
+   * This method load the messages in the chat
+   */
+  loadMessages(): Observable<ChatMessage[]> {
+
+    return of(this.chatMessages);
+  } 
+
+  /**
    * This method loads the friends of the logged user.
    */
   async loadFriends() {
@@ -108,6 +116,7 @@ export class ChatService{
   loadPartner(username: String) {
     const photo: string = '../assets/images/profile.png';
     this.partnerUser = new User('https://'+ username.toLocaleLowerCase() +'.inrupt.net/profile/card#me', username.toLocaleLowerCase(), photo);
+    this.loadMessages();
   }
   
   /**
