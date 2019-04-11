@@ -80,7 +80,6 @@ export class ChatService{
    * This method load the messages in the chat
    */
   loadMessages(): Observable<ChatMessage[]> {
-
     return of(this.chatMessages);
   } 
 

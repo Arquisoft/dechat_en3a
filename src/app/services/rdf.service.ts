@@ -366,6 +366,11 @@ export class RdfService {
     }
   }
 
+  /**
+   * This method is used to get the channel with the partner.
+   * @param userWebId 
+   * @param partnerWebId 
+   */
   async getChannel(userWebId: string, partnerWebId: string): Promise<string>{
     const me = this.store.sym(userWebId.replace('#me', ''));
     const document = me.doc();
@@ -375,6 +380,12 @@ export class RdfService {
     return match[0].subject.value;
   }
 
+  /**
+   * We use this method to create the new chat with the partner.
+   * @param ownWebId 
+   * @param partnerWebId 
+   * @param chatFolder 
+   */
   async createNewChat(ownWebId: string, partnerWebId: string, chatFolder: string){
     const currentDate = new Date();
     const thisUriSym = this.store.sym(chatFolder + '#this');
@@ -398,6 +409,10 @@ export class RdfService {
     const cardNote = $rdf.st(chatFolderFile, MEE('Chat'), partnerUiSym, myCardFile.doc());
   }
   
+  /**
+   * This method is used to create the structure
+   * @param uri 
+   */
   async createStructure(uri: string) {
     const splitted = uri.split('/');
     console.log(splitted);
@@ -409,6 +424,10 @@ export class RdfService {
     await this.createChatFile(uri);
   }
   
+  /**
+   * This method is used to create the file with the message of the chat
+   * @param uri 
+   */
   async createChatFile(uri: string) {
     const chatFile = this.store.sym(uri);
     const folder = uri.replace('/chat.ttl', '');
@@ -422,6 +441,14 @@ export class RdfService {
 
   }
 
+
+  /**
+   * This method is used to add a message to the pod.
+   * @param chatFileUri 
+   * @param message 
+   * @param ownUri 
+   * @param partnerFile 
+   */
   async addMessage(chatFileUri: string, message: ChatMessage, ownUri: string, partnerFile: string) {
     let time = message.timeSent.getUTCFullYear() + ('0' + (message.timeSent.getUTCMonth() + 1)).slice(-2) 
     + ('0' + message.timeSent.getUTCDate()).slice(-2) + ('0' + message.timeSent.getHours()).slice(-2) 
