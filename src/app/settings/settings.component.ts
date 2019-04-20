@@ -98,6 +98,9 @@ export class SettingsComponent implements OnInit  {
     this.r.navigateByUrl('profile');
   }
 
+  /**
+   * Method to go to the comments component.
+   */
   goToComments(){
     this.r.navigateByUrl('comments');
   }

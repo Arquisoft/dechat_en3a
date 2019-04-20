@@ -7,6 +7,10 @@ import { ChatMessage } from '../../app/models/chat-message.model';
     templateUrl: './message.component.html',
     styleUrls: ['./message.component.css']
 })
+
+/**
+ * This is the message component with the time of it
+ */
 export class MessageComponent implements OnInit {
 
     @Input() chatMessage: ChatMessage;

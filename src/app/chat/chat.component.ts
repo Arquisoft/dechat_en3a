@@ -69,6 +69,9 @@ export class ChatComponent implements OnInit  {
 
   }
 
+  /**
+   * This method is used to load the partner in the chat
+   */
   private loadData() {
     this.chat.loadPartner('pablomrtnez');
     console.log(this.chat.partnerUser.username);
