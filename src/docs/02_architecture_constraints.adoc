@@ -9,6 +9,33 @@
 |Constraint |Explanation
 |The application must be decentralized
 |Our goal is to have a decentralized chat, that consists in having separated personal data from apps.
+
+|Browser-independent
+|The application must be browser independent, need to test the application in the most popular ones, at least.
+
+|Github
+|The project is open source, hosted in a Github repository, which helps a lot.
+
+|Language
+|The application must, at least, be developed in English, as we are a students of the english group.
+
+|Testing 
+|We need to develop tests as much as we can.
+
+|===
+****
+
+****
+=== Organizational Constraints
+[options="header"]
+|===
+|Constraint |Explanation
+|Deadline
+|Our application must be as advanced as possible by May 2019.
+
+|Team
+|We are a team of 5 people and we must work like one.
+
 |===
 ****
 
