@@ -33,7 +33,7 @@ export class ChatService{
       this.thisUser = new BehaviorSubject<User>(null);
       this.loadOwnUser();
       this.loadUserData().then(response => { this.loadFriends(); });
-      this.loadPartner('pablomrtnez'); 
+      this.loadPartner('ruizber'); 
       this.loadChat(); 
   }
 /**
@@ -114,7 +114,7 @@ export class ChatService{
    */
   loadPartner(username: String) {
     const photo: string = '../assets/images/profile.png';
-    this.partnerUser = new User('https://'+ username.toLocaleLowerCase() +'.inrupt.net/profile/card#me', username.toLocaleLowerCase(), photo);
+    this.partnerUser = new User('https://'+ username +'.inrupt.net/profile/card#me', username, photo);
     this.loadMessages();
   }
   
@@ -132,6 +132,7 @@ export class ChatService{
       await this.rdf.createStructure(this.currentChannel);
       await this.rdf.createNewChat(this.ownUser.webId, this.partnerUser.webId, this.currentChannel);
     }
+    this.rdf.loadPodMessages(this.currentChannel);
   }
 
   /**
@@ -140,7 +141,7 @@ export class ChatService{
    */
   private getChannel(ownUser: User) {
     this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '-' 
-    + this.partnerUser.username.toLocaleLowerCase() + '/chat.ttl');
+    + this.partnerUser.username + '/chat.ttl');
   }    
 
   /**
@@ -152,7 +153,7 @@ export class ChatService{
     if(!this.rdf.session){
       return ;
     }
-    const partnerFolder = this.partnerUser.webId.replace('profile/card#me', 'public/' + this.partnerUser.username.toLocaleLowerCase() + '-' 
+    const partnerFolder = this.partnerUser.webId.replace('profile/card#me', 'public/' + this.partnerUser.username + '-' 
     + this.ownUser.username + '/chat.ttl');
     await this.rdf.addMessage(await this.currentChannel, msg, this.ownUser.webId, partnerFolder);
     this.addMessage(msg);

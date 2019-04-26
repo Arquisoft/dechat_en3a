@@ -33,6 +33,7 @@ export class RdfService {
 
   session: SolidSession;
   store = $rdf.graph();
+  podChatMessages: ChatMessage[] = new Array<ChatMessage>();
 
   /**
    * A helper object that connects to the web, loads data, and saves it back. More powerful than using a simple
@@ -488,6 +489,20 @@ export class RdfService {
   
     this.updateManager.update([], ins2, (uri, ok, msg, response) => {});
   
+  }
+
+  loadPodMessages(chatFileUri: string){
+    const cFile = this.store.sym(chatFileUri);
+    this.fetcher.load(cFile.doc());
+    let lines = cFile.doc().split('/n');
+    for(let line in lines){
+      console.log(line);
+      if (line.includes(':Msg')){
+        console.log(line);
+        //this.podChatMessages.push(line);
+      }
+    }
+    return this.podChatMessages;
   }
 
 }
