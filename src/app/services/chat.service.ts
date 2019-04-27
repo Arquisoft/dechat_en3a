@@ -132,7 +132,7 @@ export class ChatService{
       await this.rdf.createStructure(this.currentChannel);
       await this.rdf.createNewChat(this.ownUser.webId, this.partnerUser.webId, this.currentChannel);
     }
-    this.rdf.loadPodMessages(this.currentChannel);
+    //this.rdf.loadMessagesFromPod(this.currentChannel);
   }
 
   /**
@@ -172,4 +172,19 @@ export class ChatService{
     return of(this.friendsList);
   }
 
+  /*
+  private async loadMessagesFromPod() {
+    this.rdf.getMessageUrisForFile(this.currentChatFile, this.currentChat.chatFileUri).then(res => {
+      res.forEach(async el => {
+        const maker = await this.rdf.getMessageMaker(el.value, this.currentChatFileUri);
+        const msg = new ChatMessage(this.getUsernameFromWebID(maker),
+          await this.rdf.getMessageContent(el.value, this.currentChatFileUri),
+          maker, await this.getUserByWebId(maker));
+        msg.uri = el.value;
+        msg.timeSent = await this.rdf.getMessageDate(el.value, this.currentChatFileUri);
+        this.addMessage(m);
+      });
+    });
+  }
+  */
 }

@@ -5,7 +5,7 @@ import { ChatMessage } from '../models/chat-message.model';
 import * as fileClient from 'solid-file-client';
 declare let solid: any;
 declare let $rdf: any;
-//import * as $rdf from 'rdflib'
+import * as $rdf from 'rdflib'
 
 // TODO: Remove any UI interaction from this service
 import { NgForm } from '@angular/forms';
@@ -33,7 +33,6 @@ export class RdfService {
 
   session: SolidSession;
   store = $rdf.graph();
-  podChatMessages: ChatMessage[] = new Array<ChatMessage>();
 
   /**
    * A helper object that connects to the web, loads data, and saves it back. More powerful than using a simple
@@ -491,18 +490,13 @@ export class RdfService {
   
   }
 
-  loadPodMessages(chatFileUri: string){
-    const cFile = this.store.sym(chatFileUri);
-    this.fetcher.load(cFile.doc());
-    let lines = cFile.doc().split('/n');
-    for(let line in lines){
-      console.log(line);
-      if (line.includes(':Msg')){
-        console.log(line);
-        //this.podChatMessages.push(line);
-      }
-    }
-    return this.podChatMessages;
+  async getMessageUrisForFile(chatFileUri: string, chatUri: string): Promise<Array<NamedNode>> {
+    const d = this.store.sym(chatFileUri);
+    await this.fetcher.load(d.doc());
+    const indexUri = chatUri + '/index.ttl#this';
+    const indexd = this.store.sym(indexUri);
+    const messagesIdsList = (await this.store.match(indexd, FLOW('message'), null, d.doc())).map(e => e.object);
+    return messagesIdsList;
   }
 
 }
