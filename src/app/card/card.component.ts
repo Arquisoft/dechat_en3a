@@ -72,20 +72,34 @@ export class CardComponent implements OnInit  {
     }
   }
 
+  /**
+   * This method is used to go to the chat component
+   * 
+   */
   goToChat() {
     this.r.navigateByUrl('chat');
   }
 
+  /**
+   * This method is used to go to the settings component
+   */
   goToSettings() {
     this.r.navigateByUrl('settings');
   }
 
+  /**
+   * This method is used to go to the information component
+   */
   goToInfo() {
     this.r.navigateByUrl('information');
   }
 
-  // Example of logout functionality. Normally wouldn't be triggered by clicking the profile picture.
+  /**
+   * This methos is used to log out of your account
+   */
   logout() {
       this.auth.solidSignOut();
   }
+
+  
 }
