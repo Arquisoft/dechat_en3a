@@ -1,7 +1,6 @@
 [[section-introduction-and-goals]]
 == Introduction and Goals
 ****
-
 [role="arc42help"]
 ****
 === Requirements Overview
@@ -11,8 +10,6 @@ We use solid for this application and design a decentralized chat that allows pe
 We develop this system to allow users to keep his personal data save in this computer so the data doesnt need to go to a server.
 
 ****
-
-[role="arc42help"]
 ****
 === Quality Goals
 
@@ -24,8 +21,6 @@ We develop this system to allow users to keep his personal data save in this com
 | Usability | The app should be easy to use for the user, easy to interact with, and intuitive, so the users doesn't need to think so much about what to do and how to do that
 |===
 ****
-
-[role="arc42help"]
 ****
 === Stakeholders
 
@@ -43,6 +38,5 @@ We develop this system to allow users to keep his personal data save in this com
 | Teamwork | Group developing the application | Develop a functional application that allow us to pass the course
 | Client | People that is going to use the application | Have the possibility to chat with another people keeping his data save
 |===
-
 ****
 ****
