@@ -103,7 +103,13 @@ export class CardComponent implements OnInit  {
   }
 
   async selectPartner() {
-      this.selectedPartner = 'pablomrtnez';
+      if(document.getElementById('1')){
+        this.selectedPartner = 'pablomrtnez';
+      } else if (document.getElementById('2')){
+        this.selectedPartner = 'ruizber';
+      } else if (document.getElementById('4')) {
+        this.selectedPartner = 'danielllanauni';
+      }
   
  
   }
