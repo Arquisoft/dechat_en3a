@@ -17,6 +17,8 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Syst
 
 <<Business context diagram>>
 
+We will have two users (at least) sending and receiving messages, while in the background, RDF will be sharing chat details. The data that the users will exchange will be kept in PODs.
+
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/BusinessContext.PNG[diagram]
 
 ****
@@ -26,11 +28,7 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Busi
 
 [role="arc42help"]
 
-.Contents
-Technical interfaces (channels and transmission media) linking your system to its environment. In addition a mapping of domain specific input/output to the channels, i.e. an explanation with I/O uses which channel.
-
-.Motivation
-Many stakeholders make architectural decision based on the technical interfaces between the system and its context. Especially infrastructure or hardware designers decide these technical interfaces.
+As the architecture of DeChat is SOLID, we'll be using WebID to communicate between users and friends. In addition, SOLID uses WebSockets, RDF...
 
 .Form
 E.g. UML deployment diagram describing channels to neighboring systems,
