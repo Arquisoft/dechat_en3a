@@ -17,6 +17,7 @@ export class CardComponent implements OnInit  {
   profile: SolidProfile;
   profileImage: string;
   loadingProfile: Boolean;
+  public selectedPartner: String;
 
   @ViewChild('f') cardForm: NgForm;
 
@@ -99,6 +100,12 @@ export class CardComponent implements OnInit  {
    */
   logout() {
       this.auth.solidSignOut();
+  }
+
+  async selectPartner() {
+      this.selectedPartner = 'pablomrtnez';
+  
+ 
   }
 
   

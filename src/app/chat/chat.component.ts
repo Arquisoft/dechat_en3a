@@ -30,6 +30,7 @@ export class ChatComponent implements OnInit  {
   message: string;
   chatMessages: string[] = new Array<string>();
   public partnerUsername: string;
+  public selectedPartner: string;
 
 
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
@@ -152,6 +153,6 @@ export class ChatComponent implements OnInit  {
     }
   }
 
-
+  
 }
 

@@ -6,7 +6,6 @@ import { ChatMessage } from '../models/chat-message.model';
 import { RdfService } from './rdf.service';
 import { User } from '../models/user.model';
 import { ToastrService } from 'ngx-toastr';
-
 import * as fileClient from 'solid-file-client';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 
@@ -20,15 +19,15 @@ export class ChatService{
   thisUser: BehaviorSubject<User>;
   ownUser: User;
   partnerUser: User;
-
   currentUserWebId: string;
   currentChannel: string;
   currentChatFile: string;
 
   friendsList: Array<User> = new Array<User>();
+ 
 
 
-  constructor (private rdf : RdfService, private toastr: ToastrService){
+  constructor ( private rdf : RdfService, private toastr: ToastrService){
       this.rdf.getSession();
       this.thisUser = new BehaviorSubject<User>(null);
       this.loadOwnUser();
