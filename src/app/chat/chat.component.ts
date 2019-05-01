@@ -14,6 +14,7 @@ import { ChatService } from '../services/chat.service';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { p } from '@angular/core/src/render3';
 import { User } from '../models/user.model';
+import { delay } from 'q';
 
 
 @Component({
@@ -81,6 +82,7 @@ export class ChatComponent implements OnInit  {
   
   private selectPartner() {
     this.selectedPartner = this.opcionSeleccionada;
+    this.chatMessages.length = 0;
     this.chat.chatMessages.length = 0; 
     this.chat.loadPartner(this.selectedPartner);
     this.chat.loadChat();
@@ -139,22 +141,22 @@ export class ChatComponent implements OnInit  {
       let user = this.chat.ownUser.username;
       let msg = new ChatMessage(user, message, now);
       this.chat.sendMessage(msg, this.selectedPartner);
-      
+      /*
       this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
       + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
       + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
-      
-      /*
+      */
       this.chat.chatMessages.forEach(element => {
-        console.log(this.chat.chatMessages.length);
         this.chatMessages.push('[' + element.timeSent + '] ' + element.userName + ': ' + element.message);
       });
-      */
+      
+      m = null;
       for (let i = 0; i < this.chatMessages.length; i++) {
         m = m + this.chatMessages[i] + '<br>';
       }
 
       (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
+      document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
       (<HTMLInputElement> document.getElementById('usermsg')).value = '';
     }
   }

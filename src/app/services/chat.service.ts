@@ -184,7 +184,7 @@ export class ChatService{
       return;
     }
     const messages = await this.rdf.getMessagesFromPod(this.currentChannel);
-    await messages.forEach(async e => {
+    await messages.forEach(e => {
       this.chatMessages.push(e);
     });
   }
