@@ -415,10 +415,8 @@ export class RdfService {
    */
   async createStructure(uri: string) {
     const splitted = uri.split('/');
-    console.log(splitted);
     for (let i = 3; i > 0; i--) {
       const newUri = splitted.slice(0, splitted.length - i).join('/');
-      console.log(newUri);
       await fileClient.createFolder(newUri);
     }
     await this.createChatFile(uri);
@@ -438,9 +436,7 @@ export class RdfService {
     if (matches.length === 0) {
       await this.updateManager.put(chatFile.doc(), '', 'text/turtle', function (o, s, c) { });
     }
-
   }
-
 
   /**
    * This method is used to add a message to the pod.
@@ -452,7 +448,7 @@ export class RdfService {
   async addMessage(chatFileUri: string, message: ChatMessage, ownUri: string, partnerFile: string) {
     let time = message.timeSent.getUTCFullYear() + ('0' + (message.timeSent.getUTCMonth() + 1)).slice(-2) 
     + ('0' + message.timeSent.getUTCDate()).slice(-2) + ('0' + message.timeSent.getHours()).slice(-2) 
-    + ('0' + message.timeSent.getMinutes()).slice(-2)
+    + ('0' + message.timeSent.getMinutes()).slice(-2);
     const msgUri = chatFileUri + '#Msg' + time;
     const indexUri = chatFileUri.split('/').slice(0, 6).join('/') + '#this';
     const msgUriSym = this.store.sym(msgUri);
@@ -490,17 +486,17 @@ export class RdfService {
   
   }
 
-  async getMessagesFromPod(myWebId: string): Promise<Array<ChatMessage>> {
-    const ret = new Array<ChatMessage>();
-    const d = this.store.sym(myWebId.replace('#me', ''));
+  /**
+   * Loads all the messages stored in a pod   * 
+   * @param chatFileUri 
+   */
+  async getMessagesFromPod(chatFileUri: string): Promise<Array<ChatMessage>> {
+    const d = this.store.sym(chatFileUri.replace('/chat.ttl', ''));
     await this.fetcher.load(d.doc());
-    const coinc = await this.store.match(null, RDFSYN('type'), MEE('Chat'), d.doc());
-    await coinc.forEach(async element => {
-      const d2 = this.store.sym(element.subject.value);
-      const participants = await this.store.match(d2, FLOW('participant'), null, d.doc());
-      ret.push(new ChatMessage('', element.subject.value, participants.map(e => e.object.value)));
-    });
-    return ret;
+    const indexUri = this.store.sym(chatFileUri + '/chat.ttl#this');
+    const indexd = this.store.sym(indexUri);
+    const messagesIdsList = (await this.store.match(indexd, FLOW('message'), null, d.doc())).map(e => e.object);
+    return messagesIdsList;
   }
-  
+
 }

@@ -73,13 +73,6 @@ export class ChatService{
   }
 
   /**
-   * This method load the messages in the chat
-   */
-  loadMessages(): Observable<ChatMessage[]> {
-    return of(this.chatMessages);
-  } 
-
-  /**
    * This method loads the friends of the logged user.
    */
   async loadFriends() {
@@ -111,7 +104,7 @@ export class ChatService{
   loadPartner(username: String) {
     const photo: string = '../assets/images/profile.png';
     this.partnerUser = new User('https://'+ username +'.inrupt.net/profile/card#me', username, photo);
-    this.loadMessages();
+    this.loadChat();
   }
   
   /**
@@ -123,12 +116,12 @@ export class ChatService{
     try {
       this.currentChannel = await this.rdf.getChannel(this.ownUser.webId, this.partnerUser.webId);
       await this.rdf.createStructure(this.currentChannel);
+      this.loadMessagesFromPod();
     } catch (error){
       this.getChannel(this.ownUser);
       await this.rdf.createStructure(this.currentChannel);
       await this.rdf.createNewChat(this.ownUser.webId, this.partnerUser.webId, this.currentChannel);
     }
-    this.loadMessagesFromPod();
   }
 
   /**
@@ -150,7 +143,8 @@ export class ChatService{
    * @param message 
    * @param partner
    */
-  async sendMessage(msg: ChatMessage, partner: String){
+  async sendMessage(msg: ChatMessage, partner: String) {
+    this.addMessage(msg);
     await this.rdf.getSession();
     if(!this.rdf.session){
       return ;
@@ -162,7 +156,6 @@ export class ChatService{
       await this.rdf.createNewChat(this.partnerUser.webId, this.ownUser.webId, this.currentPartnerChannel);
     }
     await this.rdf.addMessage(await this.currentChannel, msg, this.ownUser.webId, this.currentPartnerChannel);
-    this.addMessage(msg);
   }
 
   /**
@@ -173,11 +166,13 @@ export class ChatService{
     this.chatMessages.push(message);
   }
 
-  
   private getFriends(): Observable<User[]> {
     return of(this.friendsList);
   }
 
+  /**
+   * Loads all the messages stored in our pod
+   */
   private async loadMessagesFromPod() {
     await this.rdf.getSession();
     if (!this.rdf.session) {

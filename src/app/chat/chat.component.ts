@@ -61,7 +61,6 @@ export class ChatComponent implements OnInit  {
       if (profile) {
         this.profile = profile;
         this.auth.saveOldUserData(profile);
-        this.loadData();
       }
       this.loadingProfile = false;
       this.setupProfileData();
@@ -74,18 +73,12 @@ export class ChatComponent implements OnInit  {
   /**
    * This method is used to load the partner in the chat
    */
-  private loadData() {
-    this.chat.loadPartner(this.selectedPartner);
-    console.log(this.selectedPartner);
-    this.chat.loadChat();
-  }
-  
   private selectPartner() {
     this.selectedPartner = this.opcionSeleccionada;
     this.chatMessages.length = 0;
+    (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = '';
     this.chat.chatMessages.length = 0; 
     this.chat.loadPartner(this.selectedPartner);
-    this.chat.loadChat();
   }
 
   /**
@@ -132,8 +125,7 @@ export class ChatComponent implements OnInit  {
    * the author of the message in this case with the username of solid.
    */
  sendMessage() {
-    let m = '';
-    <HTMLInputElement> document.getElementById('usermsg');
+    let m;
     let message = (<HTMLInputElement> document.getElementById('usermsg')).value;
     this.checkNotEmpty(message);
     if(message != '') {
@@ -141,18 +133,16 @@ export class ChatComponent implements OnInit  {
       let user = this.chat.ownUser.username;
       let msg = new ChatMessage(user, message, now);
       this.chat.sendMessage(msg, this.selectedPartner);
-      /*
-      this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
-      + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
-      + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);
-      */
+      this.chatMessages.length = 0;
       this.chat.chatMessages.forEach(element => {
-        this.chatMessages.push('[' + element.timeSent + '] ' + element.userName + ': ' + element.message);
+        this.chatMessages.push('[' + element.timeSent.getUTCFullYear() + '/' + ('0' + (element.timeSent.getUTCMonth() + 1)).slice(-2) + '/' 
+        + ('0' + element.timeSent.getUTCDate()).slice(-2) + ' - ' +  ('0' + element.timeSent.getHours()).slice(-2) + ':' 
+        + ('0' + element.timeSent.getMinutes()).slice(-2) + '] - ' + element.userName + ': ' + element.message);
       });
       
-      m = null;
+      m = '';
       for (let i = 0; i < this.chatMessages.length; i++) {
-        m = m + this.chatMessages[i] + '<br>';
+        m = m + this.chatMessages[i] + '<br>' + '<br>';
       }
 
       (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = m;
