@@ -29,17 +29,17 @@ export class ChatComponent implements OnInit  {
   loadingProfile: Boolean;
   message: string;
   chatMessages: string[] = new Array<string>();
-  public partnerUsername: string;
-  public selectedPartner: string;
 
+  datos;
+  opcionSeleccionada: string = '0';
+  selectedPartner: string = '';
 
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
-    this.partnerUsername = this.chat.partnerUser.username;
+    this.datos = ["ruizber", "pablomrtnez", "alvz13", "danielllanauni", "vladislavstelmakh1819"];
   }
 
 /**
  * Executes this method when the component is used.
- *
  */
   ngOnInit() {
     this.loadingProfile = true;
@@ -74,8 +74,14 @@ export class ChatComponent implements OnInit  {
    * This method is used to load the partner in the chat
    */
   private loadData() {
-    this.chat.loadPartner('ruizber');
-    console.log(this.chat.partnerUser.username);
+    this.chat.loadPartner(this.selectedPartner);
+    console.log(this.selectedPartner);
+    this.chat.loadChat();
+  }
+  
+  private selectPartner() {
+    this.selectedPartner = this.opcionSeleccionada;
+    this.chat.loadPartner(this.selectedPartner);
     this.chat.loadChat();
   }
 
@@ -131,7 +137,7 @@ export class ChatComponent implements OnInit  {
       let now = new Date();
       let user = this.chat.ownUser.username;
       let msg = new ChatMessage(user, message, now);
-      this.chat.sendMessage(msg);
+      this.chat.sendMessage(msg, this.selectedPartner);
       this.chatMessages.push('[' + now.getUTCFullYear() + '/' + ('0' + (now.getUTCMonth() + 1)).slice(-2) + '/' 
       + ('0' + now.getUTCDate()).slice(-2) + ' - ' +  ('0' + now.getHours()).slice(-2) + ':' 
       + ('0' + now.getMinutes()).slice(-2) + '] ' + user + ': ' + message);

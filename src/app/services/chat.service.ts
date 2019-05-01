@@ -21,19 +21,16 @@ export class ChatService{
   partnerUser: User;
   currentUserWebId: string;
   currentChannel: string;
+  currentPartnerChannel: string;
   currentChatFile: string;
 
   friendsList: Array<User> = new Array<User>();
- 
-
 
   constructor ( private rdf : RdfService, private toastr: ToastrService){
       this.rdf.getSession();
       this.thisUser = new BehaviorSubject<User>(null);
       this.loadOwnUser();
       this.loadUserData().then(response => { this.loadFriends(); });
-      this.loadPartner('ruizber'); 
-      this.loadChat(); 
   }
 /**
  * Loads the user that logs in the application with the webId
@@ -141,20 +138,27 @@ export class ChatService{
   private getChannel(ownUser: User) {
     this.currentChannel = this.ownUser.webId.replace('profile/card#me', 'public/' + ownUser.username + '-' 
     + this.partnerUser.username + '/chat.ttl');
-  }    
+  }  
+  
+  private getPartnerChannel(partnerUser: User) {
+    this.currentPartnerChannel = this.partnerUser.webId.replace('profile/card#me', 'public/' + partnerUser.username + '-' 
+    + this.ownUser.username + '/chat.ttl');
+  }  
 
   /**
    * This is the method to send messages between the own user and the partner user.
    * @param message 
+   * @param partner
    */
-  async sendMessage(msg: ChatMessage){
+  async sendMessage(msg: ChatMessage, partner: String){
     await this.rdf.getSession();
     if(!this.rdf.session){
       return ;
     }
-    const partnerFolder = this.partnerUser.webId.replace('profile/card#me', 'public/' + this.partnerUser.username + '-' 
-    + this.ownUser.username + '/chat.ttl');
-    await this.rdf.addMessage(await this.currentChannel, msg, this.ownUser.webId, partnerFolder);
+    this.getPartnerChannel(this.partnerUser);
+    await this.rdf.createNewChat(this.partnerUser.webId, this.ownUser.webId, this.currentPartnerChannel);
+    
+    await this.rdf.addMessage(await this.currentChannel, msg, this.ownUser.webId, this.currentPartnerChannel);
     this.addMessage(msg);
   }
 

@@ -19,12 +19,27 @@
               <i class="fas fa-info-circle"></i>
             </div>
             Information
-          </div>
+        </div>
+
+        <div class="menu-item" style="width:400px;">
+            <p>Select a partner</p>
+            <select [(ngModel)]="opcionSeleccionada" (change)="selectPartner()">
+                <option *ngFor="let dato of datos">
+                {{dato}}
+                </option>
+            </select>
+        </div>
+
         <div class="profile-menu" (click)="goBack()">
             <img src="assets/images/volver-menu.jpg" />
         </div>
     </div>
+
     <h1>Decentralized Chat <img src="assets/images/logouni.jpg" width ="125" height="100"/></h1>
+
+    <!--<h2>User:</h2><div (onLoad)="loadUsername()"></div>-->
+    <h2>Partner: {{selectedPartner}} </h2>
+
     <div id="wrapper">
         <div id="menu">
             <div style="clear:both"></div>
@@ -45,8 +60,5 @@
         });
 
     </script>
-	
-    <!--<h2>User:</h2><div (onLoad)="loadUsername()"></div>-->
-        <h2>Partner: <p> {{partnerUsername}} </p></h2>
-
+        
 </div>

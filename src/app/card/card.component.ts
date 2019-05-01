@@ -17,8 +17,7 @@ export class CardComponent implements OnInit  {
   profile: SolidProfile;
   profileImage: string;
   loadingProfile: Boolean;
-  public selectedPartner: String;
-
+  
   @ViewChild('f') cardForm: NgForm;
 
   constructor(private rdf: RdfService,
@@ -101,18 +100,5 @@ export class CardComponent implements OnInit  {
   logout() {
       this.auth.solidSignOut();
   }
-
-  async selectPartner() {
-      if(document.getElementById('1')){
-        this.selectedPartner = 'pablomrtnez';
-      } else if (document.getElementById('2')){
-        this.selectedPartner = 'ruizber';
-      } else if (document.getElementById('4')) {
-        this.selectedPartner = 'danielllanauni';
-      }
-  
- 
-  }
-
   
 }
