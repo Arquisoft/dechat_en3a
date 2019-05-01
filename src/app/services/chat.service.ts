@@ -128,7 +128,7 @@ export class ChatService{
       await this.rdf.createStructure(this.currentChannel);
       await this.rdf.createNewChat(this.ownUser.webId, this.partnerUser.webId, this.currentChannel);
     }
-    //this.rdf.loadMessagesFromPod(this.currentChannel);
+    this.loadMessagesFromPod();
   }
 
   /**
@@ -155,9 +155,12 @@ export class ChatService{
     if(!this.rdf.session){
       return ;
     }
-    this.getPartnerChannel(this.partnerUser);
-    await this.rdf.createNewChat(this.partnerUser.webId, this.ownUser.webId, this.currentPartnerChannel);
-    
+    try {
+      this.currentPartnerChannel = await this.rdf.getChannel(this.partnerUser.webId, this.ownUser.webId);
+    } catch (error){
+      this.getPartnerChannel(this.partnerUser);
+      await this.rdf.createNewChat(this.partnerUser.webId, this.ownUser.webId, this.currentPartnerChannel);
+    }
     await this.rdf.addMessage(await this.currentChannel, msg, this.ownUser.webId, this.currentPartnerChannel);
     this.addMessage(msg);
   }
@@ -175,19 +178,15 @@ export class ChatService{
     return of(this.friendsList);
   }
 
-  /*
   private async loadMessagesFromPod() {
-    this.rdf.getMessageUrisForFile(this.currentChatFile, this.currentChat.chatFileUri).then(res => {
-      res.forEach(async el => {
-        const maker = await this.rdf.getMessageMaker(el.value, this.currentChatFileUri);
-        const msg = new ChatMessage(this.getUsernameFromWebID(maker),
-          await this.rdf.getMessageContent(el.value, this.currentChatFileUri),
-          maker, await this.getUserByWebId(maker));
-        msg.uri = el.value;
-        msg.timeSent = await this.rdf.getMessageDate(el.value, this.currentChatFileUri);
-        this.addMessage(m);
-      });
+    await this.rdf.getSession();
+    if (!this.rdf.session) {
+      return;
+    }
+    const messages = await this.rdf.getMessagesFromPod(this.currentChannel);
+    await messages.forEach(async e => {
+      this.chatMessages.push(e);
     });
   }
-  */
+
 }

@@ -490,13 +490,17 @@ export class RdfService {
   
   }
 
-  async getMessageUrisForFile(chatFileUri: string, chatUri: string): Promise<Array<NamedNode>> {
-    const d = this.store.sym(chatFileUri);
+  async getMessagesFromPod(myWebId: string): Promise<Array<ChatMessage>> {
+    const ret = new Array<ChatMessage>();
+    const d = this.store.sym(myWebId.replace('#me', ''));
     await this.fetcher.load(d.doc());
-    const indexUri = chatUri + '/index.ttl#this';
-    const indexd = this.store.sym(indexUri);
-    const messagesIdsList = (await this.store.match(indexd, FLOW('message'), null, d.doc())).map(e => e.object);
-    return messagesIdsList;
+    const coinc = await this.store.match(null, RDFSYN('type'), MEE('Chat'), d.doc());
+    await coinc.forEach(async element => {
+      const d2 = this.store.sym(element.subject.value);
+      const participants = await this.store.match(d2, FLOW('participant'), null, d.doc());
+      ret.push(new ChatMessage('', element.subject.value, participants.map(e => e.object.value)));
+    });
+    return ret;
   }
-
+  
 }
