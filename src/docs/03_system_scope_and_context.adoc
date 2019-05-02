@@ -21,6 +21,10 @@ We will have two users (at least) sending and receiving messages, while in the b
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/BusinessContext.png[diagram]
 
+* Sender: User of the application that sends a message to other user.
+* Receiver: User in the application that receives a message from other user.
+
+
 ****
 ****
 
