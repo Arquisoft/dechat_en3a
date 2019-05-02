@@ -16,6 +16,8 @@ In this document we will show you the main runtime views of the application in d
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/log in.png[diagram]
 
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/home.PNG[diagram]
+
 ==== Register
 1. First, the user must choose between getting registered via Inrupt or Solid Community
 2. After that, they will fulfill the registration form with their personal data
@@ -24,10 +26,12 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/lo
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register.png[diagram]
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register2.png[diagram]
 
-*ADD IMAGE*
-
 === Chat with friends
 The chat is used for chatting between users, better said, between friends.
+
+*Selection of the partner to whom you will send a message*
+
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/friends.png[diagram]
 
 *Sequence of a chat*
 
@@ -36,8 +40,4 @@ The chat is used for chatting between users, better said, between friends.
 3. The application of the User_2 requests the received messages that contains its pod, so the pod makes the messages available for the application
 4. Finally User_2 reads the received messages from the application
 
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/chat.png[diagram]
-
-****
-****
-
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/chatting.png[diagram]
