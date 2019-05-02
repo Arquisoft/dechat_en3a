@@ -1,7 +1,7 @@
 [[section-system-scope-and-context]]
 == System Scope and Context
 
-****
+=== What are the goals of the system?
 
 The goal is to create a decentralized chat app based on the solid specifications. The system will be based on a decentralized architecture where data storage is separated from the app. Users can store their chat data in their own pods. The app will allow a user to share pictures, videos or other kinds of files with other friends through the chat. A user can also get notifications when some friend wants to chat with him. Users can have groups of friends with whom they may want to chat and it will be possible to have group chats where all members receive the messages.
 
@@ -9,24 +9,19 @@ The goal is to create a decentralized chat app based on the solid specifications
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/SystemDiagram.png[diagram]
 
-****
 === Business Context
 
 [role="arc42help"]
-
 
 <<Business context diagram>>
 
 We will have two users (at least) sending and receiving messages, while in the background, RDF will be sharing chat details. The data that the users will exchange will be kept in PODs.
 
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/BusinessContext.png[diagram]
+image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/businessContext.png[diagram]
 
 * Sender: User of the application that sends a message to other user.
 * Receiver: User in the application that receives a message from other user.
 
-
-****
-****
 
 === Technical Context
 
@@ -34,16 +29,5 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Busi
 
 As the architecture of DeChat is SOLID, we'll be using WebID to communicate between users and friends. In addition, SOLID uses WebSockets, RDF...
 
-.Form
-E.g. UML deployment diagram describing channels to neighboring systems,
-together with a mapping table showing the relationships between channels and input/output.
-
-****
-
-**<Diagram or Table>**
-
-**<optionally: Explanation of technical interfaces>**
-
-**<Mapping Input/Output to Channels>**
-
-****
+Furthermore, we are using a lot of other technologies for building the application as Angular, Javascript... 
+The main purpose of building this is allowing the users of SOLID to communiate between them, and for doing that we used the mentioned WebID's, and also some other libraries as RDF.
