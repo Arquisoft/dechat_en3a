@@ -24,13 +24,6 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/lo
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register.png[diagram]
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register2.png[diagram]
 
-=== Add friends
-Every user must have any friend added in the chat so they can chat one to each other.
-When the user signs up for the first time, it won't have any friend
-
-1. One of the users must enter the url of the pod of the other user, the one who asks for adding the first user as a friend
-2. After that, the first user friend's url is stored on its pod so they can chat one to each other
-
 *ADD IMAGE*
 
 === Chat with friends
