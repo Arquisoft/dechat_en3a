@@ -36,7 +36,7 @@ export class ChatComponent implements OnInit  {
   selectedPartner: string = '';
 
   constructor(private rdf: RdfService, private auth: AuthService, private r: Router, private chat: ChatService) {
-    this.datos = ["ruizber", "pablomrtnez", "alvz13", "danielllanauni", "vladislavstelmakh1819"];
+    this.datos = ["ruizber", "pablomrtnez", "alvz13", "danielllanauni", "vladislavstelmakh", "labra"];
   }
 
 /**
