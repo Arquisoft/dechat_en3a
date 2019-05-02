@@ -1,9 +1,6 @@
 [[section-technical-risks]]
 == Risks and Technical Debts
 ****
-.*Database*
-We had some problems at the time of decide which database we will use because not all of us has used the 
-  same kind of databases
 
 .*Solid*
 This is something completely new for all of us, so we may need to spend quite some time 
