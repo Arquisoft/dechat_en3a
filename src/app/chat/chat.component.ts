@@ -73,7 +73,7 @@ export class ChatComponent implements OnInit  {
   /**
    * This method is used to load the partner in the chat
    */
-  private selectPartner() {
+  public selectPartner() {
     this.selectedPartner = this.opcionSeleccionada;
     this.chatMessages.length = 0;
     (<HTMLInputElement> document.getElementById('chatbox')).innerHTML = '';
