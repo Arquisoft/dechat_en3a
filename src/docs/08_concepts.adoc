@@ -1,51 +1,50 @@
 [[section-concepts]]
 == Cross-cutting Concepts
 
+In this section we are oging to describe the main ideas and concepts that are applied in the system.
 
-[role="arc42help"]
+[domain-concepts]
+=== Domain Concepts
 ****
-.Content
-This section describes overall, principal regulations and solution ideas that are
-relevant in multiple parts (= cross-cutting) of your system.
-Such concepts are often related to multiple building blocks.
-They can include many different topics, such as
+* Client: the decentrlized chat running on the user's browser. It gives to as just the functionality.
+* Message: is a piece of text that is used to communicate between users, expressed in turtle syntax for RDF.
+* Pod: it could be called as user repository, following the SOLID specification, and it stores the messages exchanged.
+****
 
-* domain models
-* architecture patterns or design patterns
-* rules for using specific technology
-* principal, often technical decisions of overall decisions
-* implementation rules
+[ux]
+=== User Experience
+The user should use the application in an easy way as with other chat application, with no problems or any difference.
+There are two main reasons for this:
+* Facilitate the migration from other chat systems easy for any kind of user.
+* Prove that it is posible to have the very same services that we currently enjoy using the SOLID system
 
-.Motivation
-Concepts form the basis for _conceptual integrity_ (consistency, homogeneity)
-of the architecture. Thus, they are an important contribution to achieve inner qualities of your system.
+[arch-patterns]
+=== Architecture and design patterns
+Nowadays, the decentrlized chat is an Angular-based system, therefore following the Model View Controller architectural pattern.
+However, all our application would not store any of the user's data. It will access it via SOLID pods.
 
-Some of these concepts cannot be assigned to individual building blocks
-(e.g. security or safety). This is the place in the template that we provided for a
-cohesive specification of such concepts.
+[pers]
+=== Persistency
+We have achieved the persistence using the RTC and turtle (.ttl) files. Thus, making use of the standard already in place in SOLID, and allowing the interaction of the decentralized chat and the SOLID chat system.
 
-.Form
-The form can be varied:
+[session]
+=== Session handling
+The session is managed using the SOLID session itself, as it is the platform that is in charge of storing the user's data.
 
-* concept papers with any kind of structure
-* cross-cutting model excerpts or scenarios using notations of the architecture views
-* sample implementations, especially for technical concepts
-* reference to typical usage of standard frameworks (e.g. using Hibernate for object/relational mapping)
+[communication]
+=== Communication
+Two chats would not communicate directly. For that, we will need SOLID pods, which are the ones storing the messages. The application provides a realtime notification daemon to allow users to talk fluently.
 
-.Structure
-A potential (but not mandatory) structure for this section could be:
+[test]
+=== Testing
+Two types of testing are currently in place:
 
-* Domain concepts
-* User Experience concepts (UX)
-* Safety and security concepts
-* Architecture and design patterns
-* "Under-the-hood"
-* development concepts
-* operational concepts
+* Unit testing: in charge of testing the low level features of the system.
+* Cucumber: in charge of testing the general behavior of the system.
 
-Note: it might be difficult to assign individual concepts to one specific topic
-on this list.
+[build]
+=== Building
+The building of the project, considering that it is an Angular application, is done via the Node.js package manages, *npm*.
+It is expected to be built using the docker platform, in order to avoid dependencies and enviorment issues.
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/08-Crosscutting-Concepts-Structure-EN.png["Possible topics for crosscutting concepts"]
-****
-
