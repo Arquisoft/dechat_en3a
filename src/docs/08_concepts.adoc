@@ -1,101 +1,56 @@
 [[section-concepts]]
 == Cross-cutting Concepts
 
-[role="arc42help"]
-****
-
 In this section we are oging to describe the main ideas and concepts that are applied in the system.
-
-****
 
 [domain-concepts]
 === Domain Concepts
-
-[role="arc42help"]
-****
 
 * Client: the decentrlized chat running on the user's browser. It gives to as just the functionality.
 * Message: is a piece of text that is used to communicate between users, expressed in turtle syntax for RDF.
 * Pod: it could be called as user repository, following the SOLID specification, and it stores the messages exchanged.
 
-****
-
 [ux]
 === User Experience
-
-[role="arc42help"]
-****
 
 The user should use the application in an easy way as with other chat application, with no problems or any difference.
 There are two main reasons for this:
 * Facilitate the migration from other chat systems easy for any kind of user.
 * Prove that it is posible to have the very same services that we currently enjoy using the SOLID system
 
-****
-
 [arch-patterns]
 === Architecture and design patterns
-
-[role="arc42help"]
-****
 
 Nowadays, the decentrlized chat is an Angular-based system, therefore following the Model View Controller architectural pattern.
 However, all our application would not store any of the user's data. It will access it via SOLID pods.
 
-****
-
 [pers]
 === Persistency
 
-[role="arc42help"]
-****
-
 We have achieved the persistence using the RTC and turtle (.ttl) files. Thus, making use of the standard already in place in SOLID, and allowing the interaction of the decentralized chat and the SOLID chat system.
-
-****
 
 [session]
 === Session handling
 
-[role="arc42help"]
-****
-
 The session is managed using the SOLID session itself, as it is the platform that is in charge of storing the user's data.
-
-****
 
 [communication]
 === Communication
 
-[role="arc42help"]
-****
-
 Two chats would not communicate directly. For that, we will need SOLID pods, which are the ones storing the messages. The application provides a realtime notification daemon to allow users to talk fluently.
-
-****
 
 [test]
 === Testing
-
-[role="arc42help"]
-****
 
 Two types of testing are currently in place:
 
 * Unit testing: in charge of testing the low level features of the system.
 * Cucumber: in charge of testing the general behavior of the system.
 
-****
-
 [build]
 === Building
-
-[role="arc42help"]
-****
 
 The building of the project, considering that it is an Angular application, is done via the Node.js package manages, *npm*.
 It is expected to be built using the docker platform, in order to avoid dependencies and enviorment issues.
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/08-Crosscutting-Concepts-Structure-EN.png["Possible topics for crosscutting concepts"]
-
-****
