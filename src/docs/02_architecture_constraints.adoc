@@ -1,9 +1,17 @@
 [[section-architecture-constraints]]
 == Architecture Constraints
+
+
+[role="arc42help"]
 ****
 
 ****
+
 === Technical Contraints
+
+[role="arc42help"]
+****
+
 [options="header"]
 |===
 |Constraint |Explanation
@@ -23,10 +31,14 @@
 |We need to develop tests as much as we can.
 
 |===
-****
 
 ****
+
 === Organizational Constraints
+
+[role="arc42help"]
+****
+
 [options="header"]
 |===
 |Constraint |Explanation
@@ -37,10 +49,14 @@
 |We are a team of 5 people and we must work like one.
 
 |===
-****
 
 ****
+
 === Documentation Constraints
+
+[role="arc42help"]
+****
+
 [options="header"]
 |===
 |Constraint |Explanation
@@ -51,5 +67,4 @@
 |The documentation of the project must follow the rules described in asciidoctor.
 
 |===
-****
 ****
