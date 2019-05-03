@@ -1,10 +1,6 @@
 [[section-solution-strategy]]
 == Solution Strategy
 
-
-[role="arc42help"]
-****
-
 [width="80%",cols="3,^2,^2,10",options="header"]
 |===
 |Decision made |Solution approach  |Reason why |Extrenal references
@@ -40,5 +36,3 @@ https://www.amadousall.com/angular-e2e-with-cucumber/[How to setup cucumber in a
 https://github.com/bchinmz/protractor-cucumber[Integrating cucumber in angular project (our case)].
 
 |===
-
-****
