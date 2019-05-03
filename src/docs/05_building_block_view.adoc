@@ -9,7 +9,7 @@ It is important to highlight that if we want to access to the chatting view, fir
 For reaching this, we decompose the system in small pieces (as we are using angular) to create a big application.
 
 .Building block diagram
-image::./images/Diagrama%205.png[diagram]
+image::./Diagrama%205.png[diagram]
 
 In the first level of our application we can find the components, the model and the different services of the system, 
 this is because we are using a MVC model, so this allow us to distribute the responsabilities of the system 
@@ -22,7 +22,7 @@ that works with those components.
 ==== Whitebox Overall System
 
 .Whitebox overall system diagram
-image::./images/Diagrama%205%20whitebox.png[diagram]
+image::./Diagrama%205%20whitebox.png[diagram]
 
 * *Components*: This block is the presentation of the web and what the user is go to see when he navigate through 
                 the application. Here we can find html, css and ts files.
