@@ -1,15 +1,8 @@
 [[section-architecture-constraints]]
 == Architecture Constraints
 
-
-[role="arc42help"]
-****
-
-****
-
 === Technical Contraints
 
-[role="arc42help"]
 ****
 
 [options="header"]
@@ -36,7 +29,6 @@
 
 === Organizational Constraints
 
-[role="arc42help"]
 ****
 
 [options="header"]
@@ -54,7 +46,6 @@
 
 === Documentation Constraints
 
-[role="arc42help"]
 ****
 
 [options="header"]
