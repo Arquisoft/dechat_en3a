@@ -53,4 +53,5 @@ Two types of testing are currently in place:
 The building of the project, considering that it is an Angular application, is done via the Node.js package manages, *npm*.
 It is expected to be built using the docker platform, in order to avoid dependencies and enviorment issues.
 
+.Cross-cutting concepts diagram
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/08-Crosscutting-Concepts-Structure-EN.png["Possible topics for crosscutting concepts"]
