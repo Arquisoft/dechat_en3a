@@ -1,10 +1,6 @@
 [[section-building-block-view]]
 
-
 == Building Block View
-
-[role="arc42help"]
-****
 
 The Building Block view shows the decomposition of the system statically.
 
@@ -22,12 +18,7 @@ In the second level we find the main components of our application, the chat com
 the card componenet (or profile component) and finale the settings component. There are many more small components
 that works with those components.
 
-****
-
 ==== Whitebox Overall System
-
-[role="arc42help"]
-****
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Diagrama%205%20whitebox.png[diagram]
 
@@ -37,5 +28,3 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Diag
 * *Services*: This block manages the communication between the view of the of the application and the model.
 
 * *Model*: This block manages all the parts of the system.
-
-****
