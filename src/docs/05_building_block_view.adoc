@@ -3,19 +3,16 @@
 
 == Building Block View
 
+[role="arc42help"]
+****
+
 The Building Block view shows the decomposition of the system statically.
 
 We have several views, but the main important ones are the one for login in and the one for chatting.
 It is important to highlight that if we want to access to the chatting view, first we must go through the login in one.
 For reaching this, we decompose the system in small pieces (as we are using angular) to create a big application.
 
-[role="arc42help"]
-****
-
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Diagrama%205.png[diagram]
-  
-
-****
 
 In the first level of our application we can find the components, the model and the different services of the system, 
 this is because we are using a MVC model, so this allow us to distribute the responsabilities of the system 
@@ -24,6 +21,8 @@ in different parts.
 In the second level we find the main components of our application, the chat component, the login component, 
 the card componenet (or profile component) and finale the settings component. There are many more small components
 that works with those components.
+
+****
 
 ==== Whitebox Overall System
 
@@ -39,3 +38,4 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Diag
 
 * *Model*: This block manages all the parts of the system.
 
+****
