@@ -10,10 +10,10 @@ In this document we will show you the main runtime views of the application in d
 3. Finally, if the server approves the login the user will access to the chat, but if the server denies the login the user won't access to it
 
 .Log in diagram
-image::/../../docs/assets/images/log in.png[diagram]
+image::./log in.png[diagram]
 
 .Home diagram
-image::./images/home.PNG[diagram]
+image::./home.PNG[diagram]
 
 ==== Register
 
@@ -22,9 +22,9 @@ image::./images/home.PNG[diagram]
 3. Finally, they can login in with their account
 
 .Register diagram (1)
-image::/../../docs/assets/images/register.png[diagram]
+image::./register.png[diagram]
 .Register diagram(2)
-image::/../../docs/assets/images/register2.png[diagram]
+image::./register2.png[diagram]
 
 === Chat with friends
 
@@ -33,7 +33,7 @@ The chat is used for chatting between users, better said, between friends.
 *Selection of the partner to whom you will send a message*
 
 .Friend selection diagram
-image::./images/friends.png[diagram]
+image::./friends.png[diagram]
 
 *Sequence of a chat*
 
@@ -43,4 +43,4 @@ image::./images/friends.png[diagram]
 4. Finally User_2 reads the received messages from the application
 
 .Chatting diagram
-image::./images/chatting.png[diagram]
+image::./chatting.png[diagram]
