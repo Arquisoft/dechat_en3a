@@ -530,6 +530,7 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel1">
 <li><a href="#section-system-scope-and-context">System Scope and Context</a>
 <ul class="sectlevel2">
+<li><a href="#what-are-the-goals-of-the-system">What are the goals of the system?</a></li>
 <li><a href="#business-context">Business Context</a></li>
 <li><a href="#technical-context">Technical Context</a></li>
 </ul>
@@ -541,64 +542,54 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect1">
 <h2 id="section-system-scope-and-context"><a class="anchor" href="#section-system-scope-and-context"></a>System Scope and Context</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
+<div class="sect2">
+<h3 id="what-are-the-goals-of-the-system"><a class="anchor" href="#what-are-the-goals-of-the-system"></a>What are the goals of the system?</h3>
 <div class="paragraph">
 <p>The goal is to create a decentralized chat app based on the solid specifications. The system will be based on a decentralized architecture where data storage is separated from the app. Users can store their chat data in their own pods. The app will allow a user to share pictures, videos or other kinds of files with other friends through the chat. A user can also get notifications when some friend wants to chat with him. Users can have groups of friends with whom they may want to chat and it will be possible to have group chats where all members receive the messages.</p>
 </div>
-<div class="paragraph">
-<p><a href="#DeChat application diagram">[DeChat application diagram]</a></p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/SystemDiagram.png" alt="diagram">
+<img src="./images/SystemDiagram.png" alt="diagram">
 </div>
-</div>
+<div class="title">Figure 1. DeChat application diagram</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="business-context"><a class="anchor" href="#business-context"></a>Business Context</h3>
-<div class="paragraph arc42help">
-<p><a href="#Business context diagram">[Business context diagram]</a></p>
+<div class="paragraph">
+<p>We will have two users (at least) sending and receiving messages, while in the background, RDF will be sharing chat details. The data that the users will exchange will be kept in PODs.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/BusinessContext.PNG" alt="diagram">
+<img src="./images/businessContext.png" alt="diagram">
 </div>
+<div class="title">Figure 2. Business context diagram</div>
 </div>
-<div class="sidebarblock">
-<div class="content">
-
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sender: User of the application that sends a message to other user.</p>
+</li>
+<li>
+<p>Receiver: User in the application that receives a message from other user.</p>
+</li>
+<li>
+<p>Pod: Each user has a POD where the messages are stored.</p>
+</li>
+<li>
+<p>DeChat App: Decentralized chat application through which people is chatting.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="technical-context"><a class="anchor" href="#technical-context"></a>Technical Context</h3>
-<div class="paragraph arc42help">
-<div class="title">Contents</div>
-<p>Technical interfaces (channels and transmission media) linking your system to its environment. In addition a mapping of domain specific input/output to the channels, i.e. an explanation with I/O uses which channel.</p>
+<div class="paragraph">
+<p>As the architecture of DeChat is SOLID, we&#8217;ll be using WebID to communicate between users and friends. In addition, SOLID uses WebSockets, RDF&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<div class="title">Motivation</div>
-<p>Many stakeholders make architectural decision based on the technical interfaces between the system and its context. Especially infrastructure or hardware designers decide these technical interfaces.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>E.g. UML deployment diagram describing channels to neighboring systems,
-together with a mapping table showing the relationships between channels and input/output.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>&lt;Diagram or Table&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;optionally: Explanation of technical interfaces&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Mapping Input/Output to Channels&gt;</strong></p>
-</div>
-</div>
+<p>Furthermore, we are using a lot of other technologies for building the application as Angular, Javascript&#8230;&#8203;
+The main purpose of building this is allowing the users of SOLID to communiate between them, and for doing that we used the mentioned WebID&#8217;s, and also some other libraries as RDF.</p>
 </div>
 </div>
 </div>
@@ -606,7 +597,7 @@ together with a mapping table showing the relationships between channels and inp
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-04-02 15:18:26 CEST
+Last updated 2019-05-03 16:43:07 CEST
 </div>
 </div>
 </body>

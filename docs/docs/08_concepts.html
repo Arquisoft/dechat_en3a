@@ -528,7 +528,18 @@ table.CodeRay td.code>pre{padding:0}
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#section-concepts">Cross-cutting Concepts</a></li>
+<li><a href="#section-concepts">Cross-cutting Concepts</a>
+<ul class="sectlevel2">
+<li><a href="#domain-concepts">Domain Concepts</a></li>
+<li><a href="#user-experience">User Experience</a></li>
+<li><a href="#architecture-and-design-patterns">Architecture and design patterns</a></li>
+<li><a href="#persistency">Persistency</a></li>
+<li><a href="#session-handling">Session handling</a></li>
+<li><a href="#communication">Communication</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#building">Building</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -536,102 +547,86 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect1">
 <h2 id="section-concepts"><a class="anchor" href="#section-concepts"></a>Cross-cutting Concepts</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
 <div class="paragraph">
-<div class="title">Content</div>
-<p>This section describes overall, principal regulations and solution ideas that are
-relevant in multiple parts (= cross-cutting) of your system.
-Such concepts are often related to multiple building blocks.
-They can include many different topics, such as</p>
+<p>In this section we are oging to describe the main ideas and concepts that are applied in the system.</p>
+</div>
+<div class="sect2">
+<h3 id="domain-concepts"><a class="anchor" href="#domain-concepts"></a>Domain Concepts</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Client: the decentrlized chat running on the user&#8217;s browser. It gives to as just the functionality.</p>
+</li>
+<li>
+<p>Message: is a piece of text that is used to communicate between users, expressed in turtle syntax for RDF.</p>
+</li>
+<li>
+<p>Pod: it could be called as user repository, following the SOLID specification, and it stores the messages exchanged.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="user-experience"><a class="anchor" href="#user-experience"></a>User Experience</h3>
+<div class="paragraph">
+<p>The user should use the application in an easy way as with other chat application, with no problems or any difference.
+There are two main reasons for this:
+* Facilitate the migration from other chat systems easy for any kind of user.
+* Prove that it is posible to have the very same services that we currently enjoy using the SOLID system</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="architecture-and-design-patterns"><a class="anchor" href="#architecture-and-design-patterns"></a>Architecture and design patterns</h3>
+<div class="paragraph">
+<p>Nowadays, the decentrlized chat is an Angular-based system, therefore following the Model View Controller architectural pattern.
+However, all our application would not store any of the user&#8217;s data. It will access it via SOLID pods.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="persistency"><a class="anchor" href="#persistency"></a>Persistency</h3>
+<div class="paragraph">
+<p>We have achieved the persistence using the RTC and turtle (.ttl) files. Thus, making use of the standard already in place in SOLID, and allowing the interaction of the decentralized chat and the SOLID chat system.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="session-handling"><a class="anchor" href="#session-handling"></a>Session handling</h3>
+<div class="paragraph">
+<p>The session is managed using the SOLID session itself, as it is the platform that is in charge of storing the user&#8217;s data.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="communication"><a class="anchor" href="#communication"></a>Communication</h3>
+<div class="paragraph">
+<p>Two chats would not communicate directly. For that, we will need SOLID pods, which are the ones storing the messages. The application provides a realtime notification daemon to allow users to talk fluently.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="testing"><a class="anchor" href="#testing"></a>Testing</h3>
+<div class="paragraph">
+<p>Two types of testing are currently in place:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>domain models</p>
+<p>Unit testing: in charge of testing the low level features of the system.</p>
 </li>
 <li>
-<p>architecture patterns or design patterns</p>
-</li>
-<li>
-<p>rules for using specific technology</p>
-</li>
-<li>
-<p>principal, often technical decisions of overall decisions</p>
-</li>
-<li>
-<p>implementation rules</p>
+<p>Cucumber: in charge of testing the general behavior of the system.</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="building"><a class="anchor" href="#building"></a>Building</h3>
 <div class="paragraph">
-<div class="title">Motivation</div>
-<p>Concepts form the basis for <em>conceptual integrity</em> (consistency, homogeneity)
-of the architecture. Thus, they are an important contribution to achieve inner qualities of your system.</p>
-</div>
-<div class="paragraph">
-<p>Some of these concepts cannot be assigned to individual building blocks
-(e.g. security or safety). This is the place in the template that we provided for a
-cohesive specification of such concepts.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>The form can be varied:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>concept papers with any kind of structure</p>
-</li>
-<li>
-<p>cross-cutting model excerpts or scenarios using notations of the architecture views</p>
-</li>
-<li>
-<p>sample implementations, especially for technical concepts</p>
-</li>
-<li>
-<p>reference to typical usage of standard frameworks (e.g. using Hibernate for object/relational mapping)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Structure</div>
-<p>A potential (but not mandatory) structure for this section could be:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Domain concepts</p>
-</li>
-<li>
-<p>User Experience concepts (UX)</p>
-</li>
-<li>
-<p>Safety and security concepts</p>
-</li>
-<li>
-<p>Architecture and design patterns</p>
-</li>
-<li>
-<p>"Under-the-hood"</p>
-</li>
-<li>
-<p>development concepts</p>
-</li>
-<li>
-<p>operational concepts</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Note: it might be difficult to assign individual concepts to one specific topic
-on this list.</p>
+<p>The building of the project, considering that it is an Angular application, is done via the Node.js package manages, <strong>npm</strong>.
+It is expected to be built using the docker platform, in order to avoid dependencies and enviorment issues.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/08-Crosscutting-Concepts-Structure-EN.png" alt="Possible topics for crosscutting concepts">
+<img src="./images/08-Crosscutting-Concepts-Structure-EN.png" alt="Possible topics for crosscutting concepts">
 </div>
-</div>
+<div class="title">Figure 1. Cross-cutting concepts diagram</div>
 </div>
 </div>
 </div>
@@ -639,7 +634,7 @@ on this list.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-04-02 15:18:26 CEST
+Last updated 2019-05-03 16:43:07 CEST
 </div>
 </div>
 </body>

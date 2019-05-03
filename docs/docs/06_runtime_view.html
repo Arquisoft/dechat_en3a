@@ -532,7 +532,6 @@ table.CodeRay td.code>pre{padding:0}
 <ul class="sectlevel3">
 <li><a href="#log-in">Log in</a></li>
 <li><a href="#register">Register</a></li>
-<li><a href="#add-friends">Add friends</a></li>
 <li><a href="#chat-with-friends">Chat with friends</a></li>
 </ul>
 </li>
@@ -543,63 +542,8 @@ table.CodeRay td.code>pre{padding:0}
 <div class="sect1">
 <h2 id="section-runtime-view"><a class="anchor" href="#section-runtime-view"></a>Runtime View</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
 <div class="paragraph">
-<div class="title">Contents</div>
-<p>The runtime view describes concrete behavior and interactions of the system’s building blocks in form of scenarios from the following areas:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>important use cases or features: how do building blocks execute them?</p>
-</li>
-<li>
-<p>interactions at critical external interfaces: how do building blocks cooperate with users and neighboring systems?</p>
-</li>
-<li>
-<p>operation and administration: launch, start-up, stop</p>
-</li>
-<li>
-<p>error and exception scenarios</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Remark: The main criterion for the choice of possible scenarios (sequences, workflows) is their <strong>architectural relevance</strong>. It is <strong>not</strong> important to describe a large number of scenarios. You should rather document a representative selection.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>You should understand how (instances of) building blocks of your system perform their job and communicate at runtime.
-You will mainly capture scenarios in your documentation to communicate your architecture to stakeholders that are less willing or able to read and understand the static models (building block view, deployment view).</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>There are many notations for describing scenarios, e.g.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>numbered list of steps (in natural language)</p>
-</li>
-<li>
-<p>activity diagrams or flow charts</p>
-</li>
-<li>
-<p>sequence diagrams</p>
-</li>
-<li>
-<p>BPMN or EPCs (event process chains)</p>
-</li>
-<li>
-<p>state machines</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
+<p>In this document we will show you the main runtime views of the application in different scenarios.</p>
 </div>
 <div class="sect3">
 <h4 id="log-in"><a class="anchor" href="#log-in"></a>Log in</h4>
@@ -618,8 +562,15 @@ You will mainly capture scenarios in your documentation to communicate your arch
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/log%20in.png" alt="diagram">
+<img src="./images/log%20in.png" alt="diagram">
 </div>
+<div class="title">Figure 1. Log in diagram</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/home.PNG" alt="diagram">
+</div>
+<div class="title">Figure 2. Home diagram</div>
 </div>
 </div>
 <div class="sect3">
@@ -639,39 +590,30 @@ You will mainly capture scenarios in your documentation to communicate your arch
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register.png" alt="diagram">
+<img src="./images/register.png" alt="diagram">
 </div>
+<div class="title">Figure 3. Register diagram (1)</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register2.png" alt="diagram">
+<img src="./images/register2.png" alt="diagram">
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="add-friends"><a class="anchor" href="#add-friends"></a>Add friends</h3>
-<div class="paragraph">
-<p>Every user must have any friend added in the chat so they can chat one to each other.
-When the user signs up for the first time, it won&#8217;t have any friend</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>One of the users must enter the url of the pod of the other user, the one who asks for adding the first user as a friend</p>
-</li>
-<li>
-<p>After that, the first user friend&#8217;s url is stored on its pod so they can chat one to each other</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>ADD IMAGE</strong></p>
+<div class="title">Figure 4. Register diagram(2)</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="chat-with-friends"><a class="anchor" href="#chat-with-friends"></a>Chat with friends</h3>
 <div class="paragraph">
 <p>The chat is used for chatting between users, better said, between friends.</p>
+</div>
+<div class="paragraph">
+<p><strong>Selection of the partner to whom you will send a message</strong></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/friends.png" alt="diagram">
+</div>
+<div class="title">Figure 5. Friend selection diagram</div>
 </div>
 <div class="paragraph">
 <p><strong>Sequence of a chat</strong></p>
@@ -694,13 +636,9 @@ When the user signs up for the first time, it won&#8217;t have any friend</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/chat.png" alt="diagram">
+<img src="./images/chatting.png" alt="diagram">
 </div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-
-</div>
+<div class="title">Figure 6. Chatting diagram</div>
 </div>
 </div>
 </div>
@@ -708,7 +646,7 @@ When the user signs up for the first time, it won&#8217;t have any friend</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-04-03 09:49:25 CEST
+Last updated 2019-05-03 16:43:07 CEST
 </div>
 </div>
 </body>
