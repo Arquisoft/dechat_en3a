@@ -1,24 +1,11 @@
 [[section-quality-scenarios]]
 == Quality Requirements
 
-[role="arc42help"]
-****
-
-****
-
 === Quality Tree
-
-[role="arc42help"]
-****
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
 
-****
-
 === Quality Scenarios
-
-[role="arc42help"]
-****
 
 [options="header"]
 |===
@@ -33,5 +20,3 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Qual
 | 9   | Maintainability        | The system will support changes, without affecting the usability of the system | Medium ,low
 | 10  | Testabiliy             | The system developers will use their own "special" accounts and POD's where to test any system functionality | Medium, low
 |===
-
-****
