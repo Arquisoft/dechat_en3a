@@ -566,11 +566,11 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#section-deployment-view">7. Deployment View</a>
 <ul class="sectlevel2">
 <li><a href="#infrastructure-level-1">7.1. Infrastructure Level 1</a></li>
+<li><a href="#motivation">7.2. Motivation</a></li>
+<li><a href="#quality-andor-performance-features">7.3. Quality and/or Performance Features</a></li>
 </ul>
 </li>
-<li><a href="#motivation">8. Motivation</a></li>
-<li><a href="#quality-andor-performance-features">9. Quality and/or Performance Features</a></li>
-<li><a href="#section-concepts">10. Cross-cutting Concepts</a>
+<li><a href="#section-concepts">8. Cross-cutting Concepts</a>
 <ul class="sectlevel2">
 <li><a href="#domain-concepts">Domain Concepts</a></li>
 <li><a href="#user-experience">User Experience</a></li>
@@ -582,15 +582,15 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#building">Building</a></li>
 </ul>
 </li>
-<li><a href="#section-design-decisions">11. Design Decisions</a></li>
-<li><a href="#section-quality-scenarios">12. Quality Requirements</a>
+<li><a href="#section-design-decisions">9. Design Decisions</a></li>
+<li><a href="#section-quality-scenarios">10. Quality Requirements</a>
 <ul class="sectlevel2">
-<li><a href="#quality-tree">12.1. Quality Tree</a></li>
-<li><a href="#quality-scenarios">12.2. Quality Scenarios</a></li>
+<li><a href="#quality-tree">10.1. Quality Tree</a></li>
+<li><a href="#quality-scenarios">10.2. Quality Scenarios</a></li>
 </ul>
 </li>
-<li><a href="#section-technical-risks">13. Risks and Technical Debts</a></li>
-<li><a href="#section-glossary">14. Glossary</a></li>
+<li><a href="#section-technical-risks">11. Risks and Technical Debts</a></li>
+<li><a href="#section-glossary">12. Glossary</a></li>
 </ul>
 </div>
 </div>
@@ -1115,19 +1115,14 @@ and SOLID providers</p>
 POD where the messages are going to be store. It&#8217;s a simple diagram</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="motivation"><a class="anchor" href="#motivation"></a>8. Motivation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="motivation"><a class="anchor" href="#motivation"></a>7.2. Motivation</h3>
 <div class="paragraph">
 <p>We want to establish a communication between the users based on their pods.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="quality-andor-performance-features"><a class="anchor" href="#quality-andor-performance-features"></a>9. Quality and/or Performance Features</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="quality-andor-performance-features"><a class="anchor" href="#quality-andor-performance-features"></a>7.3. Quality and/or Performance Features</h3>
 <div class="paragraph">
 <p>Once deployed we can&#8217;t do very much here, if the user has a powerful system then the performace will be higher
 and lower otherwise</p>
@@ -1135,8 +1130,9 @@ and lower otherwise</p>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="section-concepts"><a class="anchor" href="#section-concepts"></a>10. Cross-cutting Concepts</h2>
+<h2 id="section-concepts"><a class="anchor" href="#section-concepts"></a>8. Cross-cutting Concepts</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section we are oging to describe the main ideas and concepts that are applied in the system.</p>
@@ -1224,7 +1220,7 @@ It is expected to be built using the docker platform, in order to avoid dependen
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-design-decisions"><a class="anchor" href="#section-design-decisions"></a>11. Design Decisions</h2>
+<h2 id="section-design-decisions"><a class="anchor" href="#section-design-decisions"></a>9. Design Decisions</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1260,10 +1256,10 @@ It is expected to be built using the docker platform, in order to avoid dependen
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-quality-scenarios"><a class="anchor" href="#section-quality-scenarios"></a>12. Quality Requirements</h2>
+<h2 id="section-quality-scenarios"><a class="anchor" href="#section-quality-scenarios"></a>10. Quality Requirements</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="quality-tree"><a class="anchor" href="#quality-tree"></a>12.1. Quality Tree</h3>
+<h3 id="quality-tree"><a class="anchor" href="#quality-tree"></a>10.1. Quality Tree</h3>
 <div class="imageblock">
 <div class="content">
 <img src="./images/QualityTree.png" alt="diagram">
@@ -1272,7 +1268,7 @@ It is expected to be built using the docker platform, in order to avoid dependen
 </div>
 </div>
 <div class="sect2">
-<h3 id="quality-scenarios"><a class="anchor" href="#quality-scenarios"></a>12.2. Quality Scenarios</h3>
+<h3 id="quality-scenarios"><a class="anchor" href="#quality-scenarios"></a>10.2. Quality Scenarios</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -1350,7 +1346,7 @@ It is expected to be built using the docker platform, in order to avoid dependen
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-technical-risks"><a class="anchor" href="#section-technical-risks"></a>13. Risks and Technical Debts</h2>
+<h2 id="section-technical-risks"><a class="anchor" href="#section-technical-risks"></a>11. Risks and Technical Debts</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <div class="title"><strong>Solid</strong></div>
@@ -1382,7 +1378,7 @@ the other client connects?</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-glossary"><a class="anchor" href="#section-glossary"></a>14. Glossary</h2>
+<h2 id="section-glossary"><a class="anchor" href="#section-glossary"></a>12. Glossary</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
