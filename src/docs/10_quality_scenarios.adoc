@@ -4,7 +4,7 @@
 === Quality Tree
 
 .Quality tree diagram
-image::./images/QualityTree.png[diagram]
+image::./QualityTree.png[diagram]
 
 === Quality Scenarios
 
