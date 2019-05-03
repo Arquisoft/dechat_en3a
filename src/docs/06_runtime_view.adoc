@@ -1,18 +1,9 @@
 [[section-runtime-view]]
 == Runtime View
 
-
-[role="arc42help"]
-****
-
 In this document we will show you the main runtime views of the application in different scenarios.
 
-****
-
 ==== Log in
-
-[role="arc42help"]
-****
 
 1. First, the user must enter it's personal ID and password
 2. After that, the application will ask the server to approve the login request made by the user
@@ -22,12 +13,7 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/lo
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/home.PNG[diagram]
 
-****
-
 ==== Register
-
-[role="arc42help"]
-****
 
 1. First, the user must choose between getting registered via Inrupt or Solid Community
 2. After that, they will fulfill the registration form with their personal data
@@ -36,12 +22,7 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/home
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register.png[diagram]
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register2.png[diagram]
 
-****
-
 === Chat with friends
-
-[role="arc42help"]
-****
 
 The chat is used for chatting between users, better said, between friends.
 
@@ -57,5 +38,3 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/frie
 4. Finally User_2 reads the received messages from the application
 
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/chatting.png[diagram]
-
-****
