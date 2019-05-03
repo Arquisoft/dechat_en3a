@@ -10,10 +10,10 @@ In this document we will show you the main runtime views of the application in d
 3. Finally, if the server approves the login the user will access to the chat, but if the server denies the login the user won't access to it
 
 .Log in diagram
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/log in.png[diagram]
+image::/../../docs/assets/images/log in.png[diagram]
 
 .Home diagram
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/home.PNG[diagram]
+image::./images/home.PNG[diagram]
 
 ==== Register
 
@@ -22,9 +22,9 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/home
 3. Finally, they can login in with their account
 
 .Register diagram (1)
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register.png[diagram]
+image::/../../docs/assets/images/register.png[diagram]
 .Register diagram(2)
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/assets/images/register2.png[diagram]
+image::/../../docs/assets/images/register2.png[diagram]
 
 === Chat with friends
 
@@ -33,7 +33,7 @@ The chat is used for chatting between users, better said, between friends.
 *Selection of the partner to whom you will send a message*
 
 .Friend selection diagram
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/friends.png[diagram]
+image::./images/friends.png[diagram]
 
 *Sequence of a chat*
 
@@ -43,4 +43,4 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/frie
 4. Finally User_2 reads the received messages from the application
 
 .Chatting diagram
-image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/chatting.png[diagram]
+image::./images/chatting.png[diagram]
