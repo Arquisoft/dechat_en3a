@@ -1,9 +1,6 @@
 [[section-design-decisions]]
 == Design Decisions
 
-[role="arc42help"]
-****
-
 |===
 |Sections |Decisions
 
@@ -19,5 +16,3 @@
 |Platform
 |We are going to develop the app using angular.
 |===
-
-****
