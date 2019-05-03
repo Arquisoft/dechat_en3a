@@ -44,7 +44,7 @@ npm run test2
 ----
 
 == Site documentation
-https://arquisoft.github.io/dechat_en3a/
+https://arquisoft.github.io/dechat_en3a/docs
 
 == Some useful links
 I (Daniel) add here some links I think may be useful for the team during the development process:
