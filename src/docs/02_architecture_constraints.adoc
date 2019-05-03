@@ -3,8 +3,6 @@
 
 === Technical Contraints
 
-****
-
 [options="header"]
 |===
 |Constraint |Explanation
@@ -25,11 +23,7 @@
 
 |===
 
-****
-
 === Organizational Constraints
-
-****
 
 [options="header"]
 |===
@@ -42,11 +36,7 @@
 
 |===
 
-****
-
 === Documentation Constraints
-
-****
 
 [options="header"]
 |===
@@ -58,4 +48,3 @@
 |The documentation of the project must follow the rules described in asciidoctor.
 
 |===
-****
