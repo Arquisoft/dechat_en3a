@@ -7,6 +7,7 @@ and SOLID providers
 
 === Infrastructure Level 1
 
+.Deployment view diagram
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Untitled%20Diagram.png[diagram]
 
 In our decentralized system the users send message through the chat application to the the SOLID provider that is the one that has the
