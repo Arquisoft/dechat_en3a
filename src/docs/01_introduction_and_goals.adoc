@@ -1,14 +1,8 @@
 [[section-introduction-and-goals]]
 == Introduction and Goals
 
-[role="arc42help"]
-****
-
-****
-
 === Requirements Overview
 
-[role="arc42help"]
 ****
 
 We use solid for this application and design a decentralized chat that allows people to communicate people and not share this       personal data.
@@ -19,7 +13,6 @@ We develop this system to allow users to keep his personal data save in this com
 
 === Quality Goals
 
-[role="arc42help"]
 ****
 
 [options="header",cols="1,2"]
@@ -34,7 +27,6 @@ We develop this system to allow users to keep his personal data save in this com
 
 === Stakeholders
 
-[role="arc42help"]
 ****
 
 * *Jose Emilio Labra Gayo:* He should know the architecture and be convinced of it, and he also needs to know the doumentation about the project.
