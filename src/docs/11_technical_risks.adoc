@@ -1,5 +1,7 @@
 [[section-technical-risks]]
 == Risks and Technical Debts
+
+[role="arc42help"]
 ****
 
 .*Solid*
@@ -22,4 +24,5 @@ the other client connects?
 
 .*Cucumber*
 We never did any acceptance test so we have to get used to work with Cucumber.
+
 ****
