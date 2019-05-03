@@ -16,3 +16,16 @@ image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/Unti
 In our decentralized system the users send message through the chat application to the the SOLID provider that is the one that has the
 POD where the messages are going to be store. It's a simple diagram
 ****
+
+== Motivation
+
+****
+We want to establish a communication between the users based on their pods.
+****
+
+== Quality and/or Performance Features
+
+****
+Once deployed we can't do very much here, if the user has a powerful system then the performace will be higher
+and lower otherwise
+****
