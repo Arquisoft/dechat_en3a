@@ -1,18 +1,25 @@
 [[section-quality-scenarios]]
 == Quality Requirements
+
+[role="arc42help"]
 ****
 
-
 ****
+
 === Quality Tree
+
+[role="arc42help"]
+****
+
 image::https://github.com/Arquisoft/dechat_en3a/blob/master/src/docs/images/QualityTree.png[diagram]
-****
-
 
 ****
+
 === Quality Scenarios
 
+[role="arc42help"]
 ****
+
 [options="header"]
 |===
 | Reference |Quality attribute |Scenario  | Priority
