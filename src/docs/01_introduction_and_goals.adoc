@@ -51,3 +51,5 @@ We develop this system to allow users to keep his personal data save in this com
 | Teamwork | Group developing the application | Develop a functional application that allow us to pass the course
 | Client | People that is going to use the application | Have the possibility to chat with another people keeping his data save
 |===
+
+****
