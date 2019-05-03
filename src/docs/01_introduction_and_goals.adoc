@@ -3,17 +3,11 @@
 
 === Requirements Overview
 
-****
-
 We use solid for this application and design a decentralized chat that allows people to communicate people and not share this       personal data.
 
 We develop this system to allow users to keep his personal data save in this computer so the data doesnt need to go to a server.
 
-****
-
 === Quality Goals
-
-****
 
 [options="header",cols="1,2"]
 |===
@@ -23,11 +17,7 @@ We develop this system to allow users to keep his personal data save in this com
 | Usability | The app should be easy to use for the user, easy to interact with, and intuitive, so the users doesn't need to think so much about what to do and how to do that
 |===
 
-****
-
 === Stakeholders
-
-****
 
 * *Jose Emilio Labra Gayo:* He should know the architecture and be convinced of it, and he also needs to know the doumentation about the project.
 
@@ -43,5 +33,3 @@ We develop this system to allow users to keep his personal data save in this com
 | Teamwork | Group developing the application | Develop a functional application that allow us to pass the course
 | Client | People that is going to use the application | Have the possibility to chat with another people keeping his data save
 |===
-
-****
