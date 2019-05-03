@@ -54,4 +54,4 @@ The building of the project, considering that it is an Angular application, is d
 It is expected to be built using the docker platform, in order to avoid dependencies and enviorment issues.
 
 .Cross-cutting concepts diagram
-image::./08-Crosscutting-Concepts-Structure-EN.png["Possible topics for crosscutting concepts"]
+image::./images/08-Crosscutting-Concepts-Structure-EN.png["Possible topics for crosscutting concepts"]
